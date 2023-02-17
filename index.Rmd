@@ -1,0 +1,23 @@
+--- 
+title: "Research Information Gateway Handbook"
+author: "EcoHealth Alliance"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  This is a handbook created as a guide for the development and maintenance of 
+  a One Health Research Information Gateway.
+link-citations: yes
+github-repo: ecohealthalliance/rig-handbook
+---
+
+# About
+
+This is a handbook created as a how-to manual for the development and maintenance of a One Health Research Information Gateway for the African continent.
+
+
+
+

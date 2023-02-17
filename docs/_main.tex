@@ -1,0 +1,624 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Research Information Gateway Handbook},
+  pdfauthor={EcoHealth Alliance},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Research Information Gateway Handbook}
+\author{EcoHealth Alliance}
+\date{2023-02-17}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{about}{%
+\chapter{About}\label{about}}
+
+This is a handbook created as a how-to manual for the development and maintenance of a One Health Research Information Gateway for the African continent.
+
+\hypertarget{introduction}{%
+\chapter{Introduction}\label{introduction}}
+
+\href{https://www.ecohealthalliance.org/}{EcoHelth Alliance} is supporting the creation of a database of active infectious disease research activities and research scientists in Africa. The database contains information about scientific research being conducted on the African continent that has particular relevance to understanding, detecting and responding to zoonotic pathogens. EHA is building a detailed, searchable, and visual database (e.g.~via a dashboard) populated with information about major (e.g.~multi-year) and active One Health research projects that includes subject matter, duration, geographical locations, key personnel, and links to publicly available reports, preprints and publications relevant to zoonoses. Examples of research areas may include epidemiological (syndrome based or disease specific), ecological (studies looking at potential reservoirs or animal hosts for zoonotic pathogens and spillover into humans or livestock); basic science (e.g.~virology, bacteriology; serology); clinical (vaccine or therapeutic trials); or sociological (e.g.~behavioral risk assessments or behavioral intervention studies) or any other preliminary public health findings. A particularly important view within the database includes a directory of subject matter experts associated with research across the continent. This roster view can be used by public health practitioners to engage expert consultations as needed to support training activities, surveillance or outbreak response, for example.
+
+\hypertarget{tools}{%
+\chapter{Tools}\label{tools}}
+
+The Research Information Gateway (RIG) is currently using the following set of tools for database development and maintenance.
+
+\hypertarget{airtable}{%
+\section{Airtable}\label{airtable}}
+
+\href{https://airtable.com}{Airtable} is a cloud-based software platform that allows users to create and manage databases, spreadsheets, and other types of organizational tools. It can be used for a variety of purposes, including project management, customer relationship management, inventory tracking, event planning, and much more.
+
+One of the key features of Airtable is its flexible and customizable nature. Users can create and customize their own database structures, and can choose from a wide range of data types, including text, attachments, checkboxes, and more. This allows for a high degree of customization and adaptability to different use cases and workflows.
+
+Airtable also offers a variety of collaboration features, including real-time syncing and commenting, as well as integrations with other popular tools such as Slack, Google Drive, and Trello. Additionally, Airtable has a robust API that allows developers to build custom integrations and applications on top of the platform.
+
+Airtable's flexibility, customizability, and features that support collaboration along with its spreadsheet-style interface that is familiar to most that have used other spreadsheet software such as Microsoft Excel or Google Sheets are the key reasons why it was chosen to be the database tool for RIG.
+
+\hypertarget{r}{%
+\section{R}\label{r}}
+
+\href{https://cran.r-project.org}{R} is a free and open-source programming language and software environment for statistical computing and graphics. It was first developed in the early 1990s by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand, and is now widely used by statisticians, data analysts, and researchers across various fields.
+
+R provides a wide range of statistical and graphical techniques, including linear and nonlinear modeling, classical statistical tests, time-series analysis, classification, clustering, and more. It also has a large and active community of users and developers who contribute to the development of new packages and extensions for the language.
+
+R is popular in the field of data science, as it provides a powerful and flexible platform for analyzing and visualizing data. It can be used in conjuction with other tools such as Airtable through community-developed packages making it particularly well-suited for the current use-case of the RIG.
+
+\hypertarget{database}{%
+\chapter{Database}\label{database}}
+
+The current database is built using \href{https://airtable.com}{Airtable}. The current database has the following schema:
+
+\includegraphics{images/database_schema.png}
+
+\hypertarget{sources}{%
+\chapter{Sources}\label{sources}}
+
+Following is an initial list of sources of information used for the RIG database.
+
+The initial search performed was non-systematic and focused primarily on a known funder of global research related/relevant to the topics of interest for the database . The main aim of focusing first on this limited and focused search was to get a sense of what information is available from such bodies/organisations, and the limitations of the information available. This is based on an initial idea that research funders would tend to have a system of collecting/archiving information on research they have funded. The expectation was that at the minimum, the information available from funders would lead to identifying further sources of information relevant to the ACDC database specifically those of research groups/institutions particularly those based in countries/regions within Africa. This initial search will hopefully inform a more systematic and informed search strategy for the database information.
+
+\hypertarget{ukri}{%
+\section{UKRI}\label{ukri}}
+
+\href{https://www.ukri.org/}{UK Research and Innovation or UKRI} is a non-departmental public body in the United Kingdom that was established in 2018. It brings together the seven UK Research Councils, \href{https://www.ukri.org/councils/innovate-uk/}{Innovate UK}, and \href{https://www.ukri.org/councils/research-england/}{Research England}, which were previously separate organizations, to create a single body that oversees research and innovation funding and strategy in the UK.
+
+The seven UK Research Councils are:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Arts and Humanities Research Council (AHRC)
+\item
+  Biotechnology and Biological Sciences Research Council (BBSRC)
+\item
+  Engineering and Physical Sciences Research Council (EPSRC)
+\item
+  Economic and Social Research Council (ESRC)
+\item
+  Medical Research Council (MRC)
+\item
+  Natural Environment Research Council (NERC)
+\item
+  Science and Technology Facilities Council (STFC)
+\end{enumerate}
+
+Innovate UK is the UK's innovation agency, which provides funding and support for innovative businesses and projects.
+
+Research England is responsible for funding and overseeing research in English universities and higher education institutions.
+
+UKRI's main role is to drive innovation and research in the UK and to support research and development that benefits society and the economy. It funds research projects, provides support to researchers, promotes international collaboration, and works to ensure that research and innovation are integrated with government policies and priorities.
+
+Of these various groups within UKRI, we further focused on the \href{https://www.ukri.org/councils/bbsrc/}{Biotechnology and Biological Sciences Research Council (BBSRC)}, \href{https://www.ukri.org/councils/mrc/}{Medical Research Council (MRC)}, \href{https://www.ukri.org/councils/stfc/}{Science and Technology Facilities Council (STFC)}, \href{https://www.ukri.org/councils/innovate-uk/}{Innovate UK}, and \href{https://www.ukri.org/councils/research-england/}{Research England}.
+
+\hypertarget{wellcome}{%
+\section{Wellcome Trust}\label{wellcome}}
+
+The Wellcome Trust is a charitable foundation focused on health research based in London, in the United Kingdom. It was established in 1936 with legacies from the pharmaceutical magnate \href{https://en.wikipedia.org/wiki/Henry_Wellcome}{Henry Wellcome} to fund research to improve human and animal health. The aim of the Trust is to \emph{``support science to solve the urgent health challenges facing everyone.''}. In 2012, the Wellcome Trust was described as the United Kingdom's largest provider of non-governmental funding for scientific research, and one of the largest providers in the world.
+
+\hypertarget{nih}{%
+\section{National Insitutes of Health}\label{nih}}
+
+\hypertarget{nsf}{%
+\section{National Science Foundation}\label{nsf}}
+
+\hypertarget{darpa}{%
+\section{Defense Advanced Research Projects Agency}\label{darpa}}
+
+\hypertarget{updates}{%
+\chapter{Updates}\label{updates}}
+
+The current update process of the RIG database is summarised in this workflow:
+
+\includegraphics{images/initial-acdc-db-search_NK.png}
+
+Following are the source-specific process of updating or retrieving information for the RIG database.
+
+\hypertarget{update-wellcome}{%
+\section{Wellcome Trust Grant Funding Data}\label{update-wellcome}}
+
+\hypertarget{general-information}{%
+\subsection{General Information}\label{general-information}}
+
+The Wellcome Trust is very transparent about its funding efforts and makes information about its funded projects available in several ways including on their own website and the World RePORT: (\url{https://worldreport.nih.gov/wrapp/\#/search?searchId=62a70c4bfe43c863cea97f29}). I found the downloadable spreadsheet of funds awarded between 01st of October 2005 and 4th of May 2022 the most useful: \url{https://cms.wellcome.org/sites/default/files/2022-05/Wellcome-grants-awarded-1-October-2005-to-04-05-2022.xlsx}
+
+\hypertarget{how-to-update}{%
+\subsection{How to update}\label{how-to-update}}
+
+Please note that the steps below were done using the current available spreadsheet from the Wellcome Trust website and added the relevant projects to the RIG database. These steps can therefore be used as a guide for how to update the database with new information in the future to when the Wellcome Trust publishes its most up-to-date spreadsheet.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Go to column J -- Recipient Org:Country -\textgreater{} deselect all and then select all the African countries in the list
+\item
+  Go to column N -- Planned end date -\textgreater{} select all the years in the future
+\item
+  These two steps reduced the list from 19,833 projects to 111 projects
+\item
+  Read the project title and decide if the project is relevant for our database or not
+\item
+  If unsure, read the abstract -- that also helps to identify the keywords to tag the project within our database
+\item
+  If the project is relevant transfer all the information into our database
+\end{enumerate}
+
+\textbf{Note:} This method is only able to detect projects/activities where an African organisation itself holds the grant. It does not detect projects where African researchers are involved as collaborators. The spreadsheet does not list collaborators on projects, so it's yet to be determined how we will identify projects on which African research institutes collaborate with international organisations being awarded the grant.
+
+\hypertarget{update-clinicaltrials}{%
+\section{ClinicalTrials.gov}\label{update-clinicaltrials}}
+
+\hypertarget{how-to-update-1}{%
+\subsection{How to update}\label{how-to-update-1}}
+
+Following are steps taken to extract data from \href{https://clinicaltrials.gov/}{ClinicalTrials.gov}.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Start with searching a disease/topic of interest
+\end{enumerate}
+
+\includegraphics{images/clinicaltrial1.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  On the results page apply the following filters to look for active studies
+\end{enumerate}
+
+\includegraphics{images/clinicaltrial2.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Click on `Apply' and then look manually through the column `Locations' of the list of the results to find studies that take place in African countries
+\end{enumerate}
+
+\includegraphics{images/clinicaltrial3.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  Click on the first study to start working your way through the information available
+\item
+  The first information provided is the sponsor -\textgreater{} this information should be added to the Funder -- column in the Activities table
+\item
+  Information about collaborators can be added to Collaborators column
+\end{enumerate}
+
+\includegraphics{images/clinicaltrial4.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\item
+  Staying in the `Study Details'-tab, scroll down to `Study Design'
+\item
+  This section contains the official title, which should be used as the name for the Activity
+\item
+  Additionally it contains information about the start and end date, which should be copied into the respective fields in the Activities table
+\end{enumerate}
+
+\includegraphics{images/clinicaltrial5.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\item
+  Scroll further down to `Contact and Locations'
+\item
+  The information given under contacts should be added to the Researcher column in Airtable
+\item
+  Switching into the Researcher-table within in Airtable the given contact details should be added to the newly created entries for the involved researchers
+\item
+  Also the affiliation to a certain institute can be added based on these information as well as the researcher's location -\textgreater{} is it possible to link the Location with the Affiliation so that the location is automatically added based on the information about the institution the researcher is affiliated with?
+\item
+  Switch back into the Activities table and add information about the Locations to the Activity Location and the Institutions columns
+\end{enumerate}
+
+\includegraphics{images/clinicaltrial6.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{14}
+\item
+  Scroll up again to the selection of tabs
+\item
+  Click on the Results tab -\textgreater{} it's worth checking this tab even when it's called No Results Posted as it might still contain links to publications that are affiliated with the study
+\item
+  These links can be copied into the Published Work column in the Activities table
+\end{enumerate}
+
+\includegraphics{images/clinicaltrial7.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{17}
+\tightlist
+\item
+  I also copied the link of the study page on clinicaltrials.gov into the Activity Website column
+\end{enumerate}
+
+\includegraphics{images/clinicaltrial8.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{18}
+\tightlist
+\item
+  to determine the Research Field, I had to use my own understanding of the study so I am not sure if this can be automated or rather needs to be done by a database librarian
+\end{enumerate}
+
+\hypertarget{update-public-research}{%
+\section{Public journal/research databases}\label{update-public-research}}
+
+In order to aid in automation, maintain a list relevant search terms for each topic of interest (stored in the ``Topics'' table in Airtable). Even if the terms are not used for the purposes of developing a search strategy, they can be used by those who are not subject matter experts when collection information on a specific topic
+
+\hypertarget{example-of-a-successful-search}{%
+\subsection{Example of a successful search:}\label{example-of-a-successful-search}}
+
+\begin{verbatim}
+(zoonoses OR zoonotic disease OR zoonotic illness) and (africa*) and (surveillance OR tracking OR sampling)
+\end{verbatim}
+
+The majority of results from this search, when conducted in \href{https://pubmed.ncbi.nlm.nih.gov/}{PubMed}, appeared relevant to the database (based on title/abstract scanning)
+
+\hypertarget{example-of-pubmed-search-for-surveillance-activities-for-brucellosis}{%
+\subsection{Example of PubMed search for surveillance activities for Brucellosis:}\label{example-of-pubmed-search-for-surveillance-activities-for-brucellosis}}
+
+\begin{verbatim}
+("surveillance"[Title/Abstract] OR "prevalence"[Title/Abstract] OR "monitoring"[Title/Abstract] OR "seropositive"[Title/Abstract] OR "seroprevalence"[Title/Abstract] OR "seroevidence"[Title/Abstract] OR "screened"[Title/Abstract] OR "biosurveillance"[Title/Abstract] OR "sampl*"[Title/Abstract]) AND (brucellosis[Title/Abstract] OR "Brucella melitensis"[Title/Abstract] OR "B. melitensis"[Title/Abstract] OR "Brucella abortus"[Title/Abstract] OR "B. abortus"[Title/Abstract])  
+\end{verbatim}
+
+This search yielded a large quantity of results, not all of which were relevant. Manual processes are required to validate results.
+
+Including terms to filter the results based on location were helpful, but still included results not located on the African continent. Search term to filter for African countries:
+
+\begin{verbatim}
+(Djibouti[Title/Abstract] OR Seychelles[Title/Abstract] OR DR Congo[Title/Abstract] OR Comoros[Title/Abstract] OR Togo[Title/Abstract] OR Sierra Leone[Title/Abstract] OR Libya[Title/Abstract] OR Tanzania[Title/Abstract] OR South Africa[Title/Abstract] OR Cabo Verde[Title/Abstract] OR Congo[Title/Abstract] OR Kenya[Title/Abstract] OR Liberia[Title/Abstract] OR Central African Republic[Title/Abstract] OR Mauritania[Title/Abstract] OR Uganda[Title/Abstract] OR Algeria[Title/Abstract] OR Sudan[Title/Abstract] OR Morocco[Title/Abstract] OR Eritrea[Title/Abstract] OR Angola[Title/Abstract] OR Mozambique[Title/Abstract] OR Ghana[Title/Abstract] OR Madagascar[Title/Abstract] OR Cameroon[Title/Abstract] OR Côte d'Ivoire[Title/Abstract] OR Namibia[Title/Abstract] OR Niger[Title/Abstract] OR Gambia[Title/Abstract] OR Botswana[Title/Abstract] OR Gabon[Title/Abstract] OR Sao Tome & Principe[Title/Abstract] OR Lesotho[Title/Abstract] OR Burkina Faso[Title/Abstract] OR Nigeria[Title/Abstract] OR Mali[Title/Abstract] OR Guinea-Bissau[Title/Abstract] OR Malawi[Title/Abstract] OR Zambia[Title/Abstract] OR Senegal[Title/Abstract] OR Chad[Title/Abstract] OR Somalia[Title/Abstract] OR Zimbabwe[Title/Abstract] OR Equatorial Guinea[Title/Abstract] OR Guinea[Title/Abstract] OR Rwanda[Title/Abstract] OR Mauritius[Title/Abstract] OR Benin[Title/Abstract] OR Burundi[Title/Abstract] OR Tunisia[Title/Abstract] OR Eswatini[Title/Abstract] OR Ethiopia[Title/Abstract] OR South Sudan[Title/Abstract] OR Egypt[Title/Abstract]) 
+\end{verbatim}
+
+From publications, can extract researchers, institutions, funders, activities. Ideally, researchers, institutions, and funders can be extracted automatically as opposed to manually, but scripts would need to be customized for each journal.
+
+\hypertarget{validation-of-results}{%
+\subsection{Validation of results}\label{validation-of-results}}
+
+Validation of results can be useful to better understand the overlap between publications and activities and determine the priority of searching through publications vs.~navigating to institution sites directly (or other strategies).
+
+After finding a relevant publication, look at the publication's authors and their respective institutions
+
+Navigate to institutions' sites to search for publications or results from research
+
+Are their activities listed on the site? Are those activities explicitly mentioned in the publications? Etc.
+
+\hypertarget{some-relevant-journalsdatabases}{%
+\subsection{Some relevant journals/databases:}\label{some-relevant-journalsdatabases}}
+
+\begin{itemize}
+\item
+  Zoonoses \& Public Health from Wiley Online Library : \url{https://onlinelibrary.wiley.com/action/doSearch?SeriesKey=18632378\&sortBy=Earliest}
+\item
+  Journal of Public Health in Africa: \url{https://www.publichealthinafrica.org/jphia/issue/view/30}
+\item
+  PLoS Journal of Neglected Tropical Diseases: \url{https://journals.plos.org/plosntds/search?filterJournals=PLoSNTD}
+\end{itemize}
+
+\hypertarget{update-gepris}{%
+\section{GEPRIS}\label{update-gepris}}
+
+\hypertarget{general-information-1}{%
+\subsection{General Information:}\label{general-information-1}}
+
+GEPRIS is a database listing all projects funded by the German Research Foundation (German: Deutsche Forschungsgemeinschaft; abbr. DFG) The DFG is a research funding organisation, which functions as a self-governing institution for the promotion of science and research in the Federal Republic Germany. In 2019, the DFG had a funding budget of €3.3 billion.
+
+\hypertarget{how-to-use}{%
+\subsection{How to Use:}\label{how-to-use}}
+
+The database can be accessed here: \url{https://gepris.dfg.de/gepris/OCTOPUS?language=en\&task=showSearchSimple}
+
+This link should directly lead to the English version of the website, otherwise the language can be changed by clicking on English in the top right corner.
+
+\begin{itemize}
+\item
+  In the database one can search for Projects, People, or Institutions -- for our purpose the project option is the most relevant
+\item
+  One can either search for keywords or filter for different criteria -- for a systematic approach I found using the filtering options easier than going through all our
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  On the search start site stay in the Projects tab.
+\item
+  Click on Show extended search.
+\item
+  Under Subject Area select one of the following:
+
+  \begin{itemize}
+  \item
+    Agriculture, Forestry and Veterinary Medicine
+  \item
+    Basic Research in Biology and Medicine
+  \item
+    Medicine
+  \item
+    Microbiology, Virology, and Immunology
+  \item
+    Social Sciences
+  \item
+    Water Research
+  \item
+    Zoology
+  \end{itemize}
+\end{enumerate}
+
+\textbf{Note:} After working through all these subject areas, any relevant project in the field of One Health should be picked up by the searches
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  Leave everything under DFG Programme as it is
+\item
+  Move on to Funding and change Status to Current
+\item
+  Move on to International and change Continent to Africa
+\item
+  Click on Find
+\item
+  Read through the project titles on the results page to identify relevant projects
+\item
+  Import all the relevant project information (as highlighted on the screenshots) into the Africa CDC database
+\end{enumerate}
+
+\includegraphics{images/gepris1.png}
+\includegraphics{images/gepris2.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  To identify the research institutes that are involved in the project one has to click on the researchers names and extract that information from their profile (their affiliation with a research institute is listed there)
+\end{enumerate}
+
+\hypertarget{positive-aspects-of-this-source}{%
+\subsection{Positive aspects of this source:}\label{positive-aspects-of-this-source}}
+
+The filtering options allow to filter for several criteria which are crucial for the relevance of a project to our database. That removes a lot of irrelevant projects from the results pages. The project pages list almost all the information we are interested in.
+
+\hypertarget{downsides-of-this-source}{%
+\subsection{Downsides of this source:}\label{downsides-of-this-source}}
+
+The project page doesn't list the anticipated end date of a project.
+
+One has to click on the link to the researcher's profile to identify the participating organisations.
+
+Even using all the different filtering options not all resulting hits are relevant for our database, so I don't think the process can be fully automated or at least requires a subsequent manual validation or clean up step to remove irrelevant projects.
+
+\hypertarget{update-edctp}{%
+\section{EDCTP}\label{update-edctp}}
+
+\hypertarget{general-information-2}{%
+\subsection{General Information}\label{general-information-2}}
+
+The European \& Developing Countries Clinical Trials Partnership (EDCTP) is a non-profit organisation with a European office in The Hague, The Netherlands and an African office in Cape Town, South Africa. EDCTP is a partnership between European Union (EU), Norway, Switzerland, and African countries to accelerate the development of new clinical interventions such as drugs, vaccines, microbicides, and diagnostics against poverty-related diseases in Africa. The organisation supports clinical trials, capacity strengthening and networking in Africa and Europe. Funding comes from the EU, member states, pharmaceutical industry and private organisations and charities like The Wellcome Trust and The Bill \& Melinda Gates foundation.
+
+\textbf{Note:} Since funding comes from several sources that we also list as sources for populating the database such as the European Union (European Commission), The Wellcome Trust and The Bill \& Melinda Gates Foundation, there is the possibility that downloading project information from all these sources into our database could lead to duplicate entries. I created a column in the Actvities table for the Project ID, as this might be helpful to identify duplicates and remove them automatically.
+
+\hypertarget{how-to-use-1}{%
+\subsection{How to use:}\label{how-to-use-1}}
+
+The database of funded project can be accessed here: \url{https://www.edctp.org/edctp2-project-portal/}
+
+There is the option to download the list of projects as a PDF, CSV or XLXS file. Personally, I did not find that helpful for manually adding projects to the database, but it might be useful for an automated process.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Go to Status of Project and select the filter Active
+\item
+  Go to Classification and select one of the following filters:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Co-Infections
+  \item
+    COVID-19
+  \item
+    Cysticercosis/Taeniasis\\
+  \item
+    Diagnostics
+  \item
+    Diarrhoeal Diseases
+  \item
+    Drugs
+  \item
+    Emerging Infections, incl.~Ebola, Lassa
+  \item
+    Epidemiology
+  \item
+    HIV
+  \item
+    Human African trypanosomiasis (sleeping sickness)\\
+  \item
+    Implementation Research\\
+  \item
+    Leishmaniases
+  \item
+    Leprosy (Hansen disease)
+  \item
+    Lower respiratory infections\\
+  \item
+    Lymphatic filariasis
+  \item
+    Malaria
+  \item
+    Microbicides
+  \item
+    Onchocerciasis (river blindness)
+  \item
+    Rabies
+  \item
+    Schistosomiasis
+  \item
+    Soil-transmitted helminthiasis\\
+  \item
+    Social Science
+  \item
+    Tuberculosis
+  \item
+    Vaccines
+  \item
+    Yaws
+  \item
+    Yellow Fever
+  \end{itemize}
+\end{enumerate}
+
+\textbf{Note:} Only one Classification at a time can be selected
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  Once one Classification was selected click on search
+\item
+  Change from Show Map to Show List -\textgreater{} this makes it easier to systematically look through the projects
+\item
+  On the results list you can see the location of the coordinating organisation, but even if it is not in an African country, it is worth checking the project details for the Participating Organisations. So read the project title and decide whether this could be a relevant project, if so, click on View details
+\end{enumerate}
+
+\includegraphics{images/edctp1.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Check the Participating Organisations first to decide whether the project is relevant to our database:
+\end{enumerate}
+
+\includegraphics{images/edctp2.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\item
+  If the project is relevant use the Project Name + Acronym for the Activity Column
+\item
+  Transfer all the relevant information to our database, including Project ID, Start and End date, Participating Organisations and corresponding locations, Project Website, Coordinating Organisation and Coordinating Researcher
+\item
+  Tag the project with the correct keywords in the Activity Type, Activity Outputs, Target Species, Topic, and Research Field columns based on your understanding of the project abstract
+\end{enumerate}
+
+\hypertarget{benefits-of-this-source}{%
+\subsection{Benefits of this Source:}\label{benefits-of-this-source}}
+
+The projects can be easily filtered for currently active projects.
+
+The EDCTP is specifically focused on projects in Africa or Europe with African collaborators so most projects fulfil at least one of our selection criteria
+
+A lot of the projects (not all) are also topic-wise relevant for our database
+
+The database lists most of the information that we are interested in for our database
+
+\hypertarget{shortcomings-of-this-source}{%
+\subsection{Shortcomings of this source:}\label{shortcomings-of-this-source}}
+
+Only one disease/topic can be selected at a time so sequential searches are necessary
+
+Project details only list the Coordinating researcher but no other lead researchers at the participating organisations
+
+\hypertarget{survey}{%
+\chapter{Survey}\label{survey}}
+
+  \bibliography{book.bib}
+
+\end{document}

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Updates | Research Information Gateway Handbook</title>
+  <meta name="description" content="<p>This is a handbook created as a guide for the development and maintenance of
+a One Health Research Information Gateway.</p>" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Updates | Research Information Gateway Handbook" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a handbook created as a guide for the development and maintenance of
+a One Health Research Information Gateway.</p>" />
+  <meta name="github-repo" content="ecohealthalliance/rig-handbook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Updates | Research Information Gateway Handbook" />
+  
+  <meta name="twitter:description" content="<p>This is a handbook created as a guide for the development and maintenance of
+a One Health Research Information Gateway.</p>" />
+  
+
+<meta name="author" content="EcoHealth Alliance" />
+
+
+<meta name="date" content="2023-02-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="sources.html"/>
+<link rel="next" href="survey.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">RIG Handbook</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="tools.html"><a href="tools.html"><i class="fa fa-check"></i><b>3</b> Tools</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="tools.html"><a href="tools.html#airtable"><i class="fa fa-check"></i><b>3.1</b> Airtable</a></li>
+<li class="chapter" data-level="3.2" data-path="tools.html"><a href="tools.html#r"><i class="fa fa-check"></i><b>3.2</b> R</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="database.html"><a href="database.html"><i class="fa fa-check"></i><b>4</b> Database</a></li>
+<li class="chapter" data-level="5" data-path="sources.html"><a href="sources.html"><i class="fa fa-check"></i><b>5</b> Sources</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="sources.html"><a href="sources.html#ukri"><i class="fa fa-check"></i><b>5.1</b> UKRI</a></li>
+<li class="chapter" data-level="5.2" data-path="sources.html"><a href="sources.html#wellcome"><i class="fa fa-check"></i><b>5.2</b> Wellcome Trust</a></li>
+<li class="chapter" data-level="5.3" data-path="sources.html"><a href="sources.html#nih"><i class="fa fa-check"></i><b>5.3</b> National Insitutes of Health</a></li>
+<li class="chapter" data-level="5.4" data-path="sources.html"><a href="sources.html#nsf"><i class="fa fa-check"></i><b>5.4</b> National Science Foundation</a></li>
+<li class="chapter" data-level="5.5" data-path="sources.html"><a href="sources.html#darpa"><i class="fa fa-check"></i><b>5.5</b> Defense Advanced Research Projects Agency</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="updates.html"><a href="updates.html"><i class="fa fa-check"></i><b>6</b> Updates</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="updates.html"><a href="updates.html#update-wellcome"><i class="fa fa-check"></i><b>6.1</b> Wellcome Trust Grant Funding Data</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="updates.html"><a href="updates.html#general-information"><i class="fa fa-check"></i><b>6.1.1</b> General Information</a></li>
+<li class="chapter" data-level="6.1.2" data-path="updates.html"><a href="updates.html#how-to-update"><i class="fa fa-check"></i><b>6.1.2</b> How to update</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="updates.html"><a href="updates.html#update-clinicaltrials"><i class="fa fa-check"></i><b>6.2</b> ClinicalTrials.gov</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="updates.html"><a href="updates.html#how-to-update-1"><i class="fa fa-check"></i><b>6.2.1</b> How to update</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="updates.html"><a href="updates.html#update-public-research"><i class="fa fa-check"></i><b>6.3</b> Public journal/research databases</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="updates.html"><a href="updates.html#example-of-a-successful-search"><i class="fa fa-check"></i><b>6.3.1</b> Example of a successful search:</a></li>
+<li class="chapter" data-level="6.3.2" data-path="updates.html"><a href="updates.html#example-of-pubmed-search-for-surveillance-activities-for-brucellosis"><i class="fa fa-check"></i><b>6.3.2</b> Example of PubMed search for surveillance activities for Brucellosis:</a></li>
+<li class="chapter" data-level="6.3.3" data-path="updates.html"><a href="updates.html#validation-of-results"><i class="fa fa-check"></i><b>6.3.3</b> Validation of results</a></li>
+<li class="chapter" data-level="6.3.4" data-path="updates.html"><a href="updates.html#some-relevant-journalsdatabases"><i class="fa fa-check"></i><b>6.3.4</b> Some relevant journals/databases:</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="updates.html"><a href="updates.html#update-gepris"><i class="fa fa-check"></i><b>6.4</b> GEPRIS</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="updates.html"><a href="updates.html#general-information-1"><i class="fa fa-check"></i><b>6.4.1</b> General Information:</a></li>
+<li class="chapter" data-level="6.4.2" data-path="updates.html"><a href="updates.html#how-to-use"><i class="fa fa-check"></i><b>6.4.2</b> How to Use:</a></li>
+<li class="chapter" data-level="6.4.3" data-path="updates.html"><a href="updates.html#positive-aspects-of-this-source"><i class="fa fa-check"></i><b>6.4.3</b> Positive aspects of this source:</a></li>
+<li class="chapter" data-level="6.4.4" data-path="updates.html"><a href="updates.html#downsides-of-this-source"><i class="fa fa-check"></i><b>6.4.4</b> Downsides of this source:</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="updates.html"><a href="updates.html#update-edctp"><i class="fa fa-check"></i><b>6.5</b> EDCTP</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="updates.html"><a href="updates.html#general-information-2"><i class="fa fa-check"></i><b>6.5.1</b> General Information</a></li>
+<li class="chapter" data-level="6.5.2" data-path="updates.html"><a href="updates.html#how-to-use-1"><i class="fa fa-check"></i><b>6.5.2</b> How to use:</a></li>
+<li class="chapter" data-level="6.5.3" data-path="updates.html"><a href="updates.html#benefits-of-this-source"><i class="fa fa-check"></i><b>6.5.3</b> Benefits of this Source:</a></li>
+<li class="chapter" data-level="6.5.4" data-path="updates.html"><a href="updates.html#shortcomings-of-this-source"><i class="fa fa-check"></i><b>6.5.4</b> Shortcomings of this source:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="survey.html"><a href="survey.html"><i class="fa fa-check"></i><b>7</b> Survey</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://www.ecohealthalliance.org" target="blank">@ EcoHealth Alliance 2023</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Research Information Gateway Handbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="updates" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Updates<a href="updates.html#updates" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The current update process of the RIG database is summarised in this workflow:</p>
+<p><img src="images/initial-acdc-db-search_NK.png" /></p>
+<p>Following are the source-specific process of updating or retrieving information for the RIG database.</p>
+<div id="update-wellcome" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Wellcome Trust Grant Funding Data<a href="updates.html#update-wellcome" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="general-information" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> General Information<a href="updates.html#general-information" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The Wellcome Trust is very transparent about its funding efforts and makes information about its funded projects available in several ways including on their own website and the World RePORT: (<a href="https://worldreport.nih.gov/wrapp/#/search?searchId=62a70c4bfe43c863cea97f29" class="uri">https://worldreport.nih.gov/wrapp/#/search?searchId=62a70c4bfe43c863cea97f29</a>). I found the downloadable spreadsheet of funds awarded between 01st of October 2005 and 4th of May 2022 the most useful: <a href="https://cms.wellcome.org/sites/default/files/2022-05/Wellcome-grants-awarded-1-October-2005-to-04-05-2022.xlsx" class="uri">https://cms.wellcome.org/sites/default/files/2022-05/Wellcome-grants-awarded-1-October-2005-to-04-05-2022.xlsx</a></p>
+</div>
+<div id="how-to-update" class="section level3 hasAnchor" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> How to update<a href="updates.html#how-to-update" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Please note that the steps below were done using the current available spreadsheet from the Wellcome Trust website and added the relevant projects to the RIG database. These steps can therefore be used as a guide for how to update the database with new information in the future to when the Wellcome Trust publishes its most up-to-date spreadsheet.</p>
+<ol style="list-style-type: decimal">
+<li><p>Go to column J – Recipient Org:Country -&gt; deselect all and then select all the African countries in the list</p></li>
+<li><p>Go to column N – Planned end date -&gt; select all the years in the future</p></li>
+<li><p>These two steps reduced the list from 19,833 projects to 111 projects</p></li>
+<li><p>Read the project title and decide if the project is relevant for our database or not</p></li>
+<li><p>If unsure, read the abstract – that also helps to identify the keywords to tag the project within our database</p></li>
+<li><p>If the project is relevant transfer all the information into our database</p></li>
+</ol>
+<p><strong>Note:</strong> This method is only able to detect projects/activities where an African organisation itself holds the grant. It does not detect projects where African researchers are involved as collaborators. The spreadsheet does not list collaborators on projects, so it’s yet to be determined how we will identify projects on which African research institutes collaborate with international organisations being awarded the grant.</p>
+</div>
+</div>
+<div id="update-clinicaltrials" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> ClinicalTrials.gov<a href="updates.html#update-clinicaltrials" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="how-to-update-1" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> How to update<a href="updates.html#how-to-update-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Following are steps taken to extract data from <a href="https://clinicaltrials.gov/">ClinicalTrials.gov</a>.</p>
+<ol style="list-style-type: decimal">
+<li>Start with searching a disease/topic of interest</li>
+</ol>
+<p><img src="images/clinicaltrial1.png" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>On the results page apply the following filters to look for active studies</li>
+</ol>
+<p><img src="images/clinicaltrial2.png" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Click on ‘Apply’ and then look manually through the column ‘Locations’ of the list of the results to find studies that take place in African countries</li>
+</ol>
+<p><img src="images/clinicaltrial3.png" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Click on the first study to start working your way through the information available</p></li>
+<li><p>The first information provided is the sponsor -&gt; this information should be added to the Funder – column in the Activities table</p></li>
+<li><p>Information about collaborators can be added to Collaborators column</p></li>
+</ol>
+<p><img src="images/clinicaltrial4.png" /></p>
+<ol start="7" style="list-style-type: decimal">
+<li><p>Staying in the ‘Study Details’-tab, scroll down to ‘Study Design’</p></li>
+<li><p>This section contains the official title, which should be used as the name for the Activity</p></li>
+<li><p>Additionally it contains information about the start and end date, which should be copied into the respective fields in the Activities table</p></li>
+</ol>
+<p><img src="images/clinicaltrial5.png" /></p>
+<ol start="10" style="list-style-type: decimal">
+<li><p>Scroll further down to ‘Contact and Locations’</p></li>
+<li><p>The information given under contacts should be added to the Researcher column in Airtable</p></li>
+<li><p>Switching into the Researcher-table within in Airtable the given contact details should be added to the newly created entries for the involved researchers</p></li>
+<li><p>Also the affiliation to a certain institute can be added based on these information as well as the researcher’s location -&gt; is it possible to link the Location with the Affiliation so that the location is automatically added based on the information about the institution the researcher is affiliated with?</p></li>
+<li><p>Switch back into the Activities table and add information about the Locations to the Activity Location and the Institutions columns</p></li>
+</ol>
+<p><img src="images/clinicaltrial6.png" /></p>
+<ol start="15" style="list-style-type: decimal">
+<li><p>Scroll up again to the selection of tabs</p></li>
+<li><p>Click on the Results tab -&gt; it’s worth checking this tab even when it’s called No Results Posted as it might still contain links to publications that are affiliated with the study</p></li>
+<li><p>These links can be copied into the Published Work column in the Activities table</p></li>
+</ol>
+<p><img src="images/clinicaltrial7.png" /></p>
+<ol start="18" style="list-style-type: decimal">
+<li>I also copied the link of the study page on clinicaltrials.gov into the Activity Website column</li>
+</ol>
+<p><img src="images/clinicaltrial8.png" /></p>
+<ol start="19" style="list-style-type: decimal">
+<li>to determine the Research Field, I had to use my own understanding of the study so I am not sure if this can be automated or rather needs to be done by a database librarian</li>
+</ol>
+</div>
+</div>
+<div id="update-public-research" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Public journal/research databases<a href="updates.html#update-public-research" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In order to aid in automation, maintain a list relevant search terms for each topic of interest (stored in the “Topics” table in Airtable). Even if the terms are not used for the purposes of developing a search strategy, they can be used by those who are not subject matter experts when collection information on a specific topic</p>
+<div id="example-of-a-successful-search" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Example of a successful search:<a href="updates.html#example-of-a-successful-search" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>(zoonoses OR zoonotic disease OR zoonotic illness) and (africa*) and (surveillance OR tracking OR sampling)</code></pre>
+<p>The majority of results from this search, when conducted in <a href="https://pubmed.ncbi.nlm.nih.gov/">PubMed</a>, appeared relevant to the database (based on title/abstract scanning)</p>
+</div>
+<div id="example-of-pubmed-search-for-surveillance-activities-for-brucellosis" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Example of PubMed search for surveillance activities for Brucellosis:<a href="updates.html#example-of-pubmed-search-for-surveillance-activities-for-brucellosis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>(&quot;surveillance&quot;[Title/Abstract] OR &quot;prevalence&quot;[Title/Abstract] OR &quot;monitoring&quot;[Title/Abstract] OR &quot;seropositive&quot;[Title/Abstract] OR &quot;seroprevalence&quot;[Title/Abstract] OR &quot;seroevidence&quot;[Title/Abstract] OR &quot;screened&quot;[Title/Abstract] OR &quot;biosurveillance&quot;[Title/Abstract] OR &quot;sampl*&quot;[Title/Abstract]) AND (brucellosis[Title/Abstract] OR &quot;Brucella melitensis&quot;[Title/Abstract] OR &quot;B. melitensis&quot;[Title/Abstract] OR &quot;Brucella abortus&quot;[Title/Abstract] OR &quot;B. abortus&quot;[Title/Abstract])  </code></pre>
+<p>This search yielded a large quantity of results, not all of which were relevant. Manual processes are required to validate results.</p>
+<p>Including terms to filter the results based on location were helpful, but still included results not located on the African continent. Search term to filter for African countries:</p>
+<pre><code>(Djibouti[Title/Abstract] OR Seychelles[Title/Abstract] OR DR Congo[Title/Abstract] OR Comoros[Title/Abstract] OR Togo[Title/Abstract] OR Sierra Leone[Title/Abstract] OR Libya[Title/Abstract] OR Tanzania[Title/Abstract] OR South Africa[Title/Abstract] OR Cabo Verde[Title/Abstract] OR Congo[Title/Abstract] OR Kenya[Title/Abstract] OR Liberia[Title/Abstract] OR Central African Republic[Title/Abstract] OR Mauritania[Title/Abstract] OR Uganda[Title/Abstract] OR Algeria[Title/Abstract] OR Sudan[Title/Abstract] OR Morocco[Title/Abstract] OR Eritrea[Title/Abstract] OR Angola[Title/Abstract] OR Mozambique[Title/Abstract] OR Ghana[Title/Abstract] OR Madagascar[Title/Abstract] OR Cameroon[Title/Abstract] OR Côte d&#39;Ivoire[Title/Abstract] OR Namibia[Title/Abstract] OR Niger[Title/Abstract] OR Gambia[Title/Abstract] OR Botswana[Title/Abstract] OR Gabon[Title/Abstract] OR Sao Tome &amp; Principe[Title/Abstract] OR Lesotho[Title/Abstract] OR Burkina Faso[Title/Abstract] OR Nigeria[Title/Abstract] OR Mali[Title/Abstract] OR Guinea-Bissau[Title/Abstract] OR Malawi[Title/Abstract] OR Zambia[Title/Abstract] OR Senegal[Title/Abstract] OR Chad[Title/Abstract] OR Somalia[Title/Abstract] OR Zimbabwe[Title/Abstract] OR Equatorial Guinea[Title/Abstract] OR Guinea[Title/Abstract] OR Rwanda[Title/Abstract] OR Mauritius[Title/Abstract] OR Benin[Title/Abstract] OR Burundi[Title/Abstract] OR Tunisia[Title/Abstract] OR Eswatini[Title/Abstract] OR Ethiopia[Title/Abstract] OR South Sudan[Title/Abstract] OR Egypt[Title/Abstract]) </code></pre>
+<p>From publications, can extract researchers, institutions, funders, activities. Ideally, researchers, institutions, and funders can be extracted automatically as opposed to manually, but scripts would need to be customized for each journal.</p>
+</div>
+<div id="validation-of-results" class="section level3 hasAnchor" number="6.3.3">
+<h3><span class="header-section-number">6.3.3</span> Validation of results<a href="updates.html#validation-of-results" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Validation of results can be useful to better understand the overlap between publications and activities and determine the priority of searching through publications vs. navigating to institution sites directly (or other strategies).</p>
+<p>After finding a relevant publication, look at the publication’s authors and their respective institutions</p>
+<p>Navigate to institutions’ sites to search for publications or results from research</p>
+<p>Are their activities listed on the site? Are those activities explicitly mentioned in the publications? Etc.</p>
+</div>
+<div id="some-relevant-journalsdatabases" class="section level3 hasAnchor" number="6.3.4">
+<h3><span class="header-section-number">6.3.4</span> Some relevant journals/databases:<a href="updates.html#some-relevant-journalsdatabases" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Zoonoses &amp; Public Health from Wiley Online Library : <a href="https://onlinelibrary.wiley.com/action/doSearch?SeriesKey=18632378&amp;sortBy=Earliest" class="uri">https://onlinelibrary.wiley.com/action/doSearch?SeriesKey=18632378&amp;sortBy=Earliest</a></p></li>
+<li><p>Journal of Public Health in Africa: <a href="https://www.publichealthinafrica.org/jphia/issue/view/30" class="uri">https://www.publichealthinafrica.org/jphia/issue/view/30</a></p></li>
+<li><p>PLoS Journal of Neglected Tropical Diseases: <a href="https://journals.plos.org/plosntds/search?filterJournals=PLoSNTD" class="uri">https://journals.plos.org/plosntds/search?filterJournals=PLoSNTD</a></p></li>
+</ul>
+</div>
+</div>
+<div id="update-gepris" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> GEPRIS<a href="updates.html#update-gepris" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="general-information-1" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> General Information:<a href="updates.html#general-information-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>GEPRIS is a database listing all projects funded by the German Research Foundation (German: Deutsche Forschungsgemeinschaft; abbr. DFG) The DFG is a research funding organisation, which functions as a self-governing institution for the promotion of science and research in the Federal Republic Germany. In 2019, the DFG had a funding budget of €3.3 billion.</p>
+</div>
+<div id="how-to-use" class="section level3 hasAnchor" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> How to Use:<a href="updates.html#how-to-use" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The database can be accessed here: <a href="https://gepris.dfg.de/gepris/OCTOPUS?language=en&amp;task=showSearchSimple" class="uri">https://gepris.dfg.de/gepris/OCTOPUS?language=en&amp;task=showSearchSimple</a></p>
+<p>This link should directly lead to the English version of the website, otherwise the language can be changed by clicking on English in the top right corner.</p>
+<ul>
+<li><p>In the database one can search for Projects, People, or Institutions – for our purpose the project option is the most relevant</p></li>
+<li><p>One can either search for keywords or filter for different criteria – for a systematic approach I found using the filtering options easier than going through all our</p></li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><p>On the search start site stay in the Projects tab.</p></li>
+<li><p>Click on Show extended search.</p></li>
+<li><p>Under Subject Area select one of the following:</p>
+<ul>
+<li><p>Agriculture, Forestry and Veterinary Medicine</p></li>
+<li><p>Basic Research in Biology and Medicine</p></li>
+<li><p>Medicine</p></li>
+<li><p>Microbiology, Virology, and Immunology</p></li>
+<li><p>Social Sciences</p></li>
+<li><p>Water Research</p></li>
+<li><p>Zoology</p></li>
+</ul></li>
+</ol>
+<p><strong>Note:</strong> After working through all these subject areas, any relevant project in the field of One Health should be picked up by the searches</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Leave everything under DFG Programme as it is</p></li>
+<li><p>Move on to Funding and change Status to Current</p></li>
+<li><p>Move on to International and change Continent to Africa</p></li>
+<li><p>Click on Find</p></li>
+<li><p>Read through the project titles on the results page to identify relevant projects</p></li>
+<li><p>Import all the relevant project information (as highlighted on the screenshots) into the Africa CDC database</p></li>
+</ol>
+<p><img src="images/gepris1.png" />
+<img src="images/gepris2.png" /></p>
+<ol start="10" style="list-style-type: decimal">
+<li>To identify the research institutes that are involved in the project one has to click on the researchers names and extract that information from their profile (their affiliation with a research institute is listed there)</li>
+</ol>
+</div>
+<div id="positive-aspects-of-this-source" class="section level3 hasAnchor" number="6.4.3">
+<h3><span class="header-section-number">6.4.3</span> Positive aspects of this source:<a href="updates.html#positive-aspects-of-this-source" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The filtering options allow to filter for several criteria which are crucial for the relevance of a project to our database. That removes a lot of irrelevant projects from the results pages. The project pages list almost all the information we are interested in.</p>
+</div>
+<div id="downsides-of-this-source" class="section level3 hasAnchor" number="6.4.4">
+<h3><span class="header-section-number">6.4.4</span> Downsides of this source:<a href="updates.html#downsides-of-this-source" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The project page doesn’t list the anticipated end date of a project.</p>
+<p>One has to click on the link to the researcher’s profile to identify the participating organisations.</p>
+<p>Even using all the different filtering options not all resulting hits are relevant for our database, so I don’t think the process can be fully automated or at least requires a subsequent manual validation or clean up step to remove irrelevant projects.</p>
+</div>
+</div>
+<div id="update-edctp" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> EDCTP<a href="updates.html#update-edctp" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="general-information-2" class="section level3 hasAnchor" number="6.5.1">
+<h3><span class="header-section-number">6.5.1</span> General Information<a href="updates.html#general-information-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The European &amp; Developing Countries Clinical Trials Partnership (EDCTP) is a non-profit organisation with a European office in The Hague, The Netherlands and an African office in Cape Town, South Africa. EDCTP is a partnership between European Union (EU), Norway, Switzerland, and African countries to accelerate the development of new clinical interventions such as drugs, vaccines, microbicides, and diagnostics against poverty-related diseases in Africa. The organisation supports clinical trials, capacity strengthening and networking in Africa and Europe. Funding comes from the EU, member states, pharmaceutical industry and private organisations and charities like The Wellcome Trust and The Bill &amp; Melinda Gates foundation.</p>
+<p><strong>Note:</strong> Since funding comes from several sources that we also list as sources for populating the database such as the European Union (European Commission), The Wellcome Trust and The Bill &amp; Melinda Gates Foundation, there is the possibility that downloading project information from all these sources into our database could lead to duplicate entries. I created a column in the Actvities table for the Project ID, as this might be helpful to identify duplicates and remove them automatically.</p>
+</div>
+<div id="how-to-use-1" class="section level3 hasAnchor" number="6.5.2">
+<h3><span class="header-section-number">6.5.2</span> How to use:<a href="updates.html#how-to-use-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The database of funded project can be accessed here: <a href="https://www.edctp.org/edctp2-project-portal/" class="uri">https://www.edctp.org/edctp2-project-portal/</a></p>
+<p>There is the option to download the list of projects as a PDF, CSV or XLXS file. Personally, I did not find that helpful for manually adding projects to the database, but it might be useful for an automated process.</p>
+<ol style="list-style-type: decimal">
+<li><p>Go to Status of Project and select the filter Active</p></li>
+<li><p>Go to Classification and select one of the following filters:</p>
+<ul>
+<li>Co-Infections</li>
+<li>COVID-19</li>
+<li>Cysticercosis/Taeniasis<br />
+</li>
+<li>Diagnostics</li>
+<li>Diarrhoeal Diseases</li>
+<li>Drugs</li>
+<li>Emerging Infections, incl. Ebola, Lassa</li>
+<li>Epidemiology</li>
+<li>HIV</li>
+<li>Human African trypanosomiasis (sleeping sickness)<br />
+</li>
+<li>Implementation Research<br />
+</li>
+<li>Leishmaniases</li>
+<li>Leprosy (Hansen disease)</li>
+<li>Lower respiratory infections<br />
+</li>
+<li>Lymphatic filariasis</li>
+<li>Malaria</li>
+<li>Microbicides</li>
+<li>Onchocerciasis (river blindness)</li>
+<li>Rabies</li>
+<li>Schistosomiasis</li>
+<li>Soil-transmitted helminthiasis<br />
+</li>
+<li>Social Science</li>
+<li>Tuberculosis</li>
+<li>Vaccines</li>
+<li>Yaws</li>
+<li>Yellow Fever</li>
+</ul></li>
+</ol>
+<p><strong>Note:</strong> Only one Classification at a time can be selected</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Once one Classification was selected click on search</p></li>
+<li><p>Change from Show Map to Show List -&gt; this makes it easier to systematically look through the projects</p></li>
+<li><p>On the results list you can see the location of the coordinating organisation, but even if it is not in an African country, it is worth checking the project details for the Participating Organisations. So read the project title and decide whether this could be a relevant project, if so, click on View details</p></li>
+</ol>
+<p><img src="images/edctp1.png" /></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Check the Participating Organisations first to decide whether the project is relevant to our database:</li>
+</ol>
+<p><img src="images/edctp2.png" /></p>
+<ol start="7" style="list-style-type: decimal">
+<li><p>If the project is relevant use the Project Name + Acronym for the Activity Column</p></li>
+<li><p>Transfer all the relevant information to our database, including Project ID, Start and End date, Participating Organisations and corresponding locations, Project Website, Coordinating Organisation and Coordinating Researcher</p></li>
+<li><p>Tag the project with the correct keywords in the Activity Type, Activity Outputs, Target Species, Topic, and Research Field columns based on your understanding of the project abstract</p></li>
+</ol>
+</div>
+<div id="benefits-of-this-source" class="section level3 hasAnchor" number="6.5.3">
+<h3><span class="header-section-number">6.5.3</span> Benefits of this Source:<a href="updates.html#benefits-of-this-source" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The projects can be easily filtered for currently active projects.</p>
+<p>The EDCTP is specifically focused on projects in Africa or Europe with African collaborators so most projects fulfil at least one of our selection criteria</p>
+<p>A lot of the projects (not all) are also topic-wise relevant for our database</p>
+<p>The database lists most of the information that we are interested in for our database</p>
+</div>
+<div id="shortcomings-of-this-source" class="section level3 hasAnchor" number="6.5.4">
+<h3><span class="header-section-number">6.5.4</span> Shortcomings of this source:<a href="updates.html#shortcomings-of-this-source" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Only one disease/topic can be selected at a time so sequential searches are necessary</p>
+<p>Project details only list the Coordinating researcher but no other lead researchers at the participating organisations</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="sources.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="survey.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ecohealthalliance/rig-handbook/edit/dev/05-updates.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

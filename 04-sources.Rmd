@@ -1,0 +1,38 @@
+# Sources {#sources}
+
+Following is an initial list of sources of information used for the RIG database. 
+
+The initial search performed was non-systematic and focused primarily on a known funder of global research related/relevant to the topics of interest for the database . The main aim of focusing first on this limited and focused search was to get a sense of what information is available from such bodies/organisations, and the limitations of the information available. This is based on an initial idea that research funders would tend to have a system of collecting/archiving information on research they have funded. The expectation was that at the minimum, the information available from funders would lead to identifying further sources of information relevant to the ACDC database specifically those of research groups/institutions particularly those based in countries/regions within Africa. This initial search will hopefully inform a more systematic and informed search strategy for the database information.
+
+## UKRI {#ukri}
+
+[UK Research and Innovation or UKRI](https://www.ukri.org/) is a non-departmental public body in the United Kingdom that was established in 2018. It brings together the seven UK Research Councils, [Innovate UK](https://www.ukri.org/councils/innovate-uk/), and [Research England](https://www.ukri.org/councils/research-england/), which were previously separate organizations, to create a single body that oversees research and innovation funding and strategy in the UK.
+
+The seven UK Research Councils are:
+
+1. Arts and Humanities Research Council (AHRC)
+2. Biotechnology and Biological Sciences Research Council (BBSRC)
+3. Engineering and Physical Sciences Research Council (EPSRC)
+4. Economic and Social Research Council (ESRC)
+5. Medical Research Council (MRC)
+6. Natural Environment Research Council (NERC)
+7. Science and Technology Facilities Council (STFC)
+
+Innovate UK is the UK's innovation agency, which provides funding and support for innovative businesses and projects.
+
+Research England is responsible for funding and overseeing research in English universities and higher education institutions.
+
+UKRI's main role is to drive innovation and research in the UK and to support research and development that benefits society and the economy. It funds research projects, provides support to researchers, promotes international collaboration, and works to ensure that research and innovation are integrated with government policies and priorities.
+
+Of these various groups within UKRI, we further focused on the [Biotechnology and Biological Sciences Research Council (BBSRC)](https://www.ukri.org/councils/bbsrc/), [Medical Research Council (MRC)](https://www.ukri.org/councils/mrc/), [Science and Technology Facilities Council (STFC)](https://www.ukri.org/councils/stfc/), [Innovate UK](https://www.ukri.org/councils/innovate-uk/), and [Research England](https://www.ukri.org/councils/research-england/).
+
+## Wellcome Trust {#wellcome}
+
+The Wellcome Trust is a charitable foundation focused on health research based in London, in the United Kingdom. It was established in 1936 with legacies from the pharmaceutical magnate [Henry Wellcome](https://en.wikipedia.org/wiki/Henry_Wellcome) to fund research to improve human and animal health. The aim of the Trust is to *“support science to solve the urgent health challenges facing everyone."*. In 2012, the Wellcome Trust was described as the United Kingdom's largest provider of non-governmental funding for scientific research, and one of the largest providers in the world.
+
+## National Insitutes of Health {#nih}
+
+## National Science Foundation {#nsf}
+
+## Defense Advanced Research Projects Agency {#darpa}
+
