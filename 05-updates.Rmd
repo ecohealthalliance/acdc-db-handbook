@@ -10,7 +10,7 @@ Following are the source-specific process of updating or retrieving information 
 
 ### General Information
 
-The Wellcome Trust is very transparent about its funding efforts and makes information about its funded projects available in several ways including on their own website and the World RePORT: (https://worldreport.nih.gov/wrapp/#/search?searchId=62a70c4bfe43c863cea97f29). I found the downloadable spreadsheet of funds awarded between 01st of October 2005 and 4th of May 2022 the most useful: https://cms.wellcome.org/sites/default/files/2022-05/Wellcome-grants-awarded-1-October-2005-to-04-05-2022.xlsx
+Using the downloadable spreadsheet of funds awarded between 01st of October 2005 and 4th of May 2022 found at https://cms.wellcome.org/sites/default/files/2022-05/Wellcome-grants-awarded-1-October-2005-to-04-05-2022.xlsx, the following steps were taken to retrieve relevant information for the database:
 
 ### How to update
 
