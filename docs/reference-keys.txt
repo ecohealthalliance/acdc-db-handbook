@@ -43,6 +43,11 @@ wellcome
 nih
 nsf
 darpa
+clinicaltrials.gov
+gepris
+edctp
+glopidr
+nrfza
 updates
 update-wellcome
 general-information

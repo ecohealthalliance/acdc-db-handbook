@@ -1,1 +1,1 @@
-# The Research Information Gateway (RIG) Hanbook
+# The Research Information Gateway (RIG) Handbook

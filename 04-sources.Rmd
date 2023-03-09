@@ -28,11 +28,86 @@ Of these various groups within UKRI, we further focused on the [Biotechnology an
 
 ## Wellcome Trust {#wellcome}
 
-The Wellcome Trust is a charitable foundation focused on health research based in London, in the United Kingdom. It was established in 1936 with legacies from the pharmaceutical magnate [Henry Wellcome](https://en.wikipedia.org/wiki/Henry_Wellcome) to fund research to improve human and animal health. The aim of the Trust is to *“support science to solve the urgent health challenges facing everyone."*. In 2012, the Wellcome Trust was described as the United Kingdom's largest provider of non-governmental funding for scientific research, and one of the largest providers in the world.
+The Wellcome Trust is a global charitable foundation based in the UK. It was established in 1936 by Sir Henry Wellcome, a pharmaceutical entrepreneur and philanthropist. The Wellcome Trust is one of the largest charitable organizations in the world, with an endowment of over £29 billion.
+
+The Trust's mission is to improve health by supporting scientists, researchers, and innovators in their work to understand, treat, and prevent disease. The Trust funds research in areas such as neuroscience, genetics, infectious diseases, and global health. It also provides support for public engagement with science, education and training for scientists, and the translation of research into practical applications that benefit patients and communities.
+
+The Wellcome Trust is known for its long-term, strategic approach to funding research, and for its commitment to open science and data sharing. It also operates the Wellcome Collection, a public venue in London that hosts exhibitions and events related to health, medicine, and science.
 
 ## National Insitutes of Health {#nih}
 
+The National Institutes of Health (NIH) is a biomedical research agency of the United States federal government. It is the largest biomedical research institution in the world, with its main campus located in Bethesda, Maryland. The NIH is composed of 27 separate institutes and centers, each with a specific research focus, and is responsible for conducting and funding research in a wide range of areas, including cancer, genetics, infectious diseases, and neuroscience.
+
+The NIH was founded in 1887 as the Hygienic Laboratory and was later renamed the National Institutes of Health in 1930. Today, it is one of the world's foremost centers for medical research, with a mission to seek fundamental knowledge about the nature and behavior of living systems and to apply that knowledge to enhance health, lengthen life, and reduce illness and disability. The NIH is funded by the U.S. government through the Department of Health and Human Services and operates under the direction of the Office of the Director.
+
 ## National Science Foundation {#nsf}
+
+The National Science Foundation (NSF) is an independent federal agency of the United States government that supports fundamental research and education across all fields of science and engineering. The NSF was established by the National Science Foundation Act of 1950 and has a budget of around $8 billion.
+
+The NSF funds research and education in areas such as mathematics, computer science, physics, chemistry, biology, social sciences, and engineering. It supports individual researchers, small teams, and large interdisciplinary research collaborations through a competitive, merit-based process of proposal submission and review. The NSF also supports the development of science, technology, engineering, and mathematics (STEM) education at all levels, from K-12 through graduate education.
+
+The NSF operates through several directorates and offices, each with a specific research focus or mission, such as the Directorate for Biological Sciences, the Directorate for Social, Behavioral and Economic Sciences, and the Office of Polar Programs. The NSF works to advance scientific discovery, promote science education and outreach, and promote innovation and economic growth through its investments in research and education.
 
 ## Defense Advanced Research Projects Agency {#darpa}
 
+The Defense Advanced Research Projects Agency is a research and development agency of the United States Department of Defense that is responsible for the development of emerging technologies for use by the military.
+
+DARPA was established in 1958 in response to the Soviet Union's launch of Sputnik, the first artificial satellite, and has been involved in a number of high-profile technological innovations, including the development of the Internet, GPS, and stealth technology.
+
+DARPA's mission is to maintain the technological superiority of the U.S. military by sponsoring and conducting research in a wide range of fields, including artificial intelligence, robotics, biotechnology, materials science, and aerospace technology. DARPA works with academic researchers, private companies, and other government agencies to develop and test new technologies, and it is known for its high-risk, high-reward approach to research and development.
+
+Some of DARPA's current research initiatives include the development of hypersonic weapons, the creation of autonomous drone swarms, and the development of brain-machine interfaces for use in treating neurological disorders. DARPA's work has had significant impacts on both military and civilian technology, and the agency is seen as a leader in cutting-edge research and development.
+
+## ClinicalTrials.gov
+
+ClinicalTrials.gov is a publicly accessible database of clinical trials that are being conducted worldwide. It is maintained by the National Library of Medicine, a part of the National Institutes of Health (NIH) in the United States.
+
+The database provides information on clinical trials for a wide range of diseases and conditions, including both interventional and observational studies. It includes information about the purpose of the trial, who may participate, where the trial is being conducted, and the status of the trial, such as whether it is recruiting participants or has been completed.
+
+ClinicalTrials.gov was created in response to a 1997 law requiring the registration of clinical trials for certain serious or life-threatening diseases or conditions. Since then, the database has grown to include information on thousands of trials from around the world.
+
+ClinicalTrials.gov is an important resource for researchers, healthcare professionals, and members of the public who are interested in clinical research. It can be used to identify ongoing or completed trials, learn about the purpose and design of a study, and find out how to participate in a trial. It also serves as a platform for researchers to share their results and comply with the requirements of various funding agencies and regulatory bodies.
+
+## GEPRIS {#gepris}
+
+Geförderte Projekte in der Forschung und Entwicklung (Funded Projects in Research and Development) or GEPRIS is an online database of research projects funded by the German Research Foundation (DFG).
+
+The DFG is the largest independent research funding organization in Germany and funds projects across all scientific disciplines, from the humanities and social sciences to the natural and life sciences. GEPRIS provides information about the projects that the DFG has funded, including their aims, methods, and outcomes, as well as the institutions and researchers involved.
+
+Researchers and members of the public can use GEPRIS to search for projects that have been funded by the DFG, and to access information about these projects. The database includes information about ongoing and completed projects, and users can search by various criteria, such as by researcher name, institution, scientific discipline, or project title.
+
+GEPRIS is a valuable tool for researchers to identify potential collaborators, explore research trends, and find information about the funding landscape in their field. It is also useful for members of the public who are interested in learning about the research being conducted in Germany and the impact of this research on society.
+
+## EDCTP {#edctp}
+
+European and Developing Countries Clinical Trials Partnership or EDCTP is a public-public partnership between countries in Europe and sub-Saharan Africa, established in 2003, with the aim of accelerating the development of new clinical interventions to fight infectious diseases that disproportionately affect Africa.
+
+The partnership's mission is to improve the health of people in Africa by supporting the development of new medicines, vaccines, and other health interventions to prevent and treat diseases such as HIV/AIDS, tuberculosis, malaria, and neglected infectious diseases. EDCTP supports collaborative research projects that bring together scientists, institutions, and countries from both regions to conduct clinical trials and other research activities.
+
+EDCTP works with a range of partners, including national governments, research institutions, civil society organizations, and the private sector, to support research that is relevant and responsive to the needs of African communities. It also provides training and capacity-building opportunities to support the development of sustainable health research infrastructure and expertise in Africa.
+
+The partnership is funded by the European Union, its member states, and other donors. Since its inception, EDCTP has supported over 100 collaborative research projects and played a key role in advancing the development of new interventions for infectious diseases that affect the people of Africa.
+
+## GLOPID-R {#glopidr}
+
+Global Research Collaboration for Infectious Disease Preparedness or GLOPID-R is an international partnership that aims to strengthen global research efforts in the field of infectious disease preparedness. The partnership was established in response to the 2014 Ebola outbreak in West Africa, which highlighted the need for improved global coordination and collaboration in research and development for emerging and re-emerging infectious diseases.
+
+GLOPID-R brings together stakeholders from the global health community, including research funders, policy-makers, researchers, and public health organizations. The partnership aims to promote international cooperation and coordination in research to accelerate the development of new tools and approaches to prevent, detect, and respond to infectious disease outbreaks.
+
+GLOPID-R's main objectives include identifying research priorities for infectious disease preparedness, coordinating research efforts across different regions and countries, and promoting capacity building and knowledge exchange to strengthen global health research infrastructure.
+
+The partnership focuses on a range of infectious diseases, including those caused by emerging and re-emerging pathogens, neglected tropical diseases, and antimicrobial resistance. It works to support research efforts across the entire spectrum of infectious disease preparedness, from basic research to clinical trials and implementation research.
+
+GLOPID-R is supported by a range of funding agencies and partners from around the world and is seen as an important platform for promoting global cooperation and collaboration in infectious disease research and preparedness.
+
+## NRF South Africa {#nrfza}
+
+The National Research Foundation of South Africa (NRF) is an independent organization that promotes and supports research and innovation in all fields of science, engineering, technology, and social sciences in South Africa. The NRF was established in 1999 through the National Research Foundation Act and operates under the jurisdiction of the Department of Science and Innovation.
+
+The NRF provides funding, develops policies, and manages research infrastructure to support South African researchers and institutions. It also fosters international collaboration in research, and supports the training and development of the next generation of researchers through various funding and fellowship schemes.
+
+The NRF provides funding through a number of programs, including competitive grants, fellowships, and research chairs. It also supports the development of research infrastructure and the establishment of research centers of excellence.
+
+In addition to providing funding and support for research, the NRF plays a key role in developing research policies and strategies at the national level. It advises the South African government on research priorities and is involved in various initiatives aimed at promoting science, technology, and innovation in the country.
+
+The NRF is an important organization for the South African research community and has been instrumental in advancing the country's research and innovation capabilities. Its funding and support have contributed to numerous scientific discoveries and innovations in a wide range of fields, including health, energy, and the environment.
