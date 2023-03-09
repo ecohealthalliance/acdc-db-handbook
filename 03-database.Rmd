@@ -4,5 +4,7 @@ The current database is built using [Airtable](https://airtable.com). The curren
 
 ![](images/database_schema.png)
 
+## Data dictionary {#data-dictionary}
+
 
 
