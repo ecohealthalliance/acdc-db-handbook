@@ -224,7 +224,6 @@ create_data_dictionary(metadata = airtable_metadata, table = "Topics") |>
   kableExtra::kable_paper(lightable_options = "striped")
 ```
 
-
 ## WHO Countries Table {#who-countries-table}
 
 ### Table details
