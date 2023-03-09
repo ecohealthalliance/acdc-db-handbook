@@ -61,6 +61,86 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
+\usepackage{color}
+\usepackage{tcolorbox}
+\usepackage{float}
+\graphicspath{ {images/} }
+
+\newenvironment{rmdremind}
+  {\begin{tcolorbox}[width=\textwidth, 
+                     colback = {white}, 
+                     title = {\textbf{Remember}}, 
+                     colbacktitle = lightgray,
+                     coltitle = black]
+  \begin{includegraphics}[scale = 1]{remind.png}
+  \begin{itemize}}
+  {\end{itemize}
+  \end{includegraphics}
+  \end{tcolorbox}}
+
+\newenvironment{rmdnote}
+  {\begin{tcolorbox}[width=\textwidth, 
+                     colback = {white}, 
+                     title = {\textbf{Note}}, 
+                     colbacktitle = lightgray,
+                     coltitle = black]
+  \begin{includegraphics}[scale = 1]{pencil.png}}
+  {\end{includegraphics}
+  \end{tcolorbox}}
+  
+\newenvironment{rmdexercise}
+  {\begin{tcolorbox}[width=\textwidth, 
+                     colback = {white}, 
+                     title = {\textbf{Exercise}}, 
+                     colbacktitle = lightgray,
+                     coltitle = black]
+  \begin{includegraphics}[scale = 1]{exercise.png}}
+  {\end{includegraphics}
+  \end{tcolorbox}}
+  
+\newenvironment{rmdinfo}
+  {\begin{tcolorbox}[width=\textwidth, 
+                     colback = {white}, 
+                     title = {\textbf{Info}}, 
+                     colbacktitle = lightgray,
+                     coltitle = black]
+  \begin{includegraphics}[scale = 1]{info.png}}
+  {\end{includegraphics}
+  \end{tcolorbox}}  
+  
+\newenvironment{rmdwarning}
+  {\begin{tcolorbox}[width=\textwidth, 
+                     colback = {white}, 
+                     title = {\textbf{Warning}}, 
+                     colbacktitle = lightgray,
+                     coltitle = black]
+  \begin{includegraphics}[scale = 1]{warning.png}}
+  {\end{includegraphics}
+  \end{tcolorbox}}
+
+\newenvironment{rmddownload}
+  {\begin{tcolorbox}[width=\textwidth, 
+                     colback = {white}, 
+                     title = {\textbf{Download}}, 
+                     colbacktitle = lightgray,
+                     coltitle = black]
+  \begin{includegraphics}[scale = 1]{download.png}}
+  {\end{includegraphics}
+  \end{tcolorbox}}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -477,8 +557,524 @@ The current database is built using \href{https://airtable.com}{Airtable}. The c
 
 \includegraphics{images/database_schema.png}
 
-\hypertarget{data-dictionary}{%
-\section{Data dictionary}\label{data-dictionary}}
+\hypertarget{activities-table}{%
+\section{Activities Table}\label{activities-table}}
+
+\hypertarget{table-details}{%
+\subsection{Table details}\label{table-details}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l}
+\hline
+\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
+\hline
+tbl7emmSomJjnOUQX & Activities & Research activities relevant to the ACDC database\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{fields-details}{%
+\subsection{Fields details}\label{fields-details}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l|l}
+\hline
+\textbf{Field Name} & \textbf{Field Description} & \textbf{Field Type} & \textbf{Field Values}\\
+\hline
+Activity & Activity name & singleLineText & NA\\
+\hline
+Source Name (from Primary Sources) & Name of primary source & multipleLookupValues & NA\\
+\hline
+Notes & Internal notes for maintenance & singleLineText & NA\\
+\hline
+Topic & Activity Topic & multipleRecordLinks & Topics\\
+\hline
+Grant ID & Grand Identifier & singleLineText & NA\\
+\hline
+Collaborators & Activity collaborators & multipleRecordLinks & Institutions\\
+\hline
+Researchers & Researchers involved in activity & multipleRecordLinks & Researchers\\
+\hline
+Published Work & Links to published work & singleLineText & NA\\
+\hline
+Activity Outputs & Activity Outputs & multipleSelects & Data, Publication, Report, Guideline/SOP, Archive, Improving Diagnostics, Vaccine development, Therapeutics, Epidemic/Pandemic Preparedness, Biosurveillance technology, Prophylaxis, Surveillance, Improving Vaccine strategies, Training, Risk Assessment, Improving Capacity, Policies\\
+\hline
+Activity Status & Activity Status & singleSelect & Active, Completed\\
+\hline
+Activity Website & Activity Website & url & NA\\
+\hline
+Activity Identifier & Activity identifier & formula & NA\\
+\hline
+Primary Sources & Primary source of information & multipleRecordLinks & Sources\\
+\hline
+Additional Sources & Additional sources & singleLineText & NA\\
+\hline
+Region (from Activity Location) & Region location & multipleLookupValues & NA\\
+\hline
+Activity Location & Activity location & multipleRecordLinks & AU Countries\\
+\hline
+Target Species & Target Species & multipleSelects & Humans, Wildlife, Livestock, Vector, Plants, Intermediate Host\\
+\hline
+Institutions & Institution within which activity is being implemented & multipleRecordLinks & Institutions\\
+\hline
+Activity End Date & Activity End Date & date & NA\\
+\hline
+Created By & Person who created the entry & createdBy & NA\\
+\hline
+Disease Types (from Topic) & Disease types & multipleLookupValues & NA\\
+\hline
+Activity Start Date & Activity Start Date & date & NA\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{au-countries-table}{%
+\section{AU Countries Table}\label{au-countries-table}}
+
+\hypertarget{table-details-1}{%
+\subsection{Table details}\label{table-details-1}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l}
+\hline
+\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
+\hline
+tblys7SnjkW4IVY0g & AU Countries & List of Africa Union Countries\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{fields-details-1}{%
+\subsection{Fields details}\label{fields-details-1}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l|l}
+\hline
+\textbf{Field Name} & \textbf{Field Description} & \textbf{Field Type} & \textbf{Field Values}\\
+\hline
+Survey Results & NA & multipleRecordLinks & Survey Results\\
+\hline
+Country & Full name of country as per WHO/UN nomenclature & singleLineText & NA\\
+\hline
+Topic (from Activities) & Name of topic identified to the region & multipleLookupValues & NA\\
+\hline
+Activities & Name of activities identified in the region & multipleRecordLinks & Activities\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{au-regions-table}{%
+\section{AU Regions Table}\label{au-regions-table}}
+
+\hypertarget{table-details-2}{%
+\subsection{Table details}\label{table-details-2}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l}
+\hline
+\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
+\hline
+tblMEovpjJLMWeCoY & AU Regions & List of Africa Union regions\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{fields-details-2}{%
+\subsection{Fields details}\label{fields-details-2}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l|l}
+\hline
+\textbf{Field Name} & \textbf{Field Description} & \textbf{Field Type} & \textbf{Field Values}\\
+\hline
+AU Countries & Countries within the region based on Africa Union classification & multipleRecordLinks & AU Countries\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{description-table}{%
+\section{Description Table}\label{description-table}}
+
+\hypertarget{table-details-3}{%
+\subsection{Table details}\label{table-details-3}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l}
+\hline
+\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
+\hline
+tblwapW8nMmUv74GM & Description & NA\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{field-details}{%
+\subsection{Field details}\label{field-details}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l|l}
+\hline
+\textbf{Field Name} & \textbf{Field Description} & \textbf{Field Type} & \textbf{Field Values}\\
+\hline
+Email & Email for primary contact & email & NA\\
+\hline
+Primary Contact & Person to correspond with about the base & singleLineText & NA\\
+\hline
+IRB & Optional: Link to IRB & url & NA\\
+\hline
+Base Description & Characterization of the base. What is the base describing? & multilineText & NA\\
+\hline
+Title & Title of the base & singleLineText & NA\\
+\hline
+Data Management Plan & Link to data management plan & url & NA\\
+\hline
+Code Repository & Optional: Link to github repo & url & NA\\
+\hline
+IACUC & Optional: Link to IACUC & singleLineText & NA\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{funders-table}{%
+\section{Funder Table}\label{funders-table}}
+
+\hypertarget{table-details-4}{%
+\subsection{Table details}\label{table-details-4}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l}
+\hline
+\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
+\hline
+tblDQVkAy8ROTYfFS & Funders & Funding bodies or grant providers relevant to ACDC database\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{field-details-1}{%
+\subsection{Field details}\label{field-details-1}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l|l}
+\hline
+\textbf{Field Name} & \textbf{Field Description} & \textbf{Field Type} & \textbf{Field Values}\\
+\hline
+Funder Type & Type of funder & singleSelect & Charitable organization, Foundation, Pharmaceutical company , Not-for-profit Partnership, NGO, Government Agency, University, Research Institut, Public- public partnership , Public-private partnership\\
+\hline
+Funder Website & Website of funder & url & NA\\
+\hline
+Source Name (from Primary Sources) & Source from where funder was identified & multipleLookupValues & NA\\
+\hline
+Activities & Activities supported by funder & multipleRecordLinks & Activities\\
+\hline
+Primary Sources & Source from where funder was identified & multipleRecordLinks & Sources\\
+\hline
+Funder Email & Email of funder & email & NA\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{institutions-table}{%
+\section{Institutions Table}\label{institutions-table}}
+
+\hypertarget{table-details-5}{%
+\subsection{Table details}\label{table-details-5}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l}
+\hline
+\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
+\hline
+tbldEkEN1kqPi0cx2 & Institutions & Institutions relevant to the ACDC database\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{field-details-2}{%
+\subsection{Field details}\label{field-details-2}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l|l}
+\hline
+\textbf{Field Name} & \textbf{Field Description} & \textbf{Field Type} & \textbf{Field Values}\\
+\hline
+Institution Email & Email of institution & email & NA\\
+\hline
+Institution Website & Institution Website & url & NA\\
+\hline
+Activities & Name of activity identified with institution & multipleRecordLinks & Activities\\
+\hline
+Sources & Name of primary source & multipleRecordLinks & Sources\\
+\hline
+Institution Type & Institution Type & singleSelect & Research Institute, University, NGO, National Government Institution, Non-profit Organisation , Hospital, Government Agency, Consortium, Partnership of Institutes, Industry, Charity, Public-private partnetship, International Coalition , Inter-governmental Organisation, Medical Service Provider\\
+\hline
+Institution Location & Institution location & multipleRecordLinks & WHO Countries\\
+\hline
+Notes & Internal notes (for maintenance) & singleLineText & NA\\
+\hline
+Topic (from Activities) & Name of topic identified with the institution & multipleLookupValues & NA\\
+\hline
+Institution Name & Institution Name & singleLineText & NA\\
+\hline
+Activities 2 & Additional activities identified with institution & multipleRecordLinks & Activities\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{researchers-table}{%
+\section{Researchers Table}\label{researchers-table}}
+
+\hypertarget{table-details-6}{%
+\subsection{Table details}\label{table-details-6}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l}
+\hline
+\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
+\hline
+tblt9ott045tWENcg & Researchers & List of researchers identified/found relevant to the ACDC database\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{field-details-3}{%
+\subsection{Field details}\label{field-details-3}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l|l}
+\hline
+\textbf{Field Name} & \textbf{Field Description} & \textbf{Field Type} & \textbf{Field Values}\\
+\hline
+ACDC Status & Is researcher from the Africa CDC? & singleSelect & Non-member, Member\\
+\hline
+Sources & Name of source & multipleRecordLinks & Sources\\
+\hline
+Affiliation & Institution researcher is affiliated with. Choices from the institutions table & multipleRecordLinks & Institutions\\
+\hline
+Topic (from Activity) & Name of topic & multipleLookupValues & NA\\
+\hline
+Researcher Name & Full name of researcher identified in the search & singleLineText & NA\\
+\hline
+Notes & Internal notes (for maintenance) & singleLineText & NA\\
+\hline
+Source Name (from Sources) & Name of source & multipleLookupValues & NA\\
+\hline
+Additional Sources & Additional sources & singleLineText & NA\\
+\hline
+Activity Type (from Activity) & Type of activity & multipleLookupValues & NA\\
+\hline
+Website & Personal website of researcher (if any) & singleLineText & NA\\
+\hline
+Activity & Activity/activities researchers is involved in & multipleRecordLinks & Activities\\
+\hline
+Institution Location (from Affiliation) & Name of location where institution is based & multipleLookupValues & NA\\
+\hline
+Willing to be contacted & Is the researcher willing to be contacted? & checkbox & NA\\
+\hline
+Expertise & Topic which researcher is considered an expert on. Choices selected from the topics table & multipleRecordLinks & Topics\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{sources-table}{%
+\section{Sources Table}\label{sources-table}}
+
+\hypertarget{table-details-7}{%
+\subsection{Table details}\label{table-details-7}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l}
+\hline
+\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
+\hline
+tbl71q8ghTcqTybtf & Sources & Sources of relevant information for the ACDC database\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{field-details-4}{%
+\subsection{Field details}\label{field-details-4}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l|l}
+\hline
+\textbf{Field Name} & \textbf{Field Description} & \textbf{Field Type} & \textbf{Field Values}\\
+\hline
+Source Type & Type of primary source & singleSelect & Website text page, Website table, Website search, Downloadable document in PDF, Downloadable document in XLSX, Downloadable document in CSV, Downloadable document in DOCX, A form of database, Website text page, Website search, Links to downloadable documents in PDF, Website table, Website search\\
+\hline
+Source Notes & Internal notes for primary source (for maintenance) & multilineText & NA\\
+\hline
+Topics & Topics identified from primary source & multipleRecordLinks & Topics\\
+\hline
+Relevant tables & Notes on relevant tables found from primary source & multipleSelects & Researchers, Topics, Activities, Funders, Institutions, Countries\\
+\hline
+Funders & Funders identified from primary source & multipleRecordLinks & Funders\\
+\hline
+Source Name & Name of primary source & singleLineText & NA\\
+\hline
+Created By & Person who created the entry & createdBy & NA\\
+\hline
+Researchers & Name of researcher identified from primary source & multipleRecordLinks & Researchers\\
+\hline
+Institutions & Institution identified from primary source & multipleRecordLinks & Institutions\\
+\hline
+Fruitful? & Was source relevant/contributory? & singleSelect & Yes, No, Partially, Not reviewed yet\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{survey-results-table}{%
+\section{Survey Results Table}\label{survey-results-table}}
+
+\hypertarget{table-details-8}{%
+\subsection{Table details}\label{table-details-8}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l}
+\hline
+\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
+
+
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{field-details-5}{%
+\subsection{Field details}\label{field-details-5}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l|l}
+\hline
+\textbf{Field Name} & \textbf{Field Description} & \textbf{Field Type} & \textbf{Field Values}\\
+\hline
+Activity description/ purpose & Description of activity & multilineText & NA\\
+\hline
+Sharing with Colleagues & Is respondent going to share with colleagues? & singleLineText & NA\\
+\hline
+Lead Researcher & Name of lead researcher & singleLineText & NA\\
+\hline
+Created By & Name of survey respondent & createdBy & NA\\
+\hline
+Other websites listing this project & Other website listings for this project & singleLineText & NA\\
+\hline
+Funder & Name of funder for this project & singleLineText & NA\\
+\hline
+Official Project Title & Official project title & singleLineText & NA\\
+\hline
+Official Project website & Official project website & singleLineText & NA\\
+\hline
+Type of Activity & Activity type & multipleSelects & Surveillance, Clinical Trial, Basic Science, Behavioural Science, Epidemiology , Other\\
+\hline
+Disease & Name of disease relevant to activity/project & multipleRecordLinks & Topics\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{topics-table}{%
+\section{Topics Table}\label{topics-table}}
+
+\hypertarget{table-details-9}{%
+\subsection{Table details}\label{table-details-9}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l}
+\hline
+\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
+\hline
+tblIyWqnGcVE4mGRg & Topics & Research fields/expertise relevant to the ACDC database\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{field-details-6}{%
+\subsection{Field details}\label{field-details-6}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l|l}
+\hline
+\textbf{Field Name} & \textbf{Field Description} & \textbf{Field Type} & \textbf{Field Values}\\
+\hline
+Sources & Name of Source & multipleRecordLinks & Sources\\
+\hline
+Diseases & Disease entity related/relevant to the field/topic of interest & multipleSelects & HIV, TB, COVID-19, Monkeypox, Lassa fever, Bat flu, Avian flu, Swine flu, Ebola virus disease, Marburg virus disease, Marburg haemorrhagic fever, H7N9, H5N1, H1N1, H1N2, H3N2, Plague, Anthrax, Crimean-Congo Haemorrhagic Fever, Rift Valley Fever, Nipah Virus, Brucellosis, undulant fever, Malta fever, Mediterranean fever, Hantavirus haemorrhagic fever with renal syndrome, Hantavirus pulmonary syndrome, Q fever, Chikungunya, Henipavirus, Ghanaian bat henipavirus, Leptospirosis, Weill's disease, West Nile Fever, Zika fever, Dengue fever, African trypanosomiasis, Chagas disease, Yellow fever, Malaria, Re-emerging viruses, Visceral Leishmaniasis, Kala-azar, Cutaneous leishmaniasis , Hepatitis E , Viral Hepatitis, Hepatitis C, Hepatitis B, Leprosy, Hookworm, Schistosomiasis, Ascariasis, Trichuriasis, Lymphatic filariasis, Trachoma, Buruli ulcer, Dracunculiasis, Bilharzia, Whipworm Infection, Elephantiasis, Guinea-worm disease , Burkitt lymphoma, Cryptococcal meningitis, Kaposi sarcoma, schistosomiasis, Viral haemorrhagic fever, Rabies\\
+\hline
+Activity Location (from Activities) & Name of location of activity in which topic was identified & multipleLookupValues & NA\\
+\hline
+Survey Results & Results from survey & multipleRecordLinks & Survey Results\\
+\hline
+Search terms & Search terms used to identify topic & multipleSelects & antimycobacterial, anti-mycobacterial, COVID-19, coronavirus, omicron, rifampicin, ritonavir, darunavir, dolutegravir, MIS-C, HVTN, ART, antiretroviral, lopinavir, bedaquiline, clofazimine, isoniazid, pyrazinamide, antitubercular, tenofovir disoproxil fumarate, emtricitabine, dolutegravir , efavirenz, tubercular, drug-resistant, AMR, raltegravir, DR-, DR-TB, helminth, TBM, fluke, wildlife sampling, biosurveillance, surveillance network, seroprevalence, detection of \_\_, monitoring of \_\_, seroevidence, identification of \_\_, seropositive, seroepidemiological, survey, screened, \_\_ prevalence\\
+\hline
+Disease Types & Type/category to which disease is grouped under & multipleSelects & infectious disease, viral, bacterial, parasitic, vector-bourne, zoonotic, virus, soil-transmitted\\
+\hline
+Institutions & Institutions & multipleRecordLinks & Institutions\\
+\hline
+Region (from Activity Location) (from Activities) & Name of region where topic was identified & multipleLookupValues & NA\\
+\hline
+Source Name (from Sources) & Name of source & multipleLookupValues & NA\\
+\hline
+Topic Name & Field or topic of interest relevant to infectious disease and other relevant fields & singleLineText & NA\\
+\hline
+Activities & Name of activity in which topic was identified & multipleRecordLinks & Activities\\
+\hline
+Researchers & Name of researcher identified with the topic & multipleRecordLinks & Researchers\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{who-countries-table}{%
+\section{WHO Countries Table}\label{who-countries-table}}
+
+\hypertarget{table-details-10}{%
+\subsection{Table details}\label{table-details-10}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l}
+\hline
+\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
+\hline
+tblWRh0rWAuXODyb7 & WHO Countries & List of WHO countries\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{field-details-7}{%
+\subsection{Field details}\label{field-details-7}}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l|l|l}
+\hline
+\textbf{Field Name} & \textbf{Field Description} & \textbf{Field Type} & \textbf{Field Values}\\
+\hline
+Funders & Name of funder identified in the specific country & multipleRecordLinks & Funders\\
+\hline
+Institutions & Name of institution identified in the specific country & multipleRecordLinks & Institutions\\
+\hline
+Country name & Short name of country as per WHO listing & singleLineText & NA\\
+\hline
+\end{tabular}
+\end{table}
 
 \hypertarget{sources}{%
 \chapter{Sources}\label{sources}}
