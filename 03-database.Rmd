@@ -4,6 +4,8 @@ The current database is built using [Airtable](https://airtable.com). The curren
 
 ![](images/database_schema.png)
 
+This schema can be viewed interactively from here - https://airtable.com/appAL7fJUpBPYtOq4/tblt9ott045tWENcg/viwznxjIFAsTu0jzJ?blocks=bliZ6LV2bkGQNzgKF
+
 ## Activities Table {#activities-table}
 
 ### Table details
