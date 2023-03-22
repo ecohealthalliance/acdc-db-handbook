@@ -571,7 +571,7 @@ This schema can be viewed interactively from here - \url{https://airtable.com/ap
 \hline
 \textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
 \hline
-tbl7emmSomJjnOUQX & Activities & Activities identified during the database search. These activities are usually the initial information found/identified during the database search. It is from these activities that further information on researchers and institutions are primarily retrieved from. These activities may also provide additional information on topics, funders and sources.\\
+tbl7emmSomJjnOUQX & Activities & Activities pertain to the formal/official title of the project that has been identified during the database search or survey.\\
 \hline
 \end{tabular}
 \end{table}
@@ -644,7 +644,7 @@ Activity Start Date & Activity Start Date & date & NA\\
 \hline
 \textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
 \hline
-tblys7SnjkW4IVY0g & AU Countries & List of Africa Union Countries. This was originally meant to be a lookup table for the list of country members of the African Union to be used in the main tables (researchers, topics, funders, sources, institutions, and activities) to select country location information from. Currently, this table has been expanded to be its own database table cross-referencing fields from the main tables.\\
+tblys7SnjkW4IVY0g & AU Countries & List of Africa Union Countries to select country location information from the topics and activities tables.\\
 \hline
 \end{tabular}
 \end{table}
@@ -681,7 +681,7 @@ Activities & Name of activities identified in the region & multipleRecordLinks &
 \hline
 \textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
 \hline
-tblMEovpjJLMWeCoY & AU Regions & List of Africa Union regions. This was originally meant to be a lookup table for the different regions in the African Union (based on African Union definitions) to be used in the main tables (researchers, topics, funders, sources, institutions, and activities) to select appropriate and specific African Union regions information. Currently, this has been expanded into its own table cross-referencing information from the main tables.\\
+tblMEovpjJLMWeCoY & AU Regions & List of Africa Union regions to select appropriate and specific African Union regions information for AU countries, topics, and activities tables.\\
 \hline
 \end{tabular}
 \end{table}
@@ -757,7 +757,9 @@ IACUC & Optional: Link to IACUC & singleLineText & NA\\
 \hline
 \textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
 \hline
-tblDQVkAy8ROTYfFS & Funders & Funders identified during the database search. The funders and the sources tables are related/relevant to each other. Initially, the funders table was roughly the same as the sources table as the initial set of sources identified were funders. As the search through the sources found more and more sub-sources and other funders and activities, this information fed into the funders table making it more expansive than just the initial sources identified. Currently, the funders information are retrieved from declared funders for the activities identified during the database search.\\
+tblDQVkAy8ROTYfFS & Funders & Funders pertain to the entities funding each activity.
+
+The funders' information is retrieved from declared funders for the activities identified during the database search or the survey.\\
 \hline
 \end{tabular}
 \end{table}
@@ -798,7 +800,7 @@ Funder Email & Email of funder & email & NA\\
 \hline
 \textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
 \hline
-tbldEkEN1kqPi0cx2 & Institutions & Institutions identified during the database search. These institutions are the institutions to which identified researchers during the database search are affiliated with in relation to the specific activity they were involved in that was identified during the database search.\\
+tbldEkEN1kqPi0cx2 & Institutions & Institutions pertain to the entities directly related to or implementing the activity and/or the affiliation of the researcher implementing the activity.\\
 \hline
 \end{tabular}
 \end{table}
@@ -847,7 +849,9 @@ Activities 2 & Additional activities identified with institution & multipleRecor
 \hline
 \textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
 \hline
-tblt9ott045tWENcg & Researchers & Researchers identified during the database search. Information on researchers are primarily retrieved once activities have been identified from the database search process. It is possible that researchers are identified apriori and from which information on topics, funders, sources, institutions, and activities may be identified relevant to the specific researcher. This may happen when the planned/proposed survey is implemented and sent to known researchers who may or may not be in the database to begin with.\\
+tblt9ott045tWENcg & Researchers & Researchers pertains to the people involved in the activities contained in this database, and maybe involved in a variety of activity types. including but not limited to, research.
+
+Researchers identified during the database search. Information on researchers are primarily retrieved once activities have been identified from the database search process. It is possible that researchers are identified apriori and from which information on topics, funders, sources, institutions, and activities may be identified relevant to the specific researcher. This may happen when the planned/proposed survey is implemented and sent to known researchers who may or may not be in the database to begin with.\\
 \hline
 \end{tabular}
 \end{table}
@@ -904,7 +908,9 @@ Expertise & Topic which researcher is considered an expert on. Choices selected 
 \hline
 \textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
 \hline
-tbl71q8ghTcqTybtf & Sources & Sources contain initial set of sources (primarily funders) identified to initiate the database search. These original sources are fully described here - https://ecohealthalliance.github.io/rig-handbook/sources.html. As the initial search progressed, other sources were identified from which additional streams of searches were performed. Currently, the sources table is updated through a primary search of possible sources separate from the actual database search.\\
+tbl71q8ghTcqTybtf & Sources & Sources contain initial set of sources (primarily funders) identified to initiate the database search. These original sources are fully described here - https://ecohealthalliance.github.io/rig-handbook/sources.html. 
+
+From the initial search, other sources were identified from which additional streams of searches were performed.  Currently, the sources table is updated through a primary search of possible sources in addition to the search performed on the original sources list.\\
 \hline
 \end{tabular}
 \end{table}
@@ -1002,7 +1008,9 @@ Disease & Name of disease relevant to activity/project & multipleRecordLinks & T
 \hline
 \textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
 \hline
-tblIyWqnGcVE4mGRg & Topics & Topics identified during the database search. These  topics are usually related to the disease names and disease types. Initially, the topics table was designed to be a lookup table of diseases/disease entities/disease types of interest to the Africa CDC based on their priorities (as described in their Framework document).  This lookup table was meant to be used for the other tables on researchers, institutions, and activities to choose the topic field from. Also, it was meant to be used to collate search terms to be used in both manual and automated search. Currently, the topics table has now been expanded to be a database table in of itself and updated with whatever disease/disease entity/disease type were deemed relevant by the database contributor.\\
+tblIyWqnGcVE4mGRg & Topics & Topics pertain to the disease names and disease types. 
+
+The topics table contains disease types/disease entities of interest to the Africa CDC based on their priorities (as described in their Framework document) and is continually updated with whatever disease/disease entity/disease type were deemed relevant by the database contributor.\\
 \hline
 \end{tabular}
 \end{table}
@@ -1055,7 +1063,7 @@ Researchers & Name of researcher identified with the topic & multipleRecordLinks
 \hline
 \textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
 \hline
-tblWRh0rWAuXODyb7 & WHO Countries & List of WHO countries. This was originally meant to be a lookup table for the other main tables (researchers, topics, funders, sources, institutions, activities) so that database managers can select from this list the associated location field for the main tables. Currently, it has been expanded into its own table with information from the main tables cross-referenced\\
+tblWRh0rWAuXODyb7 & WHO Countries & List of WHO countries used to indicate the location information for the researchers, funders, and institutions tables\\
 \hline
 \end{tabular}
 \end{table}

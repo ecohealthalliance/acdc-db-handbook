@@ -267,7 +267,7 @@ tbl7emmSomJjnOUQX
 Activities
 </td>
 <td style="text-align:left;">
-Activities identified during the database search. These activities are usually the initial information found/identified during the database search. It is from these activities that further information on researchers and institutions are primarily retrieved from. These activities may also provide additional information on topics, funders and sources.
+Activities pertain to the formal/official title of the project that has been identified during the database search or survey.
 </td>
 </tr>
 </tbody>
@@ -632,7 +632,7 @@ tblys7SnjkW4IVY0g
 AU Countries
 </td>
 <td style="text-align:left;">
-List of Africa Union Countries. This was originally meant to be a lookup table for the list of country members of the African Union to be used in the main tables (researchers, topics, funders, sources, institutions, and activities) to select country location information from. Currently, this table has been expanded to be its own database table cross-referencing fields from the main tables.
+List of Africa Union Countries to select country location information from the topics and activities tables.
 </td>
 </tr>
 </tbody>
@@ -745,7 +745,7 @@ tblMEovpjJLMWeCoY
 AU Regions
 </td>
 <td style="text-align:left;">
-List of Africa Union regions. This was originally meant to be a lookup table for the different regions in the African Union (based on African Union definitions) to be used in the main tables (researchers, topics, funders, sources, institutions, and activities) to select appropriate and specific African Union regions information. Currently, this has been expanded into its own table cross-referencing information from the main tables.
+List of Africa Union regions to select appropriate and specific African Union regions information for AU countries, topics, and activities tables.
 </td>
 </tr>
 </tbody>
@@ -985,7 +985,8 @@ tblDQVkAy8ROTYfFS
 Funders
 </td>
 <td style="text-align:left;">
-Funders identified during the database search. The funders and the sources tables are related/relevant to each other. Initially, the funders table was roughly the same as the sources table as the initial set of sources identified were funders. As the search through the sources found more and more sub-sources and other funders and activities, this information fed into the funders table making it more expansive than just the initial sources identified. Currently, the funders information are retrieved from declared funders for the activities identified during the database search.
+<p>Funders pertain to the entities funding each activity.</p>
+The funders’ information is retrieved from declared funders for the activities identified during the database search or the survey.
 </td>
 </tr>
 </tbody>
@@ -1126,7 +1127,7 @@ tbldEkEN1kqPi0cx2
 Institutions
 </td>
 <td style="text-align:left;">
-Institutions identified during the database search. These institutions are the institutions to which identified researchers during the database search are affiliated with in relation to the specific activity they were involved in that was identified during the database search.
+Institutions pertain to the entities directly related to or implementing the activity and/or the affiliation of the researcher implementing the activity.
 </td>
 </tr>
 </tbody>
@@ -1323,6 +1324,7 @@ tblt9ott045tWENcg
 Researchers
 </td>
 <td style="text-align:left;">
+<p>Researchers pertains to the people involved in the activities contained in this database, and maybe involved in a variety of activity types. including but not limited to, research.</p>
 Researchers identified during the database search. Information on researchers are primarily retrieved once activities have been identified from the database search process. It is possible that researchers are identified apriori and from which information on topics, funders, sources, institutions, and activities may be identified relevant to the specific researcher. This may happen when the planned/proposed survey is implemented and sent to known researchers who may or may not be in the database to begin with.
 </td>
 </tr>
@@ -1576,7 +1578,8 @@ tbl71q8ghTcqTybtf
 Sources
 </td>
 <td style="text-align:left;">
-Sources contain initial set of sources (primarily funders) identified to initiate the database search. These original sources are fully described here - <a href="https://ecohealthalliance.github.io/rig-handbook/sources.html" class="uri">https://ecohealthalliance.github.io/rig-handbook/sources.html</a>. As the initial search progressed, other sources were identified from which additional streams of searches were performed. Currently, the sources table is updated through a primary search of possible sources separate from the actual database search.
+<p>Sources contain initial set of sources (primarily funders) identified to initiate the database search. These original sources are fully described here - <a href="https://ecohealthalliance.github.io/rig-handbook/sources.html" class="uri">https://ecohealthalliance.github.io/rig-handbook/sources.html</a>.</p>
+From the initial search, other sources were identified from which additional streams of searches were performed. Currently, the sources table is updated through a primary search of possible sources in addition to the search performed on the original sources list.
 </td>
 </tr>
 </tbody>
@@ -1961,7 +1964,8 @@ tblIyWqnGcVE4mGRg
 Topics
 </td>
 <td style="text-align:left;">
-Topics identified during the database search. These topics are usually related to the disease names and disease types. Initially, the topics table was designed to be a lookup table of diseases/disease entities/disease types of interest to the Africa CDC based on their priorities (as described in their Framework document). This lookup table was meant to be used for the other tables on researchers, institutions, and activities to choose the topic field from. Also, it was meant to be used to collate search terms to be used in both manual and automated search. Currently, the topics table has now been expanded to be a database table in of itself and updated with whatever disease/disease entity/disease type were deemed relevant by the database contributor.
+<p>Topics pertain to the disease names and disease types.</p>
+The topics table contains disease types/disease entities of interest to the Africa CDC based on their priorities (as described in their Framework document) and is continually updated with whatever disease/disease entity/disease type were deemed relevant by the database contributor.
 </td>
 </tr>
 </tbody>
@@ -2186,7 +2190,7 @@ tblWRh0rWAuXODyb7
 WHO Countries
 </td>
 <td style="text-align:left;">
-List of WHO countries. This was originally meant to be a lookup table for the other main tables (researchers, topics, funders, sources, institutions, activities) so that database managers can select from this list the associated location field for the main tables. Currently, it has been expanded into its own table with information from the main tables cross-referenced
+List of WHO countries used to indicate the location information for the researchers, funders, and institutions tables
 </td>
 </tr>
 </tbody>
