@@ -10,13 +10,17 @@ This schema can be viewed interactively from here - https://airtable.com/appAL7f
 
 ### Table details
 
-```{r activity-table}
+```{r activity-table, eval = FALSE}
 create_data_dictionary(metadata = airtable_metadata, table = "Activities") |>
   (\(x) x$table_details)() |>
   knitr::kable() |>
   kableExtra::row_spec(row = 0, bold = TRUE) |>
   kableExtra::kable_paper(lightable_options = "striped")
 ```
+
+`r create_data_dictionary(metadata = airtable_metadata, table = "Activities") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Activities table with their description.
 
 ### Fields details
 
@@ -28,11 +32,11 @@ create_data_dictionary(metadata = airtable_metadata, table = "Activities") |>
   kableExtra::kable_paper(lightable_options = "striped")
 ```
 
-## AU Countries Table {#au-countries-table}
+## Countries Table {#countries-table}
 
 ### Table details
 
-```{r au-countries-table}
+```{r au-countries-table, eval = FALSE}
 create_data_dictionary(metadata = airtable_metadata, table = "AU Countries") |>
   (\(x) x$table_details)() |>
   knitr::kable() |>
@@ -40,16 +44,21 @@ create_data_dictionary(metadata = airtable_metadata, table = "AU Countries") |>
   kableExtra::kable_paper(lightable_options = "striped")
 ```
 
+`r create_data_dictionary(metadata = airtable_metadata, table = "Countries") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Countries table with their description.
+
 ### Fields details
 
-```{r au-countries-field-table}
-create_data_dictionary(metadata = airtable_metadata, table = "AU Countries") |>
+```{r countries-field-table}
+create_data_dictionary(metadata = airtable_metadata, table = "Countries") |>
   (\(x) x$field_details)() |>
   knitr::kable() |>
   kableExtra::row_spec(row = 0, bold = TRUE) |>
   kableExtra::kable_paper(lightable_options = "striped")
 ```
 
+<!---
 ## AU Regions Table {#au-regions-table}
 
 ### Table details
@@ -72,17 +81,23 @@ create_data_dictionary(metadata = airtable_metadata, table = "AU Regions") |>
   kableExtra::kable_paper(lightable_options = "striped")
 ```
 
+--->
+
 ## Description Table {#description-table}
 
 ### Table details
 
-```{r description-table}
+```{r description-table, eval = FALSE}
 create_data_dictionary(metadata = airtable_metadata, table = "Description") |>
   (\(x) x$table_details)() |>
   knitr::kable() |>
   kableExtra::row_spec(row = 0, bold = TRUE) |>
   kableExtra::kable_paper(lightable_options = "striped")
 ```
+
+`r create_data_dictionary(metadata = airtable_metadata, table = "Description") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Description table with their description.
 
 ### Field details
 
@@ -98,13 +113,17 @@ create_data_dictionary(metadata = airtable_metadata, table = "Description") |>
 
 ### Table details
 
-```{r funders-table}
+```{r funders-table, eval = FALSE}
 create_data_dictionary(metadata = airtable_metadata, table = "Funders") |>
   (\(x) x$table_details)() |>
   knitr::kable() |>
   kableExtra::row_spec(row = 0, bold = TRUE) |>
   kableExtra::kable_paper(lightable_options = "striped")
 ```
+
+`r create_data_dictionary(metadata = airtable_metadata, table = "Funders") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Funders table with their description.
 
 ### Field details
 
@@ -120,13 +139,17 @@ create_data_dictionary(metadata = airtable_metadata, table = "Funders") |>
 
 ### Table details
 
-```{r institutions-table}
+```{r institutions-table, eval = FALSE}
 create_data_dictionary(metadata = airtable_metadata, table = "Institutions") |>
   (\(x) x$table_details)() |>
   knitr::kable() |>
   kableExtra::row_spec(row = 0, bold = TRUE) |>
   kableExtra::kable_paper(lightable_options = "striped")
 ```
+
+`r create_data_dictionary(metadata = airtable_metadata, table = "Institutions") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Institutions table with their description.
 
 ### Field details
 
@@ -142,13 +165,17 @@ create_data_dictionary(metadata = airtable_metadata, table = "Institutions") |>
 
 ### Table details
 
-```{r researchers-table}
+```{r researchers-table, eval = FALSE}
 create_data_dictionary(metadata = airtable_metadata, table = "Researchers") |>
   (\(x) x$table_details)() |>
   knitr::kable() |>
   kableExtra::row_spec(row = 0, bold = TRUE) |>
   kableExtra::kable_paper(lightable_options = "striped")
 ```
+
+`r create_data_dictionary(metadata = airtable_metadata, table = "Researchers") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Researchers table with their description.
 
 ### Field details
 
@@ -164,13 +191,17 @@ create_data_dictionary(metadata = airtable_metadata, table = "Researchers") |>
 
 ### Table details
 
-```{r sources-table}
+```{r sources-table, eval = FALSE}
 create_data_dictionary(metadata = airtable_metadata, table = "Sources") |>
   (\(x) x$table_details)() |>
   knitr::kable() |>
   kableExtra::row_spec(row = 0, bold = TRUE) |>
   kableExtra::kable_paper(lightable_options = "striped")
 ```
+
+`r create_data_dictionary(metadata = airtable_metadata, table = "Sources") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Sources table with their description.
 
 ### Field details
 
@@ -186,13 +217,17 @@ create_data_dictionary(metadata = airtable_metadata, table = "Sources") |>
 
 ### Table details
 
-```{r survey-results-table}
-create_data_dictionary(metadata = airtable_metadata, table = "Surveyt Results") |>
+```{r survey-results-table, eval = FALSE}
+create_data_dictionary(metadata = airtable_metadata, table = "Survey Results") |>
   (\(x) x$table_details)() |>
   knitr::kable() |>
   kableExtra::row_spec(row = 0, bold = TRUE) |>
   kableExtra::kable_paper(lightable_options = "striped")
 ```
+
+`r create_data_dictionary(metadata = airtable_metadata, table = "Survey Results") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Survey Results table with their description.
 
 ### Field details
 
@@ -208,13 +243,17 @@ create_data_dictionary(metadata = airtable_metadata, table = "Survey Results") |
 
 ### Table details
 
-```{r topics-table}
+```{r topics-table, eval = FALSE}
 create_data_dictionary(metadata = airtable_metadata, table = "Topics") |>
   (\(x) x$table_details)() |>
   knitr::kable() |>
   kableExtra::row_spec(row = 0, bold = TRUE) |>
   kableExtra::kable_paper(lightable_options = "striped")
 ```
+
+`r create_data_dictionary(metadata = airtable_metadata, table = "Topics") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Topics table with their description.
 
 ### Field details
 
@@ -226,6 +265,7 @@ create_data_dictionary(metadata = airtable_metadata, table = "Topics") |>
   kableExtra::kable_paper(lightable_options = "striped")
 ```
 
+<!---
 ## WHO Countries Table {#who-countries-table}
 
 ### Table details
@@ -247,4 +287,6 @@ create_data_dictionary(metadata = airtable_metadata, table = "WHO Countries") |>
   kableExtra::row_spec(row = 0, bold = TRUE) |>
   kableExtra::kable_paper(lightable_options = "striped")
 ```
+
+--->
 
