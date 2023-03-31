@@ -157,7 +157,7 @@
 
 \title{Research Information Gateway Handbook}
 \author{EcoHealth Alliance}
-\date{2023-03-22}
+\date{2023-03-31}
 
 \begin{document}
 \maketitle
@@ -565,16 +565,9 @@ This schema can be viewed interactively from here - \url{https://airtable.com/ap
 \hypertarget{table-details}{%
 \subsection{Table details}\label{table-details}}
 
-\begin{table}
-\centering
-\begin{tabular}{l|l|l}
-\hline
-\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
-\hline
-tbl7emmSomJjnOUQX & Activities & Activities pertain to the formal/official title of the project that has been identified during the database search or survey.\\
-\hline
-\end{tabular}
-\end{table}
+Activities pertain to the formal/official title of the project that has been identified during the database search or survey.
+
+Following are the different fields within the Activities table with their description.
 
 \hypertarget{fields-details}{%
 \subsection{Fields details}\label{fields-details}}
@@ -601,6 +594,10 @@ Researchers & Researchers involved in activity & multipleRecordLinks & Researche
 \hline
 Published Work & Links to published work & singleLineText & NA\\
 \hline
+Activity Location alt & Activity location & multipleRecordLinks & Countries\\
+\hline
+UN Stats Sub-region Name (from Activity Location alt) & NA & multipleLookupValues & NA\\
+\hline
 Activity Outputs & Activity Outputs & multipleSelects & Data, Publication, Report, Guideline/SOP, Archive, Improving Diagnostics, Vaccine development, Therapeutics, Epidemic/Pandemic Preparedness, Biosurveillance technology, Prophylaxis, Surveillance, Improving Vaccine strategies, Training, Risk Assessment, Improving Capacity, Policies\\
 \hline
 Activity Status & Activity Status & singleSelect & Active, Completed\\
@@ -613,41 +610,22 @@ Primary Sources & Primary source of information & multipleRecordLinks & Sources\
 \hline
 Additional Sources & Additional sources & singleLineText & NA\\
 \hline
-Region (from Activity Location) & Region location & multipleLookupValues & NA\\
+Continent Name (from Activity Location alt) & NA & multipleLookupValues & NA\\
 \hline
-Activity Location & Activity location & multipleRecordLinks & AU Countries\\
-\hline
-Target Species & Target Species & multipleSelects & Humans, Wildlife, Livestock, Vector, Plants, Intermediate Host\\
-\hline
-Institutions & Institution within which activity is being implemented & multipleRecordLinks & Institutions\\
-\hline
-Activity End Date & Activity End Date & date & NA\\
-\hline
-Created By & Person who created the entry & createdBy & NA\\
-\hline
-Disease Types (from Topic) & Disease types & multipleLookupValues & NA\\
-\hline
-Activity Start Date & Activity Start Date & date & NA\\
+AU Region Name (from Activity Location alt) & NA & multipleLookupValues & NA\\
 \hline
 \end{tabular}
 \end{table}
 
-\hypertarget{au-countries-table}{%
-\section{AU Countries Table}\label{au-countries-table}}
+\hypertarget{countries-table}{%
+\section{Countries Table}\label{countries-table}}
 
 \hypertarget{table-details-1}{%
 \subsection{Table details}\label{table-details-1}}
 
-\begin{table}
-\centering
-\begin{tabular}{l|l|l}
-\hline
-\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
-\hline
-tblys7SnjkW4IVY0g & AU Countries & List of Africa Union Countries to select country location information from the topics and activities tables.\\
-\hline
-\end{tabular}
-\end{table}
+List of countries used to indicate the location information for the researchers, topics, funders, sources, institutions, and activities tables
+
+Following are the different fields within the Countries table with their description.
 
 \hypertarget{fields-details-1}{%
 \subsection{Fields details}\label{fields-details-1}}
@@ -658,44 +636,15 @@ tblys7SnjkW4IVY0g & AU Countries & List of Africa Union Countries to select coun
 \hline
 \textbf{Field Name} & \textbf{Field Description} & \textbf{Field Type} & \textbf{Field Values}\\
 \hline
-Survey Results & NA & multipleRecordLinks & Survey Results\\
+Researchers & NA & multipleRecordLinks & Researchers\\
 \hline
-Country & Full name of country as per WHO/UN nomenclature & singleLineText & NA\\
+Funders & NA & multipleRecordLinks & Funders\\
 \hline
-Topic (from Activities) & Name of topic identified to the region & multipleLookupValues & NA\\
+AU Region Name & NA & singleSelect & Northern Africa, Eastern Africa, NA, Central Africa, Southern Africa, Western Africa\\
 \hline
-Activities & Name of activities identified in the region & multipleRecordLinks & Activities\\
+UN Stats Sub-region Name & Name of further sub-regional grouping to which country is usually classified within. This is based on the UN Statistics Division nomenclature. & singleSelect & NA, Eastern Africa, Middle Africa, Southern Africa, Western Africa, Channel Islands, Sark\\
 \hline
-\end{tabular}
-\end{table}
-
-\hypertarget{au-regions-table}{%
-\section{AU Regions Table}\label{au-regions-table}}
-
-\hypertarget{table-details-2}{%
-\subsection{Table details}\label{table-details-2}}
-
-\begin{table}
-\centering
-\begin{tabular}{l|l|l}
-\hline
-\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
-\hline
-tblMEovpjJLMWeCoY & AU Regions & List of Africa Union regions to select appropriate and specific African Union regions information for AU countries, topics, and activities tables.\\
-\hline
-\end{tabular}
-\end{table}
-
-\hypertarget{fields-details-2}{%
-\subsection{Fields details}\label{fields-details-2}}
-
-\begin{table}
-\centering
-\begin{tabular}{l|l|l|l}
-\hline
-\textbf{Field Name} & \textbf{Field Description} & \textbf{Field Type} & \textbf{Field Values}\\
-\hline
-AU Countries & Countries within the region based on Africa Union classification & multipleRecordLinks & AU Countries\\
+Country Name & County name based on UN Statistics Division nomenclature & multilineText & NA\\
 \hline
 \end{tabular}
 \end{table}
@@ -703,19 +652,12 @@ AU Countries & Countries within the region based on Africa Union classification 
 \hypertarget{description-table}{%
 \section{Description Table}\label{description-table}}
 
-\hypertarget{table-details-3}{%
-\subsection{Table details}\label{table-details-3}}
+\hypertarget{table-details-2}{%
+\subsection{Table details}\label{table-details-2}}
 
-\begin{table}
-\centering
-\begin{tabular}{l|l|l}
-\hline
-\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
-\hline
-tblwapW8nMmUv74GM & Description & The Description table provides overall description of this entire database.\\
-\hline
-\end{tabular}
-\end{table}
+The Description table provides overall description of this entire database.
+
+Following are the different fields within the Description table with their description.
 
 \hypertarget{field-details}{%
 \subsection{Field details}\label{field-details}}
@@ -738,31 +680,20 @@ Title & Title of the base & singleLineText & NA\\
 \hline
 Data Management Plan & Link to data management plan & url & NA\\
 \hline
-Code Repository & Optional: Link to github repo & url & NA\\
-\hline
-IACUC & Optional: Link to IACUC & singleLineText & NA\\
-\hline
 \end{tabular}
 \end{table}
 
 \hypertarget{funders-table}{%
 \section{Funder Table}\label{funders-table}}
 
-\hypertarget{table-details-4}{%
-\subsection{Table details}\label{table-details-4}}
+\hypertarget{table-details-3}{%
+\subsection{Table details}\label{table-details-3}}
 
-\begin{table}
-\centering
-\begin{tabular}{l|l|l}
-\hline
-\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
-\hline
-tblDQVkAy8ROTYfFS & Funders & Funders pertain to the entities funding each activity.
+Funders pertain to the entities funding each activity.
 
-The funders' information is retrieved from declared funders for the activities identified during the database search or the survey.\\
-\hline
-\end{tabular}
-\end{table}
+The funders' information is retrieved from declared funders for the activities identified during the database search or the survey.
+
+Following are the different fields within the Funders table with their description.
 
 \hypertarget{field-details-1}{%
 \subsection{Field details}\label{field-details-1}}
@@ -781,9 +712,11 @@ Source Name (from Primary Sources) & Source from where funder was identified & m
 \hline
 Activities & Activities supported by funder & multipleRecordLinks & Activities\\
 \hline
-Primary Sources & Source from where funder was identified & multipleRecordLinks & Sources\\
+WHO Region Name (from Funder Location alt) & NA & multipleLookupValues & NA\\
 \hline
-Funder Email & Email of funder & email & NA\\
+Continent Name (from Funder Location alt) & NA & multipleLookupValues & NA\\
+\hline
+Primary Sources & Source from where funder was identified & multipleRecordLinks & Sources\\
 \hline
 \end{tabular}
 \end{table}
@@ -791,19 +724,12 @@ Funder Email & Email of funder & email & NA\\
 \hypertarget{institutions-table}{%
 \section{Institutions Table}\label{institutions-table}}
 
-\hypertarget{table-details-5}{%
-\subsection{Table details}\label{table-details-5}}
+\hypertarget{table-details-4}{%
+\subsection{Table details}\label{table-details-4}}
 
-\begin{table}
-\centering
-\begin{tabular}{l|l|l}
-\hline
-\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
-\hline
-tbldEkEN1kqPi0cx2 & Institutions & Institutions pertain to the entities directly related to or implementing the activity and/or the affiliation of the researcher implementing the activity.\\
-\hline
-\end{tabular}
-\end{table}
+Institutions pertain to the entities directly related to or implementing the activity and/or the affiliation of the researcher implementing the activity.
+
+Following are the different fields within the Institutions table with their description.
 
 \hypertarget{field-details-2}{%
 \subsection{Field details}\label{field-details-2}}
@@ -822,7 +748,7 @@ Activities & Name of activity identified with institution & multipleRecordLinks 
 \hline
 Sources & Name of primary source & multipleRecordLinks & Sources\\
 \hline
-Institution Type & Institution Type & singleSelect & Research Institute, University, NGO, National Government Institution, Non-profit Organisation , Hospital, Government Agency, Consortium, Partnership of Institutes, Industry, Charity, Public-private partnetship, International Coalition , Inter-governmental Organisation, Medical Service Provider\\
+Institution Type & Institution Type & singleSelect & Research Institute, University, NGO, National Government Institution, Non-profit Organisation , Hospital, Government Agency, Consortium, Partnership of Institutes, Industry, Charity, Public-private partnetship, International Coalition , Inter-governmental Organisation, Medical Service Provider, Network\\
 \hline
 Institution Location & Institution location & multipleRecordLinks & WHO Countries\\
 \hline
@@ -830,31 +756,20 @@ Notes & Internal notes (for maintenance) & singleLineText & NA\\
 \hline
 Topic (from Activities) & Name of topic identified with the institution & multipleLookupValues & NA\\
 \hline
-Institution Name & Institution Name & singleLineText & NA\\
-\hline
-Activities 2 & Additional activities identified with institution & multipleRecordLinks & Activities\\
-\hline
 \end{tabular}
 \end{table}
 
 \hypertarget{researchers-table}{%
 \section{Researchers Table}\label{researchers-table}}
 
-\hypertarget{table-details-6}{%
-\subsection{Table details}\label{table-details-6}}
+\hypertarget{table-details-5}{%
+\subsection{Table details}\label{table-details-5}}
 
-\begin{table}
-\centering
-\begin{tabular}{l|l|l}
-\hline
-\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
-\hline
-tblt9ott045tWENcg & Researchers & Researchers pertains to the people involved in the activities contained in this database, and maybe involved in a variety of activity types. including but not limited to, research.
+Researchers pertains to the people involved in the activities contained in this database, and maybe involved in a variety of activity types. including but not limited to, research.
 
-Researchers identified during the database search. Information on researchers are primarily retrieved once activities have been identified from the database search process. It is possible that researchers are identified apriori and from which information on topics, funders, sources, institutions, and activities may be identified relevant to the specific researcher. This may happen when the planned/proposed survey is implemented and sent to known researchers who may or may not be in the database to begin with.\\
-\hline
-\end{tabular}
-\end{table}
+Researchers identified during the database search. Information on researchers are primarily retrieved once activities have been identified from the database search process. It is possible that researchers are identified apriori and from which information on topics, funders, sources, institutions, and activities may be identified relevant to the specific researcher. This may happen when the planned/proposed survey is implemented and sent to known researchers who may or may not be in the database to begin with.
+
+Following are the different fields within the Researchers table with their description.
 
 \hypertarget{field-details-3}{%
 \subsection{Field details}\label{field-details-3}}
@@ -865,11 +780,17 @@ Researchers identified during the database search. Information on researchers ar
 \hline
 \textbf{Field Name} & \textbf{Field Description} & \textbf{Field Type} & \textbf{Field Values}\\
 \hline
+WHO Region Name (from Researcher Country Location alt) & NA & multipleLookupValues & NA\\
+\hline
 ACDC Status & Is researcher from the Africa CDC? & singleSelect & Non-member, Member\\
 \hline
 Sources & Name of source & multipleRecordLinks & Sources\\
 \hline
+UN Stats Region Name (from Researcher Country Location alt) & NA & multipleLookupValues & NA\\
+\hline
 Affiliation & Institution researcher is affiliated with. Choices from the institutions table & multipleRecordLinks & Institutions\\
+\hline
+Institution Location alt (from Affiliation) & NA & multipleLookupValues & NA\\
 \hline
 Topic (from Activity) & Name of topic & multipleLookupValues & NA\\
 \hline
@@ -891,7 +812,7 @@ Institution Location (from Affiliation) & Name of location where institution is 
 \hline
 Willing to be contacted & Is the researcher willing to be contacted? & checkbox & NA\\
 \hline
-Expertise & Topic which researcher is considered an expert on. Choices selected from the topics table & multipleRecordLinks & Topics\\
+Continent Name (from Researcher Country Location alt) & NA & multipleLookupValues & NA\\
 \hline
 \end{tabular}
 \end{table}
@@ -899,21 +820,14 @@ Expertise & Topic which researcher is considered an expert on. Choices selected 
 \hypertarget{sources-table}{%
 \section{Sources Table}\label{sources-table}}
 
-\hypertarget{table-details-7}{%
-\subsection{Table details}\label{table-details-7}}
+\hypertarget{table-details-6}{%
+\subsection{Table details}\label{table-details-6}}
 
-\begin{table}
-\centering
-\begin{tabular}{l|l|l}
-\hline
-\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
-\hline
-tbl71q8ghTcqTybtf & Sources & Sources contain initial set of sources (primarily funders) identified to initiate the database search. These original sources are fully described here - https://ecohealthalliance.github.io/rig-handbook/sources.html. 
+Sources contain initial set of sources (primarily funders) identified to initiate the database search. These original sources are fully described here - \url{https://ecohealthalliance.github.io/rig-handbook/sources.html}.
 
-From the initial search, other sources were identified from which additional streams of searches were performed.  Currently, the sources table is updated through a primary search of possible sources in addition to the search performed on the original sources list.\\
-\hline
-\end{tabular}
-\end{table}
+From the initial search, other sources were identified from which additional streams of searches were performed. Currently, the sources table is updated through a primary search of possible sources in addition to the search performed on the original sources list.
+
+Following are the different fields within the Sources table with their description.
 
 \hypertarget{field-details-4}{%
 \subsection{Field details}\label{field-details-4}}
@@ -940,29 +854,18 @@ Created By & Person who created the entry & createdBy & NA\\
 \hline
 Researchers & Name of researcher identified from primary source & multipleRecordLinks & Researchers\\
 \hline
-Institutions & Institution identified from primary source & multipleRecordLinks & Institutions\\
-\hline
-Fruitful? & Was source relevant/contributory? & singleSelect & Yes, No, Partially, Not reviewed yet\\
-\hline
 \end{tabular}
 \end{table}
 
 \hypertarget{survey-results-table}{%
 \section{Survey Results Table}\label{survey-results-table}}
 
-\hypertarget{table-details-8}{%
-\subsection{Table details}\label{table-details-8}}
+\hypertarget{table-details-7}{%
+\subsection{Table details}\label{table-details-7}}
 
-\begin{table}
-\centering
-\begin{tabular}{l|l|l}
-\hline
-\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
+NA
 
-
-\hline
-\end{tabular}
-\end{table}
+Following are the different fields within the Survey Results table with their description.
 
 \hypertarget{field-details-5}{%
 \subsection{Field details}\label{field-details-5}}
@@ -989,31 +892,20 @@ Official Project Title & Official project title & singleLineText & NA\\
 \hline
 Official Project website & Official project website & singleLineText & NA\\
 \hline
-Type of Activity & Activity type & multipleSelects & Surveillance, Clinical Trial, Basic Science, Behavioural Science, Epidemiology , Other\\
-\hline
-Disease & Name of disease relevant to activity/project & multipleRecordLinks & Topics\\
-\hline
 \end{tabular}
 \end{table}
 
 \hypertarget{topics-table}{%
 \section{Topics Table}\label{topics-table}}
 
-\hypertarget{table-details-9}{%
-\subsection{Table details}\label{table-details-9}}
+\hypertarget{table-details-8}{%
+\subsection{Table details}\label{table-details-8}}
 
-\begin{table}
-\centering
-\begin{tabular}{l|l|l}
-\hline
-\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
-\hline
-tblIyWqnGcVE4mGRg & Topics & Topics pertain to the disease names and disease types. 
+Topics pertain to the disease names and disease types.
 
-The topics table contains disease types/disease entities of interest to the Africa CDC based on their priorities (as described in their Framework document) and is continually updated with whatever disease/disease entity/disease type were deemed relevant by the database contributor.\\
-\hline
-\end{tabular}
-\end{table}
+The topics table contains disease types/disease entities of interest to the Africa CDC based on their priorities (as described in their Framework document) and is continually updated with whatever disease/disease entity/disease type were deemed relevant by the database contributor.
+
+Following are the different fields within the Topics table with their description.
 
 \hypertarget{field-details-6}{%
 \subsection{Field details}\label{field-details-6}}
@@ -1036,52 +928,17 @@ Search terms & Search terms used to identify topic & multipleSelects & antimycob
 \hline
 Disease Types & Type/category to which disease is grouped under & multipleSelects & infectious disease, viral, bacterial, parasitic, vector-bourne, zoonotic, virus, soil-transmitted\\
 \hline
+Continent Name (from Activity Location alt) (from Activities) & NA & multipleLookupValues & NA\\
+\hline
+Activity Location alt (from Activities) & NA & multipleLookupValues & NA\\
+\hline
 Institutions & Institutions & multipleRecordLinks & Institutions\\
 \hline
 Region (from Activity Location) (from Activities) & Name of region where topic was identified & multipleLookupValues & NA\\
 \hline
+AU Region Name (from Activity Location alt) (from Activities) & NA & multipleLookupValues & NA\\
+\hline
 Source Name (from Sources) & Name of source & multipleLookupValues & NA\\
-\hline
-Topic Name & Field or topic of interest relevant to infectious disease and other relevant fields & singleLineText & NA\\
-\hline
-Activities & Name of activity in which topic was identified & multipleRecordLinks & Activities\\
-\hline
-Researchers & Name of researcher identified with the topic & multipleRecordLinks & Researchers\\
-\hline
-\end{tabular}
-\end{table}
-
-\hypertarget{who-countries-table}{%
-\section{WHO Countries Table}\label{who-countries-table}}
-
-\hypertarget{table-details-10}{%
-\subsection{Table details}\label{table-details-10}}
-
-\begin{table}
-\centering
-\begin{tabular}{l|l|l}
-\hline
-\textbf{Table ID} & \textbf{Table Name} & \textbf{Table Description}\\
-\hline
-tblWRh0rWAuXODyb7 & WHO Countries & List of WHO countries used to indicate the location information for the researchers, funders, and institutions tables\\
-\hline
-\end{tabular}
-\end{table}
-
-\hypertarget{field-details-7}{%
-\subsection{Field details}\label{field-details-7}}
-
-\begin{table}
-\centering
-\begin{tabular}{l|l|l|l}
-\hline
-\textbf{Field Name} & \textbf{Field Description} & \textbf{Field Type} & \textbf{Field Values}\\
-\hline
-Funders & Name of funder identified in the specific country & multipleRecordLinks & Funders\\
-\hline
-Institutions & Name of institution identified in the specific country & multipleRecordLinks & Institutions\\
-\hline
-Country name & Short name of country as per WHO listing & singleLineText & NA\\
 \hline
 \end{tabular}
 \end{table}
