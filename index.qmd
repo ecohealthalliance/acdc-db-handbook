@@ -4,6 +4,7 @@ library(dplyr)
 library(here)
 library(airtabler)
 library(kableExtra)
+library(rmarkdown)
 
 for (f in list.files(here::here("R"), full.names = TRUE)) source (f)
 

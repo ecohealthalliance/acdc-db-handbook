@@ -160,23 +160,6 @@
       ],
       "Hash": "543776ae6848fde2f48ff3816d0628bc"
     },
-    "bookdown": {
-      "Package": "bookdown",
-      "Version": "0.40",
-      "Source": "Repository",
-      "Repository": "P3M",
-      "Requirements": [
-        "R",
-        "htmltools",
-        "jquerylib",
-        "knitr",
-        "rmarkdown",
-        "tinytex",
-        "xfun",
-        "yaml"
-      ],
-      "Hash": "896a79478a50c78fb035a37148638f4e"
-    },
     "bslib": {
       "Package": "bslib",
       "Version": "0.8.0",
