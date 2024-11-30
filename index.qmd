@@ -1,3 +1,22 @@
+```{r setup, include = FALSE}
+library(quarto)
+library(dplyr)
+library(here)
+library(airtabler)
+library(kableExtra)
+
+for (f in list.files(here::here("R"), full.names = TRUE)) source (f)
+
+airtable_metadata <- airtable(
+  base = "appAL7fJUpBPYtOq4", 
+  tables = "Meta Data"
+)$`Meta Data`$select()
+```
+
 # Introduction {#introduction}
+
+This is a handbook created as a how-to manual for the development and maintenance of a One Health Research Information Gateway for the African continent.
+
+## About the database {#about-database}
 
 [EcoHelth Alliance](https://www.ecohealthalliance.org/) is supporting the creation of a database of active infectious disease research activities and research scientists in Africa. The database contains information about scientific research being conducted on the African continent that has particular relevance to understanding, detecting and responding to zoonotic pathogens. EHA is building a detailed, searchable, and visual database (e.g. via a dashboard) populated with information about major (e.g. multi-year) and active One Health research projects that includes subject matter, duration, geographical locations, key personnel, and links to publicly available reports, preprints and publications relevant to zoonoses. Examples of research areas may include epidemiological (syndrome based or disease specific), ecological (studies looking at potential reservoirs or animal hosts for zoonotic pathogens and spillover into humans or livestock); basic science (e.g. virology, bacteriology; serology); clinical (vaccine or therapeutic trials); or sociological (e.g. behavioral risk assessments or behavioral intervention studies) or any other preliminary public health findings. A particularly important view within the database includes a directory of subject matter experts associated with research across the continent. This roster view can be used by public health practitioners to engage expert consultations as needed to support training activities, surveillance or outbreak response, for example.

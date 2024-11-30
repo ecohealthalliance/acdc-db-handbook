@@ -1,0 +1,55 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: Africa CDC Database
+  subtitle: Technical Handbook
+  author:
+    - name: Dr Jonathan Epstein
+      orcid: 0000-0002-1373-9301
+      email: epstein@ecohealthalliance.org
+      affiliation: 
+        - name: EcoHealth Alliance
+          city: New York
+    - name: Ava Sullivan
+      orcid: 0000-0003-4339-2430
+      email: sullivan@ecohealthalliance.org
+      affiliation:
+        - name: EcoHealth Alliance
+          city: New York
+    - name: Shannon Ball
+      orcid: 0000-0001-8306-3493
+      email: ball@ecohealthalliance.org
+      affiliation:
+        - name: EcoHealth Alliance
+          city: New York
+  date: last-modified
+  date-format: "DD MMMM YYYY"
+  chapters:
+    - index.qmd
+    - 01-tools.qmd
+    - 02-database.qmd
+    - 03-sources.qmd
+    - 04-updates.qmd
+    - 05-survey.qmd
+    - 06-references.qmd
+  cover-image: images/AfricaCDC_Logo.png
+  search: true
+  repo-url: https://github.com/ecohealthalliance/acdc-db-handbook/
+  repo-actions: [edit]
+  downloads: [pdf, epub]
+  sharing: [twitter, facebook]
+
+bibliography: book.bib
+
+format:
+  html:
+    theme: lumen
+    highlight-style: breeze
+  pdf:
+    documentclass: scrreprt
+    highlight-style: breeze
+  epub:
+    cover-image: images/AfricaCDC_Logo.png
+    highlight-style: breeze
