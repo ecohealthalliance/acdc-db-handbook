@@ -29,6 +29,11 @@ jobs:
           echo $GIT_CRYPT_KEY64 > git_crypt_key.key64 && base64 -di git_crypt_key.key64 > git_crypt_key.key && git-crypt unlock git_crypt_key.key
           rm git_crypt_key.key git_crypt_key.key64
 
+      - name: Load environment variables
+        run: |
+          readRenviron(".env")
+        shell: Rscript {0}
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
