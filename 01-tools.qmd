@@ -1,8 +1,8 @@
-# Tools {#tools}
+# Tools {#sec-tools}
 
-The Research Information Gateway (RIG) is currently using the following set of tools for database development and maintenance.
+The Africa CDC Database is currently using the following set of tools for database development and maintenance.
 
-## Airtable {#airtable}
+## Airtable {#sec-airtable}
 
 ### What is Airtable?
 
@@ -14,7 +14,7 @@ Airtable also offers a variety of collaboration features, including real-time sy
 
 Airtable's flexibility, customizability, and features that support collaboration along with its spreadsheet-style interface that is familiar to most that have used other spreadsheet software such as Microsoft Excel or Google Sheets are the key reasons why it was chosen to be the database tool for RIG.
 
-This [section][airtable] will provide an overview of Airtable and good practices for designing data models in relational databases. 
+@sec-airtable provides an overview of Airtable and good practices for designing data models in relational databases. 
 
 ### Key Terms
 
