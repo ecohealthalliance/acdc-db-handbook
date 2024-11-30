@@ -1,3 +1,15 @@
+```{r setup, include = FALSE}
+library(airtabler)
+
+for (f in list.files(here::here("R"), full.names = TRUE)) source (f)
+
+airtable_metadata <- airtable(
+  base = "appAL7fJUpBPYtOq4", 
+  tables = "Meta Data"
+)$`Meta Data`$select()
+```
+
+
 # Database {#database}
 
 The current database is built using [Airtable](https://airtable.com). The current database has the following schema:
