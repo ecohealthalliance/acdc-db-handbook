@@ -28,13 +28,24 @@ book:
   date-format: "DD MMMM YYYY"
   chapters:
     - index.qmd
-    - 01-tools.qmd
-    - 02-database.qmd
-    - 03-sources.qmd
-    - 04-updates.qmd
-    - 05-survey.qmd
-    - 06-references.qmd
-  cover-image: images/AfricaCDC_Logo.png
+    - part: Tools
+      chapters:
+        - 01-dolt.qmd
+        - 02-dolthub.qmd
+        - 03-rstats.qmd
+        - 04-airtable.qmd
+    - part: Database
+      chapters:
+        - 05-database.qmd
+    - part: Sources
+      chapters:
+        - 06-sources.qmd
+    - part: Maintenance
+      chapters:
+        - 07-updates.qmd
+        - 08-survey.qmd
+    - 09-references.qmd
+  cover-image: images/acdc_eha.png
   search: true
   repo-url: https://github.com/ecohealthalliance/acdc-db-handbook/
   repo-actions: [edit]
@@ -51,5 +62,5 @@ format:
     documentclass: scrreprt
     highlight-style: breeze
   epub:
-    cover-image: images/AfricaCDC_Logo.png
+    cover-image: images/acdc_eha.png
     highlight-style: breeze

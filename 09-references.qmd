@@ -1,0 +1,6 @@
+---
+output-file: references.html
+---
+
+# References {#sec-references}
+
