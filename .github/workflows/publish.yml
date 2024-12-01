@@ -20,6 +20,12 @@ jobs:
           apt-get update && apt-get install -y --no-install-recommends \
           libglpk-dev git-crypt gh curl jq rsync
 
+      - name: Install chrome
+        run: |
+          curl -LO https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          apt-get install -y ./google-chrome-stable_current_amd64.deb
+          rm google-chrome-stable_current_amd64.deb
+
       - name: Trust repo
         run: |
           git config --global --add safe.directory /__w/acdc-db-handbook/acdc-db-handbook
