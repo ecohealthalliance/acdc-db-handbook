@@ -18,7 +18,7 @@ jobs:
       - name: Install system dependencies
         run: |
           apt-get update && apt-get install -y --no-install-recommends \
-          git-crypt gh curl jq rsync
+          libglpk-dev git-crypt gh curl jq rsync
 
       - name: Trust repo
         run: |
