@@ -1,0 +1,7 @@
+---
+output-file: database-dolthub.html
+---
+
+# Database - DoltHub {#sec-database-dolthub}
+
+

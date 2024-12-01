@@ -8,7 +8,7 @@ As of May 2024, the Africa CDC Database backend has shifted from Airtable to Dol
 
 This chapter has been kept here to document how the database started and to show the history of its development.
 
-To read about DoltHub, see @sec-dolt. To learn more about the use of dolt and DoltHub as the current backend for the database, read @sec-database.
+To read about DoltHub, see @sec-dolt. To learn more about the use of dolt and DoltHub as the current backend for the database, read @sec-database-dolthub.
 
 :::
 
