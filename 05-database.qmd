@@ -1,0 +1,308 @@
+---
+output-file: database.html
+---
+
+```{r setup, include = FALSE}
+library(airtabler)
+
+for (f in list.files(here::here("R"), full.names = TRUE)) source (f)
+
+airtable_metadata <- airtable(
+  base = "appAL7fJUpBPYtOq4", 
+  tables = "Meta Data"
+)$`Meta Data`$select()
+```
+
+
+# Database {#sec-database}
+
+The current database is built using [Airtable](https://airtable.com). The current database has the following schema:
+
+![](images/database_schema.png)
+
+This schema can be viewed interactively from here - https://airtable.com/appAL7fJUpBPYtOq4/tblt9ott045tWENcg/viwznxjIFAsTu0jzJ?blocks=bliZ6LV2bkGQNzgKF
+
+## Activities Table {#activities-table}
+
+### Table details
+
+```{r activity-table, eval = FALSE}
+create_data_dictionary(metadata = airtable_metadata, table = "Activities") |>
+  (\(x) x$table_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+`r create_data_dictionary(metadata = airtable_metadata, table = "Activities") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Activities table with their description.
+
+### Fields details
+
+```{r activity-field-table}
+create_data_dictionary(metadata = airtable_metadata, table = "Activities") |>
+  (\(x) x$field_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+## Countries Table {#countries-table}
+
+### Table details
+
+```{r au-countries-table, eval = FALSE}
+create_data_dictionary(metadata = airtable_metadata, table = "AU Countries") |>
+  (\(x) x$table_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+`r create_data_dictionary(metadata = airtable_metadata, table = "Countries") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Countries table with their description.
+
+### Fields details
+
+```{r countries-field-table}
+create_data_dictionary(metadata = airtable_metadata, table = "Countries") |>
+  (\(x) x$field_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+<!---
+## AU Regions Table {#au-regions-table}
+
+### Table details
+
+```{r au-regions-table}
+create_data_dictionary(metadata = airtable_metadata, table = "AU Regions") |>
+  (\(x) x$table_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+### Fields details
+
+```{r au-regions-field-table}
+create_data_dictionary(metadata = airtable_metadata, table = "AU Regions") |>
+  (\(x) x$field_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+--->
+
+## Description Table {#description-table}
+
+### Table details
+
+```{r description-table, eval = FALSE}
+create_data_dictionary(metadata = airtable_metadata, table = "Description") |>
+  (\(x) x$table_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+`r create_data_dictionary(metadata = airtable_metadata, table = "Description") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Description table with their description.
+
+### Field details
+
+```{r description-field-table}
+create_data_dictionary(metadata = airtable_metadata, table = "Description") |>
+  (\(x) x$field_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+## Funder Table {#funders-table}
+
+### Table details
+
+```{r funders-table, eval = FALSE}
+create_data_dictionary(metadata = airtable_metadata, table = "Funders") |>
+  (\(x) x$table_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+`r create_data_dictionary(metadata = airtable_metadata, table = "Funders") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Funders table with their description.
+
+### Field details
+
+```{r funders-field-table}
+create_data_dictionary(metadata = airtable_metadata, table = "Funders") |>
+  (\(x) x$field_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+## Institutions Table {#institutions-table}
+
+### Table details
+
+```{r institutions-table, eval = FALSE}
+create_data_dictionary(metadata = airtable_metadata, table = "Institutions") |>
+  (\(x) x$table_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+`r create_data_dictionary(metadata = airtable_metadata, table = "Institutions") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Institutions table with their description.
+
+### Field details
+
+```{r institutions-field-table}
+create_data_dictionary(metadata = airtable_metadata, table = "Institutions") |>
+  (\(x) x$field_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+## Researchers Table {#researchers-table}
+
+### Table details
+
+```{r researchers-table, eval = FALSE}
+create_data_dictionary(metadata = airtable_metadata, table = "Researchers") |>
+  (\(x) x$table_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+`r create_data_dictionary(metadata = airtable_metadata, table = "Researchers") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Researchers table with their description.
+
+### Field details
+
+```{r researchers-field-table}
+create_data_dictionary(metadata = airtable_metadata, table = "Researchers") |>
+  (\(x) x$field_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+## Sources Table {#sources-table}
+
+### Table details
+
+```{r sources-table, eval = FALSE}
+create_data_dictionary(metadata = airtable_metadata, table = "Sources") |>
+  (\(x) x$table_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+`r create_data_dictionary(metadata = airtable_metadata, table = "Sources") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Sources table with their description.
+
+### Field details
+
+```{r sources-field-table}
+create_data_dictionary(metadata = airtable_metadata, table = "Sources") |>
+  (\(x) x$field_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+## Survey Results Table {#survey-results-table}
+
+### Table details
+
+```{r survey-results-table, eval = FALSE}
+create_data_dictionary(metadata = airtable_metadata, table = "Survey Results") |>
+  (\(x) x$table_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+`r create_data_dictionary(metadata = airtable_metadata, table = "Survey Results") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Survey Results table with their description.
+
+### Field details
+
+```{r survey-results-field-table}
+create_data_dictionary(metadata = airtable_metadata, table = "Survey Results") |>
+  (\(x) x$field_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+## Topics Table {#topics-table}
+
+### Table details
+
+```{r topics-table, eval = FALSE}
+create_data_dictionary(metadata = airtable_metadata, table = "Topics") |>
+  (\(x) x$table_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+`r create_data_dictionary(metadata = airtable_metadata, table = "Topics") |> (\(x) x$table_details)() |> dplyr::pull("Table Description")`
+
+Following are the different fields within the Topics table with their description.
+
+### Field details
+
+```{r topics-field-table}
+create_data_dictionary(metadata = airtable_metadata, table = "Topics") |>
+  (\(x) x$field_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+<!---
+## WHO Countries Table {#who-countries-table}
+
+### Table details
+
+```{r who-countries-table}
+create_data_dictionary(metadata = airtable_metadata, table = "WHO Countries") |>
+  (\(x) x$table_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+### Field details
+
+```{r who-countries-field-table}
+create_data_dictionary(metadata = airtable_metadata, table = "WHO Countries") |>
+  (\(x) x$field_details)() |>
+  knitr::kable() |>
+  kableExtra::row_spec(row = 0, bold = TRUE) |>
+  kableExtra::kable_paper(lightable_options = "striped")
+```
+
+--->
+

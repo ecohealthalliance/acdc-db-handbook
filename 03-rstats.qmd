@@ -1,0 +1,12 @@
+---
+output-file: rstats.html
+---
+
+# R {#sec-rstats}
+
+[R](https://cran.r-project.org) is a free and open-source programming language and software environment for statistical computing and graphics. It was first developed in the early 1990s by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand, and is now widely used by statisticians, data analysts, and researchers across various fields.
+
+R provides a wide range of statistical and graphical techniques, including linear and nonlinear modeling, classical statistical tests, time-series analysis, classification, clustering, and more. It also has a large and active community of users and developers who contribute to the development of new packages and extensions for the language.
+
+R is popular in the field of data science, as it provides a powerful and flexible platform for analyzing and visualizing data. It can be used in conjuction with other tools such as Airtable through community-developed packages making it particularly well-suited for the current use-case of the RIG.
+
