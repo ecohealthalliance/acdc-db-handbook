@@ -36,21 +36,21 @@ book:
         - 04-airtable.qmd
     - part: Database
       chapters:
-        - 05-database.qmd
+        - 05-database-dolthub.qmd
+        - 06-database-airtable.qmd
     - part: Sources
       chapters:
-        - 06-sources.qmd
+        - 07-sources.qmd
     - part: Maintenance
       chapters:
-        - 07-updates.qmd
-        - 08-survey.qmd
-    - 09-references.qmd
+        - 08-updates.qmd
+        - 09-survey.qmd
+    - 10-references.qmd
   cover-image: images/acdc_eha.png
   search: true
   repo-url: https://github.com/ecohealthalliance/acdc-db-handbook/
   repo-actions: [edit]
   downloads: [pdf, epub]
-  sharing: [twitter, facebook]
 
 bibliography: book.bib
 
