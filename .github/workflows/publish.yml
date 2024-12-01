@@ -53,9 +53,9 @@ jobs:
         
       - name: Render document
         run: |
-          quarto render index.qmd
-        env:
-          AIRTABLE_API_KEY: ${{ env.AIRTABLE_API_KEY }}
+          readRenviron(".env")
+          quarto::quarto_render("index.qmd")
+        shell: Rscript {0}
       
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
