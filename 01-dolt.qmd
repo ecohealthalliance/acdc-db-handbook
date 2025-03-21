@@ -91,7 +91,7 @@ $ brew install dolt
 🍺  /usr/local/Cellar/dolt/0.18.3: 7 files, 56.9MB
 ```
 
-which will install Dolt as follows:
+Which will install Dolt as follows:
 
 ```bash
 $ ls -ltr $(which dolt)
