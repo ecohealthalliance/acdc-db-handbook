@@ -6,15 +6,6 @@ output-file: pact.html
 
 This is a description of the RIG database's primary data source, Pandemic PACT. We originally used a variety of data sources (summarized under Appendix, Alternate Sources), but replaced them with Pandemic PACT, which is a more comprehensive data source. Should Pandemic PACT become unavailable in the future, the Alternate Sources can be used instead.
 
-```{r setup}
-#| echo: false
-
-suppressPackageStartupMessages(source(here::here("packages.R")))
-for (f in list.files(here::here("R"), full.names = TRUE)) source (f)
-
-pact_data <- pactr::pact_read_website()
-```
-
 # Introduction {#sec-intro}
 
 This document provides a review of the [Pandemic PACT](https://www.pandemicpact.org/) dataset. Specifically, this document:
