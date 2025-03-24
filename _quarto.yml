@@ -33,19 +33,18 @@ book:
         - 01-dolt.qmd
         - 02-dolthub.qmd
         - 03-rstats.qmd
-        - 04-airtable.qmd
+    - part: Data Sources
+      chapters:
+        - 04-pact.qmd
+        - 05-updates.qmd
     - part: Database
       chapters:
-        - 05-database-dolthub.qmd
-        - 06-database-airtable.qmd
-    - part: Sources
+        - 06-database-dolthub.qmd
+    - part: Exporting the Database
+        - 07-data-export.qmd
+    - part: Appendix
       chapters:
-        - 07-sources.qmd
-    - part: Maintenance
-      chapters:
-        - 08-updates.qmd
-        - 09-survey.qmd
-    - 10-references.qmd
+        - 08-alternate-sources.qmd
   cover-image: images/acdc_eha.png
   search: true
   repo-url: https://github.com/ecohealthalliance/acdc-db-handbook/
