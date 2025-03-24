@@ -4,9 +4,8 @@ output-file: alternate-sources.html
 
 # Alternate Sources {#alt-sources}
 
-Following is an initial list of sources of information used for the RIG database. 
+Following is a list of alternate sources of information that were originally used for the RIG database. As Pandemic PACT uses all these sources and more, we have now switched to using Pandemic PACT as our primary data source. We have included these alternate sources as an Appendix so that they can be used if Pandemic PACT becomes unavailable in the future. 
 
-The initial search performed was non-systematic and focused primarily on a known funder of global research related/relevant to the topics of interest for the database . The main aim of focusing first on this limited and focused search was to get a sense of what information is available from such bodies/organisations, and the limitations of the information available. This is based on an initial idea that research funders would tend to have a system of collecting/archiving information on research they have funded. The expectation was that at the minimum, the information available from funders would lead to identifying further sources of information relevant to the ACDC database specifically those of research groups/institutions particularly those based in countries/regions within Africa. This initial search will hopefully inform a more systematic and informed search strategy for the database information.
 
 ## UKRI {#ukri}
 
