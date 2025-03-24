@@ -112,117 +112,29 @@
     "href": "pact.html",
     "title": "5  Pandemic PACT",
     "section": "",
-    "text": "5.1 UKRI\nFollowing is an initial list of sources of information used for the RIG database.\nThe initial search performed was non-systematic and focused primarily on a known funder of global research related/relevant to the topics of interest for the database . The main aim of focusing first on this limited and focused search was to get a sense of what information is available from such bodies/organisations, and the limitations of the information available. This is based on an initial idea that research funders would tend to have a system of collecting/archiving information on research they have funded. The expectation was that at the minimum, the information available from funders would lead to identifying further sources of information relevant to the ACDC database specifically those of research groups/institutions particularly those based in countries/regions within Africa. This initial search will hopefully inform a more systematic and informed search strategy for the database information.\nUK Research and Innovation or UKRI is a non-departmental public body in the United Kingdom that was established in 2018. It brings together the seven UK Research Councils, Innovate UK, and Research England, which were previously separate organizations, to create a single body that oversees research and innovation funding and strategy in the UK.\nThe seven UK Research Councils are:\nInnovate UK is the UK’s innovation agency, which provides funding and support for innovative businesses and projects.\nResearch England is responsible for funding and overseeing research in English universities and higher education institutions.\nUKRI’s main role is to drive innovation and research in the UK and to support research and development that benefits society and the economy. It funds research projects, provides support to researchers, promotes international collaboration, and works to ensure that research and innovation are integrated with government policies and priorities.\nOf these various groups within UKRI, we further focused on the Biotechnology and Biological Sciences Research Council (BBSRC), Medical Research Council (MRC), Science and Technology Facilities Council (STFC), Innovate UK, and Research England.",
+    "text": "6 Introduction\nThis is a description of the RIG database’s primary data source, Pandemic PACT. We originally used a variety of data sources (summarized under Appendix, Alternate Sources), but replaced them with Pandemic PACT, which is a more comprehensive data source. Should Pandemic PACT become unavailable in the future, the Alternate Sources can be used instead.\nThis document provides a review of the Pandemic PACT dataset. Specifically, this document:",
     "crumbs": [
       "Data Sources",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
     ]
   },
   {
-    "objectID": "pact.html#ukri",
-    "href": "pact.html#ukri",
+    "objectID": "pact.html#sec-pandemic-pact-dataset",
+    "href": "pact.html#sec-pandemic-pact-dataset",
     "title": "5  Pandemic PACT",
-    "section": "",
-    "text": "Arts and Humanities Research Council (AHRC)\nBiotechnology and Biological Sciences Research Council (BBSRC)\nEngineering and Physical Sciences Research Council (EPSRC)\nEconomic and Social Research Council (ESRC)\nMedical Research Council (MRC)\nNatural Environment Research Council (NERC)\nScience and Technology Facilities Council (STFC)",
+    "section": "7.1 The dataset",
+    "text": "7.1 The dataset\nThe data and tools developed through the Pandemic PACT project are hosted on platforms like Figshare[^1] and on its website[^2], enabling open access for researchers to analyse trends and contribute to pandemic readiness globally.\nThe Pandemic PACT dataset is distributed with an open license under the Creative Commons - Attribution - 4.0 International license (CC-BY-4.0).\n\n7.1.1 Curation process\nThe process of curating the Pandemic PACT dataset is described in their protocol and is summarised in Figure 7.1.\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 7.1: Pandemic PACT Data Flow\n\n\n\n\n\n\n\nSource: https://www.pandemicpact.org/about/our-data",
     "crumbs": [
       "Data Sources",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
     ]
   },
   {
-    "objectID": "pact.html#wellcome",
-    "href": "pact.html#wellcome",
+    "objectID": "pact.html#sec-data-governance",
+    "href": "pact.html#sec-data-governance",
     "title": "5  Pandemic PACT",
-    "section": "5.2 Wellcome Trust",
-    "text": "5.2 Wellcome Trust\nThe Wellcome Trust is a global charitable foundation based in the UK. It was established in 1936 by Sir Henry Wellcome, a pharmaceutical entrepreneur and philanthropist. The Wellcome Trust is one of the largest charitable organizations in the world, with an endowment of over £29 billion.\nThe Trust’s mission is to improve health by supporting scientists, researchers, and innovators in their work to understand, treat, and prevent disease. The Trust funds research in areas such as neuroscience, genetics, infectious diseases, and global health. It also provides support for public engagement with science, education and training for scientists, and the translation of research into practical applications that benefit patients and communities.\nThe Wellcome Trust is known for its long-term, strategic approach to funding research, and for its commitment to open science and data sharing. It also operates the Wellcome Collection, a public venue in London that hosts exhibitions and events related to health, medicine, and science.",
-    "crumbs": [
-      "Data Sources",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
-    ]
-  },
-  {
-    "objectID": "pact.html#nih",
-    "href": "pact.html#nih",
-    "title": "5  Pandemic PACT",
-    "section": "5.3 National Institutes of Health",
-    "text": "5.3 National Institutes of Health\nThe National Institutes of Health (NIH) is a biomedical research agency of the United States federal government. It is the largest biomedical research institution in the world, with its main campus located in Bethesda, Maryland. The NIH is composed of 27 separate institutes and centers, each with a specific research focus, and is responsible for conducting and funding research in a wide range of areas, including cancer, genetics, infectious diseases, and neuroscience.\nThe NIH was founded in 1887 as the Hygienic Laboratory and was later renamed the National Institutes of Health in 1930. Today, it is one of the world’s foremost centers for medical research, with a mission to seek fundamental knowledge about the nature and behavior of living systems and to apply that knowledge to enhance health, lengthen life, and reduce illness and disability. The NIH is funded by the U.S. government through the Department of Health and Human Services and operates under the direction of the Office of the Director.",
-    "crumbs": [
-      "Data Sources",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
-    ]
-  },
-  {
-    "objectID": "pact.html#nsf",
-    "href": "pact.html#nsf",
-    "title": "5  Pandemic PACT",
-    "section": "5.4 National Science Foundation",
-    "text": "5.4 National Science Foundation\nThe National Science Foundation (NSF) is an independent federal agency of the United States government that supports fundamental research and education across all fields of science and engineering. The NSF was established by the National Science Foundation Act of 1950 and has a budget of around $8 billion.\nThe NSF funds research and education in areas such as mathematics, computer science, physics, chemistry, biology, social sciences, and engineering. It supports individual researchers, small teams, and large interdisciplinary research collaborations through a competitive, merit-based process of proposal submission and review. The NSF also supports the development of science, technology, engineering, and mathematics (STEM) education at all levels, from K-12 through graduate education.\nThe NSF operates through several directorates and offices, each with a specific research focus or mission, such as the Directorate for Biological Sciences, the Directorate for Social, Behavioral and Economic Sciences, and the Office of Polar Programs. The NSF works to advance scientific discovery, promote science education and outreach, and promote innovation and economic growth through its investments in research and education.",
-    "crumbs": [
-      "Data Sources",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
-    ]
-  },
-  {
-    "objectID": "pact.html#darpa",
-    "href": "pact.html#darpa",
-    "title": "5  Pandemic PACT",
-    "section": "5.5 Defense Advanced Research Projects Agency",
-    "text": "5.5 Defense Advanced Research Projects Agency\nThe Defense Advanced Research Projects Agency is a research and development agency of the United States Department of Defense that is responsible for the development of emerging technologies for use by the military.\nDARPA was established in 1958 in response to the Soviet Union’s launch of Sputnik, the first artificial satellite, and has been involved in a number of high-profile technological innovations, including the development of the Internet, GPS, and stealth technology.\nDARPA’s mission is to maintain the technological superiority of the U.S. military by sponsoring and conducting research in a wide range of fields, including artificial intelligence, robotics, biotechnology, materials science, and aerospace technology. DARPA works with academic researchers, private companies, and other government agencies to develop and test new technologies, and it is known for its high-risk, high-reward approach to research and development.\nSome of DARPA’s current research initiatives include the development of hypersonic weapons, the creation of autonomous drone swarms, and the development of brain-machine interfaces for use in treating neurological disorders. DARPA’s work has had significant impacts on both military and civilian technology, and the agency is seen as a leader in cutting-edge research and development.",
-    "crumbs": [
-      "Data Sources",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
-    ]
-  },
-  {
-    "objectID": "pact.html#clinicaltrials.gov",
-    "href": "pact.html#clinicaltrials.gov",
-    "title": "5  Pandemic PACT",
-    "section": "5.6 ClinicalTrials.gov",
-    "text": "5.6 ClinicalTrials.gov\nClinicalTrials.gov is a publicly accessible database of clinical trials that are being conducted worldwide. It is maintained by the National Library of Medicine, a part of the National Institutes of Health (NIH) in the United States.\nThe database provides information on clinical trials for a wide range of diseases and conditions, including both interventional and observational studies. It includes information about the purpose of the trial, who may participate, where the trial is being conducted, and the status of the trial, such as whether it is recruiting participants or has been completed.\nClinicalTrials.gov was created in response to a 1997 law requiring the registration of clinical trials for certain serious or life-threatening diseases or conditions. Since then, the database has grown to include information on thousands of trials from around the world.\nClinicalTrials.gov is an important resource for researchers, healthcare professionals, and members of the public who are interested in clinical research. It can be used to identify ongoing or completed trials, learn about the purpose and design of a study, and find out how to participate in a trial. It also serves as a platform for researchers to share their results and comply with the requirements of various funding agencies and regulatory bodies.",
-    "crumbs": [
-      "Data Sources",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
-    ]
-  },
-  {
-    "objectID": "pact.html#gepris",
-    "href": "pact.html#gepris",
-    "title": "5  Pandemic PACT",
-    "section": "5.7 GEPRIS",
-    "text": "5.7 GEPRIS\nGeförderte Projekte in der Forschung und Entwicklung (Funded Projects in Research and Development) or GEPRIS is an online database of research projects funded by the German Research Foundation (DFG).\nThe DFG is the largest independent research funding organization in Germany and funds projects across all scientific disciplines, from the humanities and social sciences to the natural and life sciences. GEPRIS provides information about the projects that the DFG has funded, including their aims, methods, and outcomes, as well as the institutions and researchers involved.\nResearchers and members of the public can use GEPRIS to search for projects that have been funded by the DFG, and to access information about these projects. The database includes information about ongoing and completed projects, and users can search by various criteria, such as by researcher name, institution, scientific discipline, or project title.\nGEPRIS is a valuable tool for researchers to identify potential collaborators, explore research trends, and find information about the funding landscape in their field. It is also useful for members of the public who are interested in learning about the research being conducted in Germany and the impact of this research on society.",
-    "crumbs": [
-      "Data Sources",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
-    ]
-  },
-  {
-    "objectID": "pact.html#edctp",
-    "href": "pact.html#edctp",
-    "title": "5  Pandemic PACT",
-    "section": "5.8 EDCTP",
-    "text": "5.8 EDCTP\nEuropean and Developing Countries Clinical Trials Partnership or EDCTP is a public-public partnership between countries in Europe and sub-Saharan Africa, established in 2003, with the aim of accelerating the development of new clinical interventions to fight infectious diseases that disproportionately affect Africa.\nThe partnership’s mission is to improve the health of people in Africa by supporting the development of new medicines, vaccines, and other health interventions to prevent and treat diseases such as HIV/AIDS, tuberculosis, malaria, and neglected infectious diseases. EDCTP supports collaborative research projects that bring together scientists, institutions, and countries from both regions to conduct clinical trials and other research activities.\nEDCTP works with a range of partners, including national governments, research institutions, civil society organizations, and the private sector, to support research that is relevant and responsive to the needs of African communities. It also provides training and capacity-building opportunities to support the development of sustainable health research infrastructure and expertise in Africa.\nThe partnership is funded by the European Union, its member states, and other donors. Since its inception, EDCTP has supported over 100 collaborative research projects and played a key role in advancing the development of new interventions for infectious diseases that affect the people of Africa.",
-    "crumbs": [
-      "Data Sources",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
-    ]
-  },
-  {
-    "objectID": "pact.html#glopidr",
-    "href": "pact.html#glopidr",
-    "title": "5  Pandemic PACT",
-    "section": "5.9 GLOPID-R",
-    "text": "5.9 GLOPID-R\nGlobal Research Collaboration for Infectious Disease Preparedness or GLOPID-R is an international partnership that aims to strengthen global research efforts in the field of infectious disease preparedness. The partnership was established in response to the 2014 Ebola outbreak in West Africa, which highlighted the need for improved global coordination and collaboration in research and development for emerging and re-emerging infectious diseases.\nGLOPID-R brings together stakeholders from the global health community, including research funders, policy-makers, researchers, and public health organizations. The partnership aims to promote international cooperation and coordination in research to accelerate the development of new tools and approaches to prevent, detect, and respond to infectious disease outbreaks.\nGLOPID-R’s main objectives include identifying research priorities for infectious disease preparedness, coordinating research efforts across different regions and countries, and promoting capacity building and knowledge exchange to strengthen global health research infrastructure.\nThe partnership focuses on a range of infectious diseases, including those caused by emerging and re-emerging pathogens, neglected tropical diseases, and antimicrobial resistance. It works to support research efforts across the entire spectrum of infectious disease preparedness, from basic research to clinical trials and implementation research.\nGLOPID-R is supported by a range of funding agencies and partners from around the world and is seen as an important platform for promoting global cooperation and collaboration in infectious disease research and preparedness.",
-    "crumbs": [
-      "Data Sources",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
-    ]
-  },
-  {
-    "objectID": "pact.html#nrfza",
-    "href": "pact.html#nrfza",
-    "title": "5  Pandemic PACT",
-    "section": "5.10 NRF South Africa",
-    "text": "5.10 NRF South Africa\nThe National Research Foundation of South Africa (NRF) is an independent organization that promotes and supports research and innovation in all fields of science, engineering, technology, and social sciences in South Africa. The NRF was established in 1999 through the National Research Foundation Act and operates under the jurisdiction of the Department of Science and Innovation.\nThe NRF provides funding, develops policies, and manages research infrastructure to support South African researchers and institutions. It also fosters international collaboration in research, and supports the training and development of the next generation of researchers through various funding and fellowship schemes.\nThe NRF provides funding through a number of programs, including competitive grants, fellowships, and research chairs. It also supports the development of research infrastructure and the establishment of research centers of excellence.\nIn addition to providing funding and support for research, the NRF plays a key role in developing research policies and strategies at the national level. It advises the South African government on research priorities and is involved in various initiatives aimed at promoting science, technology, and innovation in the country.\nThe NRF is an important organization for the South African research community and has been instrumental in advancing the country’s research and innovation capabilities. Its funding and support have contributed to numerous scientific discoveries and innovations in a wide range of fields, including health, energy, and the environment.",
+    "section": "7.2 Data governance",
+    "text": "7.2 Data governance\nIn the Pandemic PACT’s published protocol, it states its data governance procedures:\n\nFor the purposes of the Pandemic PACT project, we have collected data on researchers and their research outputs using names and Open Researcher and Contributor IDs (ORCIDs) (“personal” data). The University of Oxford are the ‘data controller’ for these data, which means we decide how to use it and are responsible for looking after it in accordance with the UK General Data Protection Regulation and associated data protection legislation. We share data with anyone who wishes to download and re-use the information under a CC-BY licence. We will only retain data for as long as we need it to meet our purposes, including any relating to legal, accounting, or reporting requirements. Data will be held securely in accordance with the University’s policies and procedures. Further information is available on the University’s Information Security website where information on rights in relation to personal data are explained.\n\n\n7.2.1 Sources\nThe Pandemic PACT lists the following funders as their sources of information found in the dataset (see Figure 7.2).\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 7.2: Pandemic PACT data sources\n\n\n\n\n\n\n\nSource: https://www.pandemicpact.org/about/our-data",
     "crumbs": [
       "Data Sources",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
