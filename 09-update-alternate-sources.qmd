@@ -4,7 +4,7 @@ output-file: update-alternate-sources.html
 
 # Update Alternate Sources {#update-alt-sources}
 
-The current update process of the RIG database is summarised in this workflow:
+This is a summary of the previous update process for the RIG database, based on a variety of data sources. Should Pandemic PACT become unavailable as a data source in the future, these instructions can be used to download data from our alternate data sources.
 
 ![](images/initial-acdc-db-search_NK.png)
 
