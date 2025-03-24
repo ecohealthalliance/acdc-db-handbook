@@ -36,7 +36,7 @@ book:
     - part: Data Sources
       chapters:
         - 04-pact.qmd
-        - 05-updates.qmd
+        - 05-update-pact.qmd
     - part: Database
       chapters:
         - 06-database-dolthub.qmd
@@ -45,6 +45,7 @@ book:
     - part: Appendix
       chapters:
         - 08-alternate-sources.qmd
+        - 09-update-alternate-sources.qmd
   cover-image: images/acdc_eha.png
   search: true
   repo-url: https://github.com/ecohealthalliance/acdc-db-handbook/

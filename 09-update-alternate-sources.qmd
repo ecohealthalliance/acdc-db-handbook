@@ -1,5 +1,5 @@
 ---
-output-file: updates.html
+output-file: update-alternate-sources.html
 ---
 
 # Updates {#sec-updates}

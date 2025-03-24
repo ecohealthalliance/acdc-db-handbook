@@ -1,5 +1,5 @@
 ---
-output-file: sources.html
+output-file: alternate-sources.html
 ---
 
 # Pandemic PACT {#pact}
