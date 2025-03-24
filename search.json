@@ -420,7 +420,7 @@
     "href": "update-alternate-sources.html",
     "title": "10  Update Alternate Sources",
     "section": "",
-    "text": "10.1 Wellcome Trust Grant Funding Data\nThe current update process of the RIG database is summarised in this workflow:\nFollowing are the source-specific process of updating or retrieving information for the RIG database.",
+    "text": "10.1 Wellcome Trust Grant Funding Data\nThis is a summary of the previous update process for the RIG database, based on a variety of data sources. Should Pandemic PACT become unavailable as a data source in the future, these instructions can be used to download data from our alternate data sources.\nFollowing are the source-specific process of updating or retrieving information for the RIG database.",
     "crumbs": [
       "Appendix",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Update Alternate Sources</span>"
