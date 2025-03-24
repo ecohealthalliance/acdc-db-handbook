@@ -108,420 +108,376 @@
     ]
   },
   {
-    "objectID": "airtable.html",
-    "href": "airtable.html",
-    "title": "5  Airtable",
+    "objectID": "pact.html",
+    "href": "pact.html",
+    "title": "5  Pandemic PACT",
     "section": "",
-    "text": "5.1 Key Terms\nAirtable is a cloud-based software platform that allows users to create and manage databases, spreadsheets, and other types of organizational tools. It can be used for a variety of purposes, including project management, customer relationship management, inventory tracking, event planning, and much more.\nOne of the key features of Airtable is its flexible and customizable nature. Users can create and customize their own database structures, and can choose from a wide range of data types, including text, attachments, checkboxes, and more. This allows for a high degree of customization and adaptability to different use cases and workflows.\nAirtable also offers a variety of collaboration features, including real-time syncing and commenting, as well as integrations with other popular tools such as Slack, Google Drive, and Trello. Additionally, Airtable has a robust API that allows developers to build custom integrations and applications on top of the platform.\nAirtable’s flexibility, customizability, and features that support collaboration along with its spreadsheet-style interface that is familiar to most that have used other spreadsheet software such as Microsoft Excel or Google Sheets are the key reasons why it was chosen to be the database tool for RIG.\nChapter 5 provides an overview of Airtable and good practices for designing data models in relational databases.",
+    "text": "5.1 UKRI\nFollowing is an initial list of sources of information used for the RIG database.\nThe initial search performed was non-systematic and focused primarily on a known funder of global research related/relevant to the topics of interest for the database . The main aim of focusing first on this limited and focused search was to get a sense of what information is available from such bodies/organisations, and the limitations of the information available. This is based on an initial idea that research funders would tend to have a system of collecting/archiving information on research they have funded. The expectation was that at the minimum, the information available from funders would lead to identifying further sources of information relevant to the ACDC database specifically those of research groups/institutions particularly those based in countries/regions within Africa. This initial search will hopefully inform a more systematic and informed search strategy for the database information.\nUK Research and Innovation or UKRI is a non-departmental public body in the United Kingdom that was established in 2018. It brings together the seven UK Research Councils, Innovate UK, and Research England, which were previously separate organizations, to create a single body that oversees research and innovation funding and strategy in the UK.\nThe seven UK Research Councils are:\nInnovate UK is the UK’s innovation agency, which provides funding and support for innovative businesses and projects.\nResearch England is responsible for funding and overseeing research in English universities and higher education institutions.\nUKRI’s main role is to drive innovation and research in the UK and to support research and development that benefits society and the economy. It funds research projects, provides support to researchers, promotes international collaboration, and works to ensure that research and innovation are integrated with government policies and priorities.\nOf these various groups within UKRI, we further focused on the Biotechnology and Biological Sciences Research Council (BBSRC), Medical Research Council (MRC), Science and Technology Facilities Council (STFC), Innovate UK, and Research England.",
     "crumbs": [
-      "Tools",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Airtable</span>"
+      "Data Sources",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
     ]
   },
   {
-    "objectID": "airtable.html#sec-airtable-key-terms",
-    "href": "airtable.html#sec-airtable-key-terms",
-    "title": "5  Airtable",
-    "section": "",
-    "text": "Workspace - A collection of bases\nBase - A database. Each is identified by the Airtable API via a base id\nTable - A tabular data set within a base. Each table is identified by the Airtable API via the name of the table e.g. “Demo Table”\nRecord - An individual cell within a table. Each record is identified by the Airtable API via a record id\nField - A property of data in a table\nViews - A specific way of displaying a table. Default is grid.\nEntity - Something that either physically or logically exists whose properties are typically stored in a table and composed of data elements.\nElement - an attribute of a Entity (a field)",
-    "crumbs": [
-      "Tools",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Airtable</span>"
-    ]
-  },
-  {
-    "objectID": "airtable.html#sec-airtable-security",
-    "href": "airtable.html#sec-airtable-security",
-    "title": "5  Airtable",
-    "section": "5.2 Security and Access Control",
-    "text": "5.2 Security and Access Control\nAirtable maintains physical and technological security as part of its ISO IEC 27001:2013 and SOC 2 compliance measures. Data are 256-bit encrypted when storing on the server and also when transferring data over the internet. To find vulnerabilities in their software, they run daily, weekly, and monthly scans on different components of their system and regularly commission external penetration tests. They also run a bug bounty program to help identify issues. Their data centers have fire detection and suppression systems, redundant power systems, and strict control for physical access. Because Airtable relies on Amazon Web Services (AWS) for its cloud infrastructure (the same providers used by previous EHA projects), data are geo-redundantly replicated in backups across multiple zones to increase data durability. They also have a team monitoring services at all times. Airtable employees are thoroughly vetted before hiring and continually trained on data protection best practices. Their workstations are secured by using full-disk encryption, automatic locking, and strong password requirements.\n\n5.2.1 User and Administrator Security Features\n\n5.2.1.1 Access Controls\nAirtable provides database (referred to as “base”) and workspace administrators with granular controls over who can view, edit, comment, or otherwise modify data at the base, table, and field levels. There are four levels of Airtable user permissions:\n\nOwner/Creator: Full administrative control of base\n\nEditor: Sees full base, create and modify records and views, create and modify view share links\n\nCommenter: Sees full base, comment on records\n\nReader: Sees full base\n\nDirect access to a base or workspace is granted or removed by base owners and creators to Airtable users. Base owners and creators can control who has access to a base and can control any “share” links created for that base. They may also restrict editing of tables or fields within a base. Any collaborator given direct access to a base at any permission level will be able to duplicate that base and share that data further. It is important that direct access to the base is limited to individuals with a need to curate or analyze the data.\n\n\n5.2.1.2 Share Links and Interfaces\nTo further restrict access to a base, users can be given indirect access via revocable share links or interfaces.\nShare links can be customized to prevent users from seeing the full base, prevent duplicating the base, and prevent copying data from the base. The ability to use the link can be password protected, restricted to people with certain email domains, and may be revoked at any time. If there are concerns about data leaks via base or table duplication, inviting people with a need to view the data via share links constrains their ability to extract data from the base.\nInterfaces are dynamic dashboards built on a limited set of data in an airtable base. Users can explore or even edit data based on the permissions provided by the interface creator. Access can be further tuned by setting up a “current-user filter”. See this guide for more information.",
-    "crumbs": [
-      "Tools",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Airtable</span>"
-    ]
-  },
-  {
-    "objectID": "airtable.html#sec-airtable-data",
-    "href": "airtable.html#sec-airtable-data",
-    "title": "5  Airtable",
-    "section": "5.3 Data in Airtable",
-    "text": "5.3 Data in Airtable\nSee Airtable plan comparison for more information on the size of bases and features available. Information in this section pertains to all plans unless specified.\n\n5.3.1 Workspaces, Bases, Tables, Fields, Records\nAirtable uses workspaces, bases, tables, and fields to manage data. A workspace generally pertains to a particular project and contains all bases relevant to that project. Sharing a workspace with someone allows them to see all bases within that workspace.\nBases are equivalent to databases. They consist of a set of tables that can be linked and allow you to perform some task (e.g. IRB tracking, capturing research data, etc.). Bases can be duplicated and shared across your workspaces and you can share bases with other users.\nTables are where most of the action happens. Data is entered in tables, tables can be transformed via views into calendars, dashboards, or galleries, and tables can be manipulated via the API. They describe a data entity and are composed of fields. In the bat sampling example, each circle would be a table in the bat sampling base (see Figure 5.1).\n\n\n\n\n\n\n\n\nbat_sampling\n\n\n\na\n\nCollector\n\n\n\nc\n\nBat\n\n\n\na-&gt;c\n\nCollected by\n\n\n\nb\n\nSite\n\n\n\nb-&gt;c\n\nCollected at\n\n\n\nf\n\nPhysical\nsample\n\n\n\nc-&gt;f\n\nCollected from\n\n\n\nd\n\nAntibody\ntest result\n\n\n\ne\n\nPCR\ntest result\n\n\n\nf-&gt;d\n\nDerived from\n\n\n\nf-&gt;e\n\nDerived from\n\n\n\n\n\n\nFigure 5.1: Data model for bat sampling example\n\n\n\n\n\nFields represent properties of a data entity. In a spreadsheet view, fields are columns. Airtable allows you to control field types (date, number, text, file attachments, logical, etc.) and paid plans allows you to control who can edit fields. Fields can be linked between tables creating links.\nRecords are the individual data points in a table. In a spreadsheet they would be the rows. Records are shaped by the structure you have created in tables and fields. Each record has a URL that can be used to access it programmatically or share it.",
-    "crumbs": [
-      "Tools",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Airtable</span>"
-    ]
-  },
-  {
-    "objectID": "airtable.html#sec-airtable-views",
-    "href": "airtable.html#sec-airtable-views",
-    "title": "5  Airtable",
-    "section": "5.4 Views",
-    "text": "5.4 Views\nIn Airtable, tables can be displayed in different views to emphasis different components of the data. Views are great for creating concise presentations of data, especially in sprawling tables. The default view in an table is the grid (spreadsheet) view. All other views will derive from the data entered in this view.\nFor more on views, see the guide to views.",
-    "crumbs": [
-      "Tools",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Airtable</span>"
-    ]
-  },
-  {
-    "objectID": "airtable.html#sec-airtable-internal-backups",
-    "href": "airtable.html#sec-airtable-internal-backups",
-    "title": "5  Airtable",
-    "section": "5.5 Internal Backups: Record History, Base Snapshots",
-    "text": "5.5 Internal Backups: Record History, Base Snapshots\nAirtable has system for tracking changes to a base. They provide revision history for individual records (how long those histories are stored varies by plan). Any comments made in the revision history will be stored for the life of the record (on any plan). The current state of an entire base may be captured through snapshots. Should a systemic issue arise, the base can be restored to a snapshot at a later date. Restoring from a snapshot will remove the revision history for a record but comments on that record will be maintained.\nAs revision histories are maintained, “deleted” records may be retrieved. In the event of the need to permanently remove data, the revision history of the base may be removed.\nAirtable allows data to be exported as CSVs from individual tables. At this time there is not an Airtable supported base export function.",
-    "crumbs": [
-      "Tools",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Airtable</span>"
-    ]
-  },
-  {
-    "objectID": "airtable.html#sec-airtable-import-data",
-    "href": "airtable.html#sec-airtable-import-data",
-    "title": "5  Airtable",
-    "section": "5.6 Importing data",
-    "text": "5.6 Importing data\nData can be imported to Airtable from a number of sources including CSV files, excel, Google sheets, XML, and via copy paste. Airtable will guess what the most appropriate field type is, so make sure the field type is appropriate for the data (e.g. convert from text to date type fields). Certain sources, like Google sheets, can be imported as bases.\nFor more on importing data see: Importing and Adding data",
-    "crumbs": [
-      "Tools",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Airtable</span>"
-    ]
-  },
-  {
-    "objectID": "airtable.html#sec-airtable-base-design",
-    "href": "airtable.html#sec-airtable-base-design",
-    "title": "5  Airtable",
-    "section": "5.7 Base Design",
-    "text": "5.7 Base Design\nHaving a good base design will make using your data easier. Generally, the process looks like this:\n\nDescribe what the database will do and collect use cases\nDetermine the roles of various stakeholders\nList out the entities in the database and define their properties\nMap out how the entities fit together (which properties link them)\nCheck that the mapping meets the use cases\nBuild base in Airtable\nCheck that the base meets the use cases\n\nIf you are migrating from spreadsheets, you likely already have an idea of what you need the base to do and a collection of data properties. It is still a good idea to follow the steps outlined above for mapping out entities. You may find that entire sheets can be replaced by views or that the data in one sheet should actually be stored in two different tables.",
-    "crumbs": [
-      "Tools",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Airtable</span>"
-    ]
-  },
-  {
-    "objectID": "airtable.html#sec-airtable-automation",
-    "href": "airtable.html#sec-airtable-automation",
-    "title": "5  Airtable",
-    "section": "5.8 Automating Airtable",
-    "text": "5.8 Automating Airtable\nAirtable has five main routes for automating processes.\n\nAutomations - a drag and drop visual programming tool\nExtensions - pre-built applications that perform some task\nScripting - use JavaScript to automate tasks within Airtable\nBlocks - use JavaScript to create custom applications\nREST API - use whatever programming language you like to automate processes\n\n\n5.8.1 Automations with Drag and Drop Programming (pro and above)\nThe automations feature within Airtable allows you to visually program routines. Each automation has three basic components (see Figure 5.2):\n\nStatus - controls whether or not the automation will run when the trigger condition is met\nTriggers - condition for automation to run: the creation or change of a record, a scheduled time, or some other external action\nActions - what the automation will do\n\n\n\n\n\n\n\n\n\nFigure 5.2: Actions diagram\n\n\n\n\n\nAutomations are commonly used to augment the synced tables feature, send notifications, check data quality, and manipulate or create records.\nThis automation (see Figure 5.3) creates a weekly summary of applicants who applied for a position. Its trigger is time based, then it finds records that match a condition, and finally it generates an email from those records and sends to the appropriate recipients.\n\n\n\n\n\n\nFigure 5.3: Airtable weekly summary\n\n\n\n\n\n5.8.2 Scripting and Blocks (pro plan and above)\nScripting uses JavaScript to manipulate a base from within an application in Airtable. Scripting is flexible but has a steep learning curve. The scripting environment Airtable provides can be helpful as it provides code linting, direct access to documentation, and example scripts to build from. The major drawback to scripting is that scripts live in the base and files are not version controlled.\n\nThere are a LOT of pre-written scripts, in a shared “marketplace” to perform automatic actions. Search the marketplace before you start writing bespoke code.\n\nBlocks are custom applications built in JavaScript and node.js that add to base functionality. They are created in a development environment outside of Airtable then brought back into platform. There are number of tutorials for getting started with blocks.",
-    "crumbs": [
-      "Tools",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Airtable</span>"
-    ]
-  },
-  {
-    "objectID": "airtable.html#sec-airtable-api",
-    "href": "airtable.html#sec-airtable-api",
-    "title": "5  Airtable",
-    "section": "5.9 Using the REST API",
-    "text": "5.9 Using the REST API\nAll Airtable bases are automatically accessible to authorized users via a REST API. The list of API accessible bases you have access to can be found here: https://airtable.com/api. By clicking on a base you will be able to see the full API documentation for that base.\n\n5.9.1 Scoped Tokens\nAirtable is moving to a scoped tokens based approach to api access. Scoped personal access tokens allow you to create a token for a specific base with specific permissions - e.g. token has read-only access to a bat sampling base. Using scoped tokens in this way means that if the token is compromised (leaked, stolen, accidentally committed unencrypted to a github repo, etc), you can delete that token to remove any access it might have had and the limited scope means that you know exactly what a person would have been able to access.\nTo create a personal access token go here: https://airtable.com/create/tokens\n\n\n\n\n\n\nWarning\n\n\n\nRemember to save the token in a secure place. Do not store unencrypted tokens on the web (e.g. pushing them to GitHub).\n\n\nAirtable has also deployed OAuth tokens for all users.\n\n\n5.9.2 Airtable and R\nThe Airtable REST API can be used via R with the airtabler package. EHA has started a fork of the package that has additional functionality so it is recommended to use that version. The original package design works well for exploring the data. Our extension adds additional functionality to help use airtabler in automation via continuous integration such as GitHub Actions.\ndevtools::install_github(\"ecohealthalliance/airtabler\")\nThe Airtable API serves up data as JSON, which has a hierarchical structure similar to a list in R. To handle JSON, airtabler uses the jsonlite package. Its helpful to understand how jsonlite handles different JSON structures when working with more complicated Airtable data. See the jsonlite quick-start guide for a basic overview. The purrr package is extremely helpful when dealing with data objects derived from JSON because it facilitates navigating nested data structures.\nThe airtabler package provides instructions for setting up access to the Airtable API. You will need to follow those instructions for Example 5.1 and Example 5.2 to work.\n\nExample 5.1  \nlibrary(airtabler)\n\ntable1  &lt;-  fetch_all(base = \"app49bbyLczZxX9PM\",table_name = \"One To One\")\n\ntable2 &lt;- fetch_all(base = \"app49bbyLczZxX9PM\",table_name = \"Table 2\")\n\n## Linked records are stored as JSON arrays so they become lists \n## when part of a data frame. Because each array has a length of 1\n## we can safely unlist the arrays and add them back as to the \n## data frame.\n\ntable1$LinkedRec &lt;- unlist(table1$LinkedRec)\n\njoinedTables &lt;- dplyr::left_join(table1,table2, by = c(\"LinkedRec\"=\"id\"))\n\nrecordKey &lt;- joinedTables[c(\"Name\",\"LinkedRec\",\"Number\")]\n\nrecordKey\nOne to One join\n\n\nExample 5.2  \nlibrary(airtabler)\nlibrary(dplyr)\nlibrary(purrr)\n\noneToMany &lt;- fetch_all(base = \"app49bbyLczZxX9PM\", table_name = \"One To Many\")\n\ntable2 &lt;- fetch_all(base = \"app49bbyLczZxX9PM\",table_name = \"Table 2\")\n\n# Depending on how you want to work with the data joins are a \n# little trickier here. \n\n## to replace the values but keep the structure\n\noneToMany$LinkedRecReplace &lt;- purrr::map(oneToMany$LinkedRec, function(x){\n  table2 %&gt;%\n    filter(id %in% x) %&gt;%\n    select(c(\"id\",\"Number\")) %&gt;% \n    pull(\"Number\")\n})\n\ndata.frame(\n  id = unlist(oneToMany$LinkedRec), \n  label = unlist(oneToMany$LinkedRecReplace)\n)\nOne to Many Join",
-    "crumbs": [
-      "Tools",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Airtable</span>"
-    ]
-  },
-  {
-    "objectID": "airtable.html#sec-airtable-data-management",
-    "href": "airtable.html#sec-airtable-data-management",
-    "title": "5  Airtable",
-    "section": "5.10 Data Management",
-    "text": "5.10 Data Management\nBecause of its flexibility and ease of use, it is extremely important that data management for airtable be taken seriously. Unlike most other relational databases, the fundamental properties of your base can be changed easily by multiple users without warning! Documenting the structure and purpose of your base, as well as creating regular external backups could save you from catastrophe.\n\n5.10.1 Metadata\n\nStructural metadata - Information about a resource that tells you how its put together - e.g. the relationship between a table, field, and automation. With the exception of users on the enterprise plan, you must be deliberate about creating and maintaining structural metadata for your base.\n\nExample of Airtable Structural Metadata:\n\n\n\nDescriptive metadata - Information about a resource that makes it easier to find and attribute data. This includes things attributes like author, title, description, keywords, etc. This table becomes especially important when data are transitioned out of airtable, at the end of a project, or if the base will be shared broadly with collaborators.\n\nExample of Airtable Descriptive Metadata:\n\n\nTo see the template base, follow this link\n\n5.10.1.1 Metadata for automations and extensions\nAutomations and extensions live entirely inside airtable. As of August 2022, Airtable introduced a “Manage Fields” tab that provides metadata for a specific table, including any automation dependencies. It is not possible to export those dependency tables or the code used in automations automatically. This makes it extremely important to document any automations and extensions outside your base.\n\n\n\n5.10.2 External Backups\nIt is a good idea to create regular external backups of airtable data in the event that something catastrophic happens to your base or you simply decide you no longer wish to use airtable as your data store.Unfortunately, airtable does not provide an off the shelf solution for this. Below are three options for extracting all data from your base.\n\n5.10.2.1 Using airtabler\nUsing airtabler::air_dump() and airtabler::air_dump_to_csv() functions, you can export all tables to R then create a versioned folder of CSVs. See the air_dump_to_csv help page for more information.\n\n\n5.10.2.2 Other Open Source Projects\nUnlyEd - use this template to push airtable backups to AWS S3.\n\nhttps://github.com/UnlyEd/airtable-backups-boilerplate\n\n\n\n5.10.2.3 Paid services\nSequin - replicate airtable to postGres database (https://www.sequin.io/sources/airtable)",
-    "crumbs": [
-      "Tools",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Airtable</span>"
-    ]
-  },
-  {
-    "objectID": "database-airtable.html",
-    "href": "database-airtable.html",
-    "title": "7  Database",
-    "section": "",
-    "text": "7.1 Activities Table\nThe current database is built using Airtable. The current database has the following schema:\nThis schema can be viewed interactively from here - https://airtable.com/appAL7fJUpBPYtOq4/tblt9ott045tWENcg/viwznxjIFAsTu0jzJ?blocks=bliZ6LV2bkGQNzgKF",
-    "crumbs": [
-      "Database",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Database</span>"
-    ]
-  },
-  {
-    "objectID": "database-airtable.html#sec-activities-table",
-    "href": "database-airtable.html#sec-activities-table",
-    "title": "7  Database",
-    "section": "",
-    "text": "7.1.1 Table details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"Activities\") |&gt;\n  (\\(x) x$table_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\nActivities pertain to the formal/official title of the project that has been identified during the database search or survey.\nFollowing are the different fields within the Activities table with their description.\n\n\n7.1.2 Fields details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"Activities\") |&gt;\n  (\\(x) x$field_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\n\n\n\nField Name\nField Description\nField Type\nField Values\n\n\n\n\nActivity\nActivity name\nsingleLineText\nNA\n\n\nSource Name (from Primary Sources)\nName of primary source\nmultipleLookupValues\nNA\n\n\nNotes\nInternal notes for maintenance\nsingleLineText\nNA\n\n\nTopic\nActivity Topic\nmultipleRecordLinks\nTopics\n\n\nGrant ID\nGrand Identifier\nsingleLineText\nNA\n\n\nCollaborators\nActivity collaborators\nmultipleRecordLinks\nInstitutions\n\n\nResearchers\nResearchers involved in activity\nmultipleRecordLinks\nResearchers\n\n\nPublished Work\nLinks to published work\nsingleLineText\nNA\n\n\nActivity Location alt\nActivity location\nmultipleRecordLinks\nCountries\n\n\nUN Stats Sub-region Name (from Activity Location alt)\nNA\nmultipleLookupValues\nNA\n\n\nActivity Outputs\nActivity Outputs\nmultipleSelects\nData, Publication, Report, Guideline/SOP, Archive, Improving Diagnostics, Vaccine development, Therapeutics, Epidemic/Pandemic Preparedness, Biosurveillance technology, Prophylaxis, Surveillance, Improving Vaccine strategies, Training, Risk Assessment, Improving Capacity, Policies\n\n\nActivity Status\nActivity Status\nsingleSelect\nActive, Completed\n\n\nActivity Website\nActivity Website\nurl\nNA\n\n\nActivity Identifier\nActivity identifier\nformula\nNA\n\n\nPrimary Sources\nPrimary source of information\nmultipleRecordLinks\nSources\n\n\nDate validated\nDate when record was validated.\ndateTime\nNA\n\n\nValidated\nIndicate whether this record has been validated.\ncheckbox\nNA\n\n\nAdditional Sources\nAdditional sources\nsingleLineText\nNA\n\n\nContinent Name (from Activity Location alt)\nNA\nmultipleLookupValues\nNA\n\n\nAU Region Name (from Activity Location alt)\nNA\nmultipleLookupValues\nNA",
-    "crumbs": [
-      "Database",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Database</span>"
-    ]
-  },
-  {
-    "objectID": "database-airtable.html#sec-countries-table",
-    "href": "database-airtable.html#sec-countries-table",
-    "title": "7  Database",
-    "section": "7.2 Countries Table",
-    "text": "7.2 Countries Table\n\n7.2.1 Table details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"AU Countries\") |&gt;\n  (\\(x) x$table_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\nList of countries used to indicate the location information for the researchers, topics, funders, sources, institutions, and activities tables\nFollowing are the different fields within the Countries table with their description.\n\n\n7.2.2 Fields details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"Countries\") |&gt;\n  (\\(x) x$field_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\n\n\n\nField Name\nField Description\nField Type\nField Values\n\n\n\n\nResearchers\nNA\nmultipleRecordLinks\nResearchers\n\n\nFunders\nNA\nmultipleRecordLinks\nFunders\n\n\nAU Region Name\nNA\nsingleSelect\nNorthern Africa, Eastern Africa, NA, Central Africa, Southern Africa, Western Africa\n\n\nUN Stats Sub-region Name\nName of further sub-regional grouping to which country is usually classified within. This is based on the UN Statistics Division nomenclature.\nsingleSelect\nNA, Eastern Africa, Middle Africa, Southern Africa, Western Africa, Channel Islands, Sark",
-    "crumbs": [
-      "Database",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Database</span>"
-    ]
-  },
-  {
-    "objectID": "database-airtable.html#sec-description-table",
-    "href": "database-airtable.html#sec-description-table",
-    "title": "7  Database",
-    "section": "7.3 Description Table",
-    "text": "7.3 Description Table\n\n7.3.1 Table details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"Description\") |&gt;\n  (\\(x) x$table_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\nThe Description table provides overall description of this entire database.\nFollowing are the different fields within the Description table with their description.\n\n\n7.3.2 Fields details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"Description\") |&gt;\n  (\\(x) x$field_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\n\n\n\nField Name\nField Description\nField Type\nField Values\n\n\n\n\nEmail\nEmail for primary contact\nemail\nNA\n\n\nPrimary Contact\nPerson to correspond with about the base\nsingleLineText\nNA\n\n\nIRB\nOptional: Link to IRB\nurl\nNA\n\n\nBase Description\nCharacterization of the base. What is the base describing?\nmultilineText\nNA",
-    "crumbs": [
-      "Database",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Database</span>"
-    ]
-  },
-  {
-    "objectID": "database-airtable.html#sec-funders-table",
-    "href": "database-airtable.html#sec-funders-table",
-    "title": "7  Database",
-    "section": "7.4 Funder Table",
-    "text": "7.4 Funder Table\n\n7.4.1 Table details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"Funders\") |&gt;\n  (\\(x) x$table_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\nFunders pertain to the entities funding each activity.\nThe funders’ information is retrieved from declared funders for the activities identified during the database search or the survey.\nFollowing are the different fields within the Funders table with their description.\n\n\n7.4.2 Fields details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"Funders\") |&gt;\n  (\\(x) x$field_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\n\n\n\nField Name\nField Description\nField Type\nField Values\n\n\n\n\nFunder Type\nType of funder\nsingleSelect\nCharitable organization, Foundation, Pharmaceutical company , Not-for-profit Partnership, NGO, Government Agency, University, Research Institut, Public- public partnership , Public-private partnership\n\n\nFunder Website\nWebsite of funder\nurl\nNA\n\n\nSource Name (from Primary Sources)\nSource from where funder was identified\nmultipleLookupValues\nNA\n\n\nActivities\nActivities supported by funder\nmultipleRecordLinks\nActivities\n\n\nWHO Region Name (from Funder Location alt)\nNA\nmultipleLookupValues\nNA\n\n\nContinent Name (from Funder Location alt)\nNA\nmultipleLookupValues\nNA\n\n\nPrimary Sources\nSource from where funder was identified\nmultipleRecordLinks\nSources",
-    "crumbs": [
-      "Database",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Database</span>"
-    ]
-  },
-  {
-    "objectID": "database-airtable.html#sec-institutions-table",
-    "href": "database-airtable.html#sec-institutions-table",
-    "title": "7  Database",
-    "section": "7.5 Institutions Table",
-    "text": "7.5 Institutions Table\n\n7.5.1 Table details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"Institutions\") |&gt;\n  (\\(x) x$table_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\nInstitutions pertain to the entities directly related to or implementing the activity and/or the affiliation of the researcher implementing the activity.\nFollowing are the different fields within the Institutions table with their description.\n\n\n7.5.2 Fields details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"Institutions\") |&gt;\n  (\\(x) x$field_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\n\n\n\nField Name\nField Description\nField Type\nField Values\n\n\n\n\nInstitution Email\nEmail of institution\nemail\nNA\n\n\nInstitution Website\nInstitution Website\nurl\nNA\n\n\nActivities\nName of activity identified with institution\nmultipleRecordLinks\nActivities\n\n\nSources\nName of primary source\nmultipleRecordLinks\nSources\n\n\nInstitution Type\nInstitution Type\nsingleSelect\nResearch Institute, University, NGO, National Government Institution, Non-profit Organisation , Hospital, Government Agency, Consortium, Partnership of Institutes, Industry, Charity, Public-private partnetship, International Coalition , Inter-governmental Organisation, Medical Service Provider, Network\n\n\nInstitution Location\nInstitution location\nmultipleRecordLinks\nWHO Countries\n\n\nNotes\nInternal notes (for maintenance)\nsingleLineText\nNA\n\n\nTopic (from Activities)\nName of topic identified with the institution\nmultipleLookupValues\nNA",
-    "crumbs": [
-      "Database",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Database</span>"
-    ]
-  },
-  {
-    "objectID": "database-airtable.html#sec-researchers-table",
-    "href": "database-airtable.html#sec-researchers-table",
-    "title": "7  Database",
-    "section": "7.6 Researchers Table",
-    "text": "7.6 Researchers Table\n\n7.6.1 Table details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"Researchers\") |&gt;\n  (\\(x) x$table_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\nResearchers pertains to the people involved in the activities contained in this database, and maybe involved in a variety of activity types. including but not limited to, research.\nResearchers identified during the database search. Information on researchers are primarily retrieved once activities have been identified from the database search process. It is possible that researchers are identified apriori and from which information on topics, funders, sources, institutions, and activities may be identified relevant to the specific researcher. This may happen when the planned/proposed survey is implemented and sent to known researchers who may or may not be in the database to begin with.\nFollowing are the different fields within the Researchers table with their description.\n\n\n7.6.2 Fields details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"Researchers\") |&gt;\n  (\\(x) x$field_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\n\n\n\nField Name\nField Description\nField Type\nField Values\n\n\n\n\nWHO Region Name (from Researcher Country Location alt)\nNA\nmultipleLookupValues\nNA\n\n\nACDC Status\nIs researcher from the Africa CDC?\nsingleSelect\nNon-member, Member\n\n\nSources\nName of source\nmultipleRecordLinks\nSources\n\n\nUN Stats Region Name (from Researcher Country Location alt)\nNA\nmultipleLookupValues\nNA\n\n\nAffiliation\nInstitution researcher is affiliated with. Choices from the institutions table\nmultipleRecordLinks\nInstitutions\n\n\nInstitution Location alt (from Affiliation)\nNA\nmultipleLookupValues\nNA\n\n\nTopic (from Activity)\nName of topic\nmultipleLookupValues\nNA\n\n\nResearcher Name\nFull name of researcher identified in the search\nsingleLineText\nNA\n\n\nNotes\nInternal notes (for maintenance)\nsingleLineText\nNA\n\n\nSource Name (from Sources)\nName of source\nmultipleLookupValues\nNA\n\n\nAdditional Sources\nAdditional sources\nsingleLineText\nNA\n\n\nActivity Type (from Activity)\nType of activity\nmultipleLookupValues\nNA\n\n\nTopic (from Activity) 2\nNA\nmultipleLookupValues\nNA\n\n\nWebsite\nPersonal website of researcher (if any)\nsingleLineText\nNA\n\n\nActivity\nActivity/activities researchers is involved in\nmultipleRecordLinks\nActivities\n\n\nInstitution Location (from Affiliation)\nName of location where institution is based\nmultipleLookupValues\nNA\n\n\nWilling to be contacted\nIs the researcher willing to be contacted?\ncheckbox\nNA\n\n\nContinent Name (from Researcher Country Location alt)\nNA\nmultipleLookupValues\nNA",
-    "crumbs": [
-      "Database",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Database</span>"
-    ]
-  },
-  {
-    "objectID": "database-airtable.html#sec-sources-table",
-    "href": "database-airtable.html#sec-sources-table",
-    "title": "7  Database",
-    "section": "7.7 Sources Table",
-    "text": "7.7 Sources Table\n\n7.7.1 Table details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"Sources\") |&gt;\n  (\\(x) x$table_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\nSources contain initial set of sources (primarily funders) identified to initiate the database search. These original sources are fully described here - https://ecohealthalliance.github.io/rig-handbook/sources.html.\nFrom the initial search, other sources were identified from which additional streams of searches were performed. Currently, the sources table is updated through a primary search of possible sources in addition to the search performed on the original sources list.\nFollowing are the different fields within the Sources table with their description.\n\n\n7.7.2 Fields details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"Sources\") |&gt;\n  (\\(x) x$field_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\n\n\n\nField Name\nField Description\nField Type\nField Values\n\n\n\n\nSource Type\nType of primary source\nsingleSelect\nWebsite text page, Website table, Website search, Downloadable document in PDF, Downloadable document in XLSX, Downloadable document in CSV, Downloadable document in DOCX, A form of database, Website text page, Website search, Links to downloadable documents in PDF, Website table, Website search\n\n\nSource Notes\nInternal notes for primary source (for maintenance)\nmultilineText\nNA\n\n\nTopics\nTopics identified from primary source\nmultipleRecordLinks\nTopics\n\n\nRelevant tables\nNotes on relevant tables found from primary source\nmultipleSelects\nResearchers, Topics, Activities, Funders, Institutions, Countries\n\n\nFunders\nFunders identified from primary source\nmultipleRecordLinks\nFunders\n\n\nSource Name\nName of primary source\nsingleLineText\nNA\n\n\nCreated By\nPerson who created the entry\ncreatedBy\nNA\n\n\nResearchers\nName of researcher identified from primary source\nmultipleRecordLinks\nResearchers",
-    "crumbs": [
-      "Database",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Database</span>"
-    ]
-  },
-  {
-    "objectID": "database-airtable.html#sec-survey-results-table",
-    "href": "database-airtable.html#sec-survey-results-table",
-    "title": "7  Database",
-    "section": "7.8 Survey Results Table",
-    "text": "7.8 Survey Results Table\n\n7.8.1 Table details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"Survey Results\") |&gt;\n  (\\(x) x$table_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\nNA\nFollowing are the different fields within the Survey Results table with their description.\n\n\n7.8.2 Field details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"Survey Results\") |&gt;\n  (\\(x) x$field_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\n\n\n\nField Name\nField Description\nField Type\nField Values\n\n\n\n\nActivity description/ purpose\nDescription of activity\nmultilineText\nNA\n\n\nSharing with Colleagues\nIs respondent going to share with colleagues?\nsingleLineText\nNA\n\n\nLead Researcher\nName of lead researcher\nsingleLineText\nNA\n\n\nCreated By\nName of survey respondent\ncreatedBy\nNA\n\n\nOther websites listing this project\nOther website listings for this project\nsingleLineText\nNA\n\n\nFunder\nName of funder for this project\nsingleLineText\nNA\n\n\nOfficial Project Title\nOfficial project title\nsingleLineText\nNA\n\n\nOfficial Project website\nOfficial project website\nsingleLineText\nNA",
-    "crumbs": [
-      "Database",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Database</span>"
-    ]
-  },
-  {
-    "objectID": "database-airtable.html#sec-topics-table",
-    "href": "database-airtable.html#sec-topics-table",
-    "title": "7  Database",
-    "section": "7.9 Topics Table",
-    "text": "7.9 Topics Table\n\n7.9.1 Table details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"Topics\") |&gt;\n  (\\(x) x$table_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\nTopics pertain to the disease names and disease types.\nThe topics table contains disease types/disease entities of interest to the Africa CDC based on their priorities (as described in their Framework document) and is continually updated with whatever disease/disease entity/disease type were deemed relevant by the database contributor.\nFollowing are the different fields within the Topics table with their description.\n\n\n7.9.2 Fields details\n\ncreate_data_dictionary(metadata = airtable_metadata, table = \"Topics\") |&gt;\n  (\\(x) x$field_details)() |&gt;\n  knitr::kable() |&gt;\n  kableExtra::row_spec(row = 0, bold = TRUE) |&gt;\n  kableExtra::kable_paper(lightable_options = \"striped\")\n\n\n\n\nField Name\nField Description\nField Type\nField Values\n\n\n\n\nSources\nName of Source\nmultipleRecordLinks\nSources\n\n\nDiseases\nDisease entity related/relevant to the field/topic of interest\nmultipleSelects\nHIV, TB, COVID-19, Monkeypox, Lassa fever, Bat flu, Avian flu, Swine flu, Ebola virus disease, Marburg virus disease, Marburg haemorrhagic fever, H7N9, H5N1, H1N1, H1N2, H3N2, Plague, Anthrax, Crimean-Congo Haemorrhagic Fever, Rift Valley Fever, Nipah Virus, Brucellosis, undulant fever, Malta fever, Mediterranean fever, Hantavirus haemorrhagic fever with renal syndrome, Hantavirus pulmonary syndrome, Q fever, Chikungunya, Henipavirus, Ghanaian bat henipavirus, Leptospirosis, Weill's disease, West Nile Fever, Zika fever, Dengue fever, African trypanosomiasis, Chagas disease, Yellow fever, Malaria, Re-emerging viruses, Visceral Leishmaniasis, Kala-azar, Cutaneous leishmaniasis , Hepatitis E , Viral Hepatitis, Hepatitis C, Hepatitis B, Leprosy, Hookworm, Schistosomiasis, Ascariasis, Trichuriasis, Lymphatic filariasis, Trachoma, Buruli ulcer, Dracunculiasis, Bilharzia, Whipworm Infection, Elephantiasis, Guinea-worm disease , Burkitt lymphoma, Cryptococcal meningitis, Kaposi sarcoma, schistosomiasis, Viral haemorrhagic fever, Rabies\n\n\nActivity Location (from Activities)\nName of location of activity in which topic was identified\nmultipleLookupValues\nNA\n\n\nSurvey Results\nResults from survey\nmultipleRecordLinks\nSurvey Results\n\n\nSearch terms\nSearch terms used to identify topic\nmultipleSelects\nantimycobacterial, anti-mycobacterial, COVID-19, coronavirus, omicron, rifampicin, ritonavir, darunavir, dolutegravir, MIS-C, HVTN, ART, antiretroviral, lopinavir, bedaquiline, clofazimine, isoniazid, pyrazinamide, antitubercular, tenofovir disoproxil fumarate, emtricitabine, dolutegravir , efavirenz, tubercular, drug-resistant, AMR, raltegravir, DR-, DR-TB, helminth, TBM, fluke, wildlife sampling, biosurveillance, surveillance network, seroprevalence, detection of __, monitoring of __, seroevidence, identification of __, seropositive, seroepidemiological, survey, screened, __ prevalence\n\n\nDisease Types\nType/category to which disease is grouped under\nmultipleSelects\ninfectious disease, viral, bacterial, parasitic, vector-bourne, zoonotic, virus, soil-transmitted\n\n\nContinent Name (from Activity Location alt) (from Activities)\nNA\nmultipleLookupValues\nNA\n\n\nActivity Location alt (from Activities)\nNA\nmultipleLookupValues\nNA\n\n\nInstitutions\nInstitutions\nmultipleRecordLinks\nInstitutions\n\n\nRegion (from Activity Location) (from Activities)\nName of region where topic was identified\nmultipleLookupValues\nNA\n\n\nAU Region Name (from Activity Location alt) (from Activities)\nNA\nmultipleLookupValues\nNA",
-    "crumbs": [
-      "Database",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Database</span>"
-    ]
-  },
-  {
-    "objectID": "sources.html",
-    "href": "sources.html",
-    "title": "8  Sources",
-    "section": "",
-    "text": "8.1 UKRI\nFollowing is an initial list of sources of information used for the RIG database.\nThe initial search performed was non-systematic and focused primarily on a known funder of global research related/relevant to the topics of interest for the database . The main aim of focusing first on this limited and focused search was to get a sense of what information is available from such bodies/organisations, and the limitations of the information available. This is based on an initial idea that research funders would tend to have a system of collecting/archiving information on research they have funded. The expectation was that at the minimum, the information available from funders would lead to identifying further sources of information relevant to the ACDC database specifically those of research groups/institutions particularly those based in countries/regions within Africa. This initial search will hopefully inform a more systematic and informed search strategy for the database information.\nUK Research and Innovation or UKRI is a non-departmental public body in the United Kingdom that was established in 2018. It brings together the seven UK Research Councils, Innovate UK, and Research England, which were previously separate organizations, to create a single body that oversees research and innovation funding and strategy in the UK.\nThe seven UK Research Councils are:\nInnovate UK is the UK’s innovation agency, which provides funding and support for innovative businesses and projects.\nResearch England is responsible for funding and overseeing research in English universities and higher education institutions.\nUKRI’s main role is to drive innovation and research in the UK and to support research and development that benefits society and the economy. It funds research projects, provides support to researchers, promotes international collaboration, and works to ensure that research and innovation are integrated with government policies and priorities.\nOf these various groups within UKRI, we further focused on the Biotechnology and Biological Sciences Research Council (BBSRC), Medical Research Council (MRC), Science and Technology Facilities Council (STFC), Innovate UK, and Research England.",
-    "crumbs": [
-      "Sources",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Sources</span>"
-    ]
-  },
-  {
-    "objectID": "sources.html#ukri",
-    "href": "sources.html#ukri",
-    "title": "8  Sources",
+    "objectID": "pact.html#ukri",
+    "href": "pact.html#ukri",
+    "title": "5  Pandemic PACT",
     "section": "",
     "text": "Arts and Humanities Research Council (AHRC)\nBiotechnology and Biological Sciences Research Council (BBSRC)\nEngineering and Physical Sciences Research Council (EPSRC)\nEconomic and Social Research Council (ESRC)\nMedical Research Council (MRC)\nNatural Environment Research Council (NERC)\nScience and Technology Facilities Council (STFC)",
     "crumbs": [
-      "Sources",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Sources</span>"
+      "Data Sources",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
     ]
   },
   {
-    "objectID": "sources.html#wellcome",
-    "href": "sources.html#wellcome",
-    "title": "8  Sources",
+    "objectID": "pact.html#wellcome",
+    "href": "pact.html#wellcome",
+    "title": "5  Pandemic PACT",
+    "section": "5.2 Wellcome Trust",
+    "text": "5.2 Wellcome Trust\nThe Wellcome Trust is a global charitable foundation based in the UK. It was established in 1936 by Sir Henry Wellcome, a pharmaceutical entrepreneur and philanthropist. The Wellcome Trust is one of the largest charitable organizations in the world, with an endowment of over £29 billion.\nThe Trust’s mission is to improve health by supporting scientists, researchers, and innovators in their work to understand, treat, and prevent disease. The Trust funds research in areas such as neuroscience, genetics, infectious diseases, and global health. It also provides support for public engagement with science, education and training for scientists, and the translation of research into practical applications that benefit patients and communities.\nThe Wellcome Trust is known for its long-term, strategic approach to funding research, and for its commitment to open science and data sharing. It also operates the Wellcome Collection, a public venue in London that hosts exhibitions and events related to health, medicine, and science.",
+    "crumbs": [
+      "Data Sources",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
+    ]
+  },
+  {
+    "objectID": "pact.html#nih",
+    "href": "pact.html#nih",
+    "title": "5  Pandemic PACT",
+    "section": "5.3 National Institutes of Health",
+    "text": "5.3 National Institutes of Health\nThe National Institutes of Health (NIH) is a biomedical research agency of the United States federal government. It is the largest biomedical research institution in the world, with its main campus located in Bethesda, Maryland. The NIH is composed of 27 separate institutes and centers, each with a specific research focus, and is responsible for conducting and funding research in a wide range of areas, including cancer, genetics, infectious diseases, and neuroscience.\nThe NIH was founded in 1887 as the Hygienic Laboratory and was later renamed the National Institutes of Health in 1930. Today, it is one of the world’s foremost centers for medical research, with a mission to seek fundamental knowledge about the nature and behavior of living systems and to apply that knowledge to enhance health, lengthen life, and reduce illness and disability. The NIH is funded by the U.S. government through the Department of Health and Human Services and operates under the direction of the Office of the Director.",
+    "crumbs": [
+      "Data Sources",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
+    ]
+  },
+  {
+    "objectID": "pact.html#nsf",
+    "href": "pact.html#nsf",
+    "title": "5  Pandemic PACT",
+    "section": "5.4 National Science Foundation",
+    "text": "5.4 National Science Foundation\nThe National Science Foundation (NSF) is an independent federal agency of the United States government that supports fundamental research and education across all fields of science and engineering. The NSF was established by the National Science Foundation Act of 1950 and has a budget of around $8 billion.\nThe NSF funds research and education in areas such as mathematics, computer science, physics, chemistry, biology, social sciences, and engineering. It supports individual researchers, small teams, and large interdisciplinary research collaborations through a competitive, merit-based process of proposal submission and review. The NSF also supports the development of science, technology, engineering, and mathematics (STEM) education at all levels, from K-12 through graduate education.\nThe NSF operates through several directorates and offices, each with a specific research focus or mission, such as the Directorate for Biological Sciences, the Directorate for Social, Behavioral and Economic Sciences, and the Office of Polar Programs. The NSF works to advance scientific discovery, promote science education and outreach, and promote innovation and economic growth through its investments in research and education.",
+    "crumbs": [
+      "Data Sources",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
+    ]
+  },
+  {
+    "objectID": "pact.html#darpa",
+    "href": "pact.html#darpa",
+    "title": "5  Pandemic PACT",
+    "section": "5.5 Defense Advanced Research Projects Agency",
+    "text": "5.5 Defense Advanced Research Projects Agency\nThe Defense Advanced Research Projects Agency is a research and development agency of the United States Department of Defense that is responsible for the development of emerging technologies for use by the military.\nDARPA was established in 1958 in response to the Soviet Union’s launch of Sputnik, the first artificial satellite, and has been involved in a number of high-profile technological innovations, including the development of the Internet, GPS, and stealth technology.\nDARPA’s mission is to maintain the technological superiority of the U.S. military by sponsoring and conducting research in a wide range of fields, including artificial intelligence, robotics, biotechnology, materials science, and aerospace technology. DARPA works with academic researchers, private companies, and other government agencies to develop and test new technologies, and it is known for its high-risk, high-reward approach to research and development.\nSome of DARPA’s current research initiatives include the development of hypersonic weapons, the creation of autonomous drone swarms, and the development of brain-machine interfaces for use in treating neurological disorders. DARPA’s work has had significant impacts on both military and civilian technology, and the agency is seen as a leader in cutting-edge research and development.",
+    "crumbs": [
+      "Data Sources",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
+    ]
+  },
+  {
+    "objectID": "pact.html#clinicaltrials.gov",
+    "href": "pact.html#clinicaltrials.gov",
+    "title": "5  Pandemic PACT",
+    "section": "5.6 ClinicalTrials.gov",
+    "text": "5.6 ClinicalTrials.gov\nClinicalTrials.gov is a publicly accessible database of clinical trials that are being conducted worldwide. It is maintained by the National Library of Medicine, a part of the National Institutes of Health (NIH) in the United States.\nThe database provides information on clinical trials for a wide range of diseases and conditions, including both interventional and observational studies. It includes information about the purpose of the trial, who may participate, where the trial is being conducted, and the status of the trial, such as whether it is recruiting participants or has been completed.\nClinicalTrials.gov was created in response to a 1997 law requiring the registration of clinical trials for certain serious or life-threatening diseases or conditions. Since then, the database has grown to include information on thousands of trials from around the world.\nClinicalTrials.gov is an important resource for researchers, healthcare professionals, and members of the public who are interested in clinical research. It can be used to identify ongoing or completed trials, learn about the purpose and design of a study, and find out how to participate in a trial. It also serves as a platform for researchers to share their results and comply with the requirements of various funding agencies and regulatory bodies.",
+    "crumbs": [
+      "Data Sources",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
+    ]
+  },
+  {
+    "objectID": "pact.html#gepris",
+    "href": "pact.html#gepris",
+    "title": "5  Pandemic PACT",
+    "section": "5.7 GEPRIS",
+    "text": "5.7 GEPRIS\nGeförderte Projekte in der Forschung und Entwicklung (Funded Projects in Research and Development) or GEPRIS is an online database of research projects funded by the German Research Foundation (DFG).\nThe DFG is the largest independent research funding organization in Germany and funds projects across all scientific disciplines, from the humanities and social sciences to the natural and life sciences. GEPRIS provides information about the projects that the DFG has funded, including their aims, methods, and outcomes, as well as the institutions and researchers involved.\nResearchers and members of the public can use GEPRIS to search for projects that have been funded by the DFG, and to access information about these projects. The database includes information about ongoing and completed projects, and users can search by various criteria, such as by researcher name, institution, scientific discipline, or project title.\nGEPRIS is a valuable tool for researchers to identify potential collaborators, explore research trends, and find information about the funding landscape in their field. It is also useful for members of the public who are interested in learning about the research being conducted in Germany and the impact of this research on society.",
+    "crumbs": [
+      "Data Sources",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
+    ]
+  },
+  {
+    "objectID": "pact.html#edctp",
+    "href": "pact.html#edctp",
+    "title": "5  Pandemic PACT",
+    "section": "5.8 EDCTP",
+    "text": "5.8 EDCTP\nEuropean and Developing Countries Clinical Trials Partnership or EDCTP is a public-public partnership between countries in Europe and sub-Saharan Africa, established in 2003, with the aim of accelerating the development of new clinical interventions to fight infectious diseases that disproportionately affect Africa.\nThe partnership’s mission is to improve the health of people in Africa by supporting the development of new medicines, vaccines, and other health interventions to prevent and treat diseases such as HIV/AIDS, tuberculosis, malaria, and neglected infectious diseases. EDCTP supports collaborative research projects that bring together scientists, institutions, and countries from both regions to conduct clinical trials and other research activities.\nEDCTP works with a range of partners, including national governments, research institutions, civil society organizations, and the private sector, to support research that is relevant and responsive to the needs of African communities. It also provides training and capacity-building opportunities to support the development of sustainable health research infrastructure and expertise in Africa.\nThe partnership is funded by the European Union, its member states, and other donors. Since its inception, EDCTP has supported over 100 collaborative research projects and played a key role in advancing the development of new interventions for infectious diseases that affect the people of Africa.",
+    "crumbs": [
+      "Data Sources",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
+    ]
+  },
+  {
+    "objectID": "pact.html#glopidr",
+    "href": "pact.html#glopidr",
+    "title": "5  Pandemic PACT",
+    "section": "5.9 GLOPID-R",
+    "text": "5.9 GLOPID-R\nGlobal Research Collaboration for Infectious Disease Preparedness or GLOPID-R is an international partnership that aims to strengthen global research efforts in the field of infectious disease preparedness. The partnership was established in response to the 2014 Ebola outbreak in West Africa, which highlighted the need for improved global coordination and collaboration in research and development for emerging and re-emerging infectious diseases.\nGLOPID-R brings together stakeholders from the global health community, including research funders, policy-makers, researchers, and public health organizations. The partnership aims to promote international cooperation and coordination in research to accelerate the development of new tools and approaches to prevent, detect, and respond to infectious disease outbreaks.\nGLOPID-R’s main objectives include identifying research priorities for infectious disease preparedness, coordinating research efforts across different regions and countries, and promoting capacity building and knowledge exchange to strengthen global health research infrastructure.\nThe partnership focuses on a range of infectious diseases, including those caused by emerging and re-emerging pathogens, neglected tropical diseases, and antimicrobial resistance. It works to support research efforts across the entire spectrum of infectious disease preparedness, from basic research to clinical trials and implementation research.\nGLOPID-R is supported by a range of funding agencies and partners from around the world and is seen as an important platform for promoting global cooperation and collaboration in infectious disease research and preparedness.",
+    "crumbs": [
+      "Data Sources",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
+    ]
+  },
+  {
+    "objectID": "pact.html#nrfza",
+    "href": "pact.html#nrfza",
+    "title": "5  Pandemic PACT",
+    "section": "5.10 NRF South Africa",
+    "text": "5.10 NRF South Africa\nThe National Research Foundation of South Africa (NRF) is an independent organization that promotes and supports research and innovation in all fields of science, engineering, technology, and social sciences in South Africa. The NRF was established in 1999 through the National Research Foundation Act and operates under the jurisdiction of the Department of Science and Innovation.\nThe NRF provides funding, develops policies, and manages research infrastructure to support South African researchers and institutions. It also fosters international collaboration in research, and supports the training and development of the next generation of researchers through various funding and fellowship schemes.\nThe NRF provides funding through a number of programs, including competitive grants, fellowships, and research chairs. It also supports the development of research infrastructure and the establishment of research centers of excellence.\nIn addition to providing funding and support for research, the NRF plays a key role in developing research policies and strategies at the national level. It advises the South African government on research priorities and is involved in various initiatives aimed at promoting science, technology, and innovation in the country.\nThe NRF is an important organization for the South African research community and has been instrumental in advancing the country’s research and innovation capabilities. Its funding and support have contributed to numerous scientific discoveries and innovations in a wide range of fields, including health, energy, and the environment.",
+    "crumbs": [
+      "Data Sources",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Pandemic PACT</span>"
+    ]
+  },
+  {
+    "objectID": "update-pact.html",
+    "href": "update-pact.html",
+    "title": "6  Updates",
+    "section": "",
+    "text": "6.1 Wellcome Trust Grant Funding Data\nThe current update process of the RIG database is summarised in this workflow:\nFollowing are the source-specific process of updating or retrieving information for the RIG database.",
+    "crumbs": [
+      "Data Sources",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Updates</span>"
+    ]
+  },
+  {
+    "objectID": "update-pact.html#update-wellcome",
+    "href": "update-pact.html#update-wellcome",
+    "title": "6  Updates",
+    "section": "",
+    "text": "6.1.1 General Information\nUsing the downloadable spreadsheet of funds awarded between 01st of October 2005 and 4th of May 2022 found at https://cms.wellcome.org/sites/default/files/2022-05/Wellcome-grants-awarded-1-October-2005-to-04-05-2022.xlsx, the following steps were taken to retrieve relevant information for the database:\n\n\n6.1.2 How to update\nPlease note that the steps below were done using the current available spreadsheet from the Wellcome Trust website and added the relevant projects to the RIG database. These steps can therefore be used as a guide for how to update the database with new information in the future to when the Wellcome Trust publishes its most up-to-date spreadsheet.\n\nGo to column J – Recipient Org:Country -&gt; deselect all and then select all the African countries in the list\nGo to column N – Planned end date -&gt; select all the years in the future\nThese two steps reduced the list from 19,833 projects to 111 projects\nRead the project title and decide if the project is relevant for our database or not\nIf unsure, read the abstract – that also helps to identify the keywords to tag the project within our database\nIf the project is relevant transfer all the information into our database\n\nNote: This method is only able to detect projects/activities where an African organisation itself holds the grant. It does not detect projects where African researchers are involved as collaborators. The spreadsheet does not list collaborators on projects, so it’s yet to be determined how we will identify projects on which African research institutes collaborate with international organisations being awarded the grant.",
+    "crumbs": [
+      "Data Sources",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Updates</span>"
+    ]
+  },
+  {
+    "objectID": "update-pact.html#update-clinicaltrials",
+    "href": "update-pact.html#update-clinicaltrials",
+    "title": "6  Updates",
+    "section": "6.2 ClinicalTrials.gov",
+    "text": "6.2 ClinicalTrials.gov\n\n6.2.1 How to update\nFollowing are steps taken to extract data from ClinicalTrials.gov.\n\nStart with searching a disease/topic of interest\n\n\n\nOn the results page apply the following filters to look for active studies\n\n\n\nClick on ‘Apply’ and then look manually through the column ‘Locations’ of the list of the results to find studies that take place in African countries\n\n\n\nClick on the first study to start working your way through the information available\nThe first information provided is the sponsor -&gt; this information should be added to the Funder – column in the Activities table\nInformation about collaborators can be added to Collaborators column\n\n\n\nStaying in the ‘Study Details’-tab, scroll down to ‘Study Design’\nThis section contains the official title, which should be used as the name for the Activity\nAdditionally it contains information about the start and end date, which should be copied into the respective fields in the Activities table\n\n\n\nScroll further down to ‘Contact and Locations’\nThe information given under contacts should be added to the Researcher column in Airtable\nSwitching into the Researcher-table within in Airtable the given contact details should be added to the newly created entries for the involved researchers\nAlso the affiliation to a certain institute can be added based on these information as well as the researcher’s location -&gt; is it possible to link the Location with the Affiliation so that the location is automatically added based on the information about the institution the researcher is affiliated with?\nSwitch back into the Activities table and add information about the Locations to the Activity Location and the Institutions columns\n\n\n\nScroll up again to the selection of tabs\nClick on the Results tab -&gt; it’s worth checking this tab even when it’s called No Results Posted as it might still contain links to publications that are affiliated with the study\nThese links can be copied into the Published Work column in the Activities table\n\n\n\nI also copied the link of the study page on clinicaltrials.gov into the Activity Website column\n\n\n\nto determine the Research Field, I had to use my own understanding of the study so I am not sure if this can be automated or rather needs to be done by a database librarian",
+    "crumbs": [
+      "Data Sources",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Updates</span>"
+    ]
+  },
+  {
+    "objectID": "update-pact.html#update-public-research",
+    "href": "update-pact.html#update-public-research",
+    "title": "6  Updates",
+    "section": "6.3 Public journal/research databases",
+    "text": "6.3 Public journal/research databases\nIn order to aid in automation, maintain a list relevant search terms for each topic of interest (stored in the “Topics” table in Airtable). Even if the terms are not used for the purposes of developing a search strategy, they can be used by those who are not subject matter experts when collection information on a specific topic\n\n6.3.1 Example of a successful search:\n(zoonoses OR zoonotic disease OR zoonotic illness) and (africa*) and (surveillance OR tracking OR sampling)\nThe majority of results from this search, when conducted in PubMed, appeared relevant to the database (based on title/abstract scanning)\n\n\n6.3.2 Example of PubMed search for surveillance activities for Brucellosis:\n(\"surveillance\"[Title/Abstract] OR \"prevalence\"[Title/Abstract] OR \"monitoring\"[Title/Abstract] OR \"seropositive\"[Title/Abstract] OR \"seroprevalence\"[Title/Abstract] OR \"seroevidence\"[Title/Abstract] OR \"screened\"[Title/Abstract] OR \"biosurveillance\"[Title/Abstract] OR \"sampl*\"[Title/Abstract]) AND (brucellosis[Title/Abstract] OR \"Brucella melitensis\"[Title/Abstract] OR \"B. melitensis\"[Title/Abstract] OR \"Brucella abortus\"[Title/Abstract] OR \"B. abortus\"[Title/Abstract])  \nThis search yielded a large quantity of results, not all of which were relevant. Manual processes are required to validate results.\nIncluding terms to filter the results based on location were helpful, but still included results not located on the African continent. Search term to filter for African countries:\n(Djibouti[Title/Abstract] OR Seychelles[Title/Abstract] OR DR Congo[Title/Abstract] OR Comoros[Title/Abstract] OR Togo[Title/Abstract] OR Sierra Leone[Title/Abstract] OR Libya[Title/Abstract] OR Tanzania[Title/Abstract] OR South Africa[Title/Abstract] OR Cabo Verde[Title/Abstract] OR Congo[Title/Abstract] OR Kenya[Title/Abstract] OR Liberia[Title/Abstract] OR Central African Republic[Title/Abstract] OR Mauritania[Title/Abstract] OR Uganda[Title/Abstract] OR Algeria[Title/Abstract] OR Sudan[Title/Abstract] OR Morocco[Title/Abstract] OR Eritrea[Title/Abstract] OR Angola[Title/Abstract] OR Mozambique[Title/Abstract] OR Ghana[Title/Abstract] OR Madagascar[Title/Abstract] OR Cameroon[Title/Abstract] OR Côte d'Ivoire[Title/Abstract] OR Namibia[Title/Abstract] OR Niger[Title/Abstract] OR Gambia[Title/Abstract] OR Botswana[Title/Abstract] OR Gabon[Title/Abstract] OR Sao Tome & Principe[Title/Abstract] OR Lesotho[Title/Abstract] OR Burkina Faso[Title/Abstract] OR Nigeria[Title/Abstract] OR Mali[Title/Abstract] OR Guinea-Bissau[Title/Abstract] OR Malawi[Title/Abstract] OR Zambia[Title/Abstract] OR Senegal[Title/Abstract] OR Chad[Title/Abstract] OR Somalia[Title/Abstract] OR Zimbabwe[Title/Abstract] OR Equatorial Guinea[Title/Abstract] OR Guinea[Title/Abstract] OR Rwanda[Title/Abstract] OR Mauritius[Title/Abstract] OR Benin[Title/Abstract] OR Burundi[Title/Abstract] OR Tunisia[Title/Abstract] OR Eswatini[Title/Abstract] OR Ethiopia[Title/Abstract] OR South Sudan[Title/Abstract] OR Egypt[Title/Abstract]) \nFrom publications, can extract researchers, institutions, funders, activities. Ideally, researchers, institutions, and funders can be extracted automatically as opposed to manually, but scripts would need to be customized for each journal.\n\n\n6.3.3 Validation of results\nValidation of results can be useful to better understand the overlap between publications and activities and determine the priority of searching through publications vs. navigating to institution sites directly (or other strategies).\nAfter finding a relevant publication, look at the publication’s authors and their respective institutions\nNavigate to institutions’ sites to search for publications or results from research\nAre their activities listed on the site? Are those activities explicitly mentioned in the publications? Etc.\n\n\n6.3.4 Some relevant journals/databases:\n\nZoonoses & Public Health from Wiley Online Library : https://onlinelibrary.wiley.com/action/doSearch?SeriesKey=18632378&sortBy=Earliest\nJournal of Public Health in Africa: https://www.publichealthinafrica.org/jphia/issue/view/30\nPLoS Journal of Neglected Tropical Diseases: https://journals.plos.org/plosntds/search?filterJournals=PLoSNTD",
+    "crumbs": [
+      "Data Sources",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Updates</span>"
+    ]
+  },
+  {
+    "objectID": "update-pact.html#update-gepris",
+    "href": "update-pact.html#update-gepris",
+    "title": "6  Updates",
+    "section": "6.4 GEPRIS",
+    "text": "6.4 GEPRIS\n\n6.4.1 General Information:\nGEPRIS is a database listing all projects funded by the German Research Foundation (German: Deutsche Forschungsgemeinschaft; abbr. DFG) The DFG is a research funding organisation, which functions as a self-governing institution for the promotion of science and research in the Federal Republic Germany. In 2019, the DFG had a funding budget of €3.3 billion.\n\n\n6.4.2 How to Use:\nThe database can be accessed here: https://gepris.dfg.de/gepris/OCTOPUS?language=en&task=showSearchSimple\nThis link should directly lead to the English version of the website, otherwise the language can be changed by clicking on English in the top right corner.\n\nIn the database one can search for Projects, People, or Institutions – for our purpose the project option is the most relevant\nOne can either search for keywords or filter for different criteria – for a systematic approach I found using the filtering options easier than going through all our\n\n\nOn the search start site stay in the Projects tab.\nClick on Show extended search.\nUnder Subject Area select one of the following:\n\nAgriculture, Forestry and Veterinary Medicine\nBasic Research in Biology and Medicine\nMedicine\nMicrobiology, Virology, and Immunology\nSocial Sciences\nWater Research\nZoology\n\n\nNote: After working through all these subject areas, any relevant project in the field of One Health should be picked up by the searches\n\nLeave everything under DFG Programme as it is\nMove on to Funding and change Status to Current\nMove on to International and change Continent to Africa\nClick on Find\nRead through the project titles on the results page to identify relevant projects\nImport all the relevant project information (as highlighted on the screenshots) into the Africa CDC database\n\n \n\nTo identify the research institutes that are involved in the project one has to click on the researchers names and extract that information from their profile (their affiliation with a research institute is listed there)\n\n\n\n6.4.3 Positive aspects of this source:\nThe filtering options allow to filter for several criteria which are crucial for the relevance of a project to our database. That removes a lot of irrelevant projects from the results pages. The project pages list almost all the information we are interested in.\n\n\n6.4.4 Downsides of this source:\nThe project page doesn’t list the anticipated end date of a project.\nOne has to click on the link to the researcher’s profile to identify the participating organisations.\nEven using all the different filtering options not all resulting hits are relevant for our database, so I don’t think the process can be fully automated or at least requires a subsequent manual validation or clean up step to remove irrelevant projects.",
+    "crumbs": [
+      "Data Sources",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Updates</span>"
+    ]
+  },
+  {
+    "objectID": "update-pact.html#update-edctp",
+    "href": "update-pact.html#update-edctp",
+    "title": "6  Updates",
+    "section": "6.5 EDCTP",
+    "text": "6.5 EDCTP\n\n6.5.1 General Information\nThe European & Developing Countries Clinical Trials Partnership (EDCTP) is a non-profit organisation with a European office in The Hague, The Netherlands and an African office in Cape Town, South Africa. EDCTP is a partnership between European Union (EU), Norway, Switzerland, and African countries to accelerate the development of new clinical interventions such as drugs, vaccines, microbicides, and diagnostics against poverty-related diseases in Africa. The organisation supports clinical trials, capacity strengthening and networking in Africa and Europe. Funding comes from the EU, member states, pharmaceutical industry and private organisations and charities like The Wellcome Trust and The Bill & Melinda Gates foundation.\nNote: Since funding comes from several sources that we also list as sources for populating the database such as the European Union (European Commission), The Wellcome Trust and The Bill & Melinda Gates Foundation, there is the possibility that downloading project information from all these sources into our database could lead to duplicate entries. I created a column in the Actvities table for the Project ID, as this might be helpful to identify duplicates and remove them automatically.\n\n\n6.5.2 How to use:\nThe database of funded project can be accessed here: https://www.edctp.org/edctp2-project-portal/\nThere is the option to download the list of projects as a PDF, CSV or XLXS file. Personally, I did not find that helpful for manually adding projects to the database, but it might be useful for an automated process.\n\nGo to Status of Project and select the filter Active\nGo to Classification and select one of the following filters:\n\nCo-Infections\nCOVID-19\nCysticercosis/Taeniasis\n\nDiagnostics\nDiarrhoeal Diseases\nDrugs\nEmerging Infections, incl. Ebola, Lassa\nEpidemiology\nHIV\nHuman African trypanosomiasis (sleeping sickness)\n\nImplementation Research\n\nLeishmaniases\nLeprosy (Hansen disease)\nLower respiratory infections\n\nLymphatic filariasis\nMalaria\nMicrobicides\nOnchocerciasis (river blindness)\nRabies\nSchistosomiasis\nSoil-transmitted helminthiasis\n\nSocial Science\nTuberculosis\nVaccines\nYaws\nYellow Fever\n\n\nNote: Only one Classification at a time can be selected\n\nOnce one Classification was selected click on search\nChange from Show Map to Show List -&gt; this makes it easier to systematically look through the projects\nOn the results list you can see the location of the coordinating organisation, but even if it is not in an African country, it is worth checking the project details for the Participating Organisations. So read the project title and decide whether this could be a relevant project, if so, click on View details\n\n\n\nCheck the Participating Organisations first to decide whether the project is relevant to our database:\n\n\n\nIf the project is relevant use the Project Name + Acronym for the Activity Column\nTransfer all the relevant information to our database, including Project ID, Start and End date, Participating Organisations and corresponding locations, Project Website, Coordinating Organisation and Coordinating Researcher\nTag the project with the correct keywords in the Activity Type, Activity Outputs, Target Species, Topic, and Research Field columns based on your understanding of the project abstract\n\n\n\n6.5.3 Benefits of this Source:\nThe projects can be easily filtered for currently active projects.\nThe EDCTP is specifically focused on projects in Africa or Europe with African collaborators so most projects fulfil at least one of our selection criteria\nA lot of the projects (not all) are also topic-wise relevant for our database\nThe database lists most of the information that we are interested in for our database\n\n\n6.5.4 Shortcomings of this source:\nOnly one disease/topic can be selected at a time so sequential searches are necessary\nProject details only list the Coordinating researcher but no other lead researchers at the participating organisations",
+    "crumbs": [
+      "Data Sources",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Updates</span>"
+    ]
+  },
+  {
+    "objectID": "alternate-sources.html",
+    "href": "alternate-sources.html",
+    "title": "8  Pandemic PACT",
+    "section": "",
+    "text": "8.1 UKRI\nFollowing is an initial list of sources of information used for the RIG database.\nThe initial search performed was non-systematic and focused primarily on a known funder of global research related/relevant to the topics of interest for the database . The main aim of focusing first on this limited and focused search was to get a sense of what information is available from such bodies/organisations, and the limitations of the information available. This is based on an initial idea that research funders would tend to have a system of collecting/archiving information on research they have funded. The expectation was that at the minimum, the information available from funders would lead to identifying further sources of information relevant to the ACDC database specifically those of research groups/institutions particularly those based in countries/regions within Africa. This initial search will hopefully inform a more systematic and informed search strategy for the database information.\nUK Research and Innovation or UKRI is a non-departmental public body in the United Kingdom that was established in 2018. It brings together the seven UK Research Councils, Innovate UK, and Research England, which were previously separate organizations, to create a single body that oversees research and innovation funding and strategy in the UK.\nThe seven UK Research Councils are:\nInnovate UK is the UK’s innovation agency, which provides funding and support for innovative businesses and projects.\nResearch England is responsible for funding and overseeing research in English universities and higher education institutions.\nUKRI’s main role is to drive innovation and research in the UK and to support research and development that benefits society and the economy. It funds research projects, provides support to researchers, promotes international collaboration, and works to ensure that research and innovation are integrated with government policies and priorities.\nOf these various groups within UKRI, we further focused on the Biotechnology and Biological Sciences Research Council (BBSRC), Medical Research Council (MRC), Science and Technology Facilities Council (STFC), Innovate UK, and Research England.",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Pandemic PACT</span>"
+    ]
+  },
+  {
+    "objectID": "alternate-sources.html#ukri",
+    "href": "alternate-sources.html#ukri",
+    "title": "8  Pandemic PACT",
+    "section": "",
+    "text": "Arts and Humanities Research Council (AHRC)\nBiotechnology and Biological Sciences Research Council (BBSRC)\nEngineering and Physical Sciences Research Council (EPSRC)\nEconomic and Social Research Council (ESRC)\nMedical Research Council (MRC)\nNatural Environment Research Council (NERC)\nScience and Technology Facilities Council (STFC)",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Pandemic PACT</span>"
+    ]
+  },
+  {
+    "objectID": "alternate-sources.html#wellcome",
+    "href": "alternate-sources.html#wellcome",
+    "title": "8  Pandemic PACT",
     "section": "8.2 Wellcome Trust",
     "text": "8.2 Wellcome Trust\nThe Wellcome Trust is a global charitable foundation based in the UK. It was established in 1936 by Sir Henry Wellcome, a pharmaceutical entrepreneur and philanthropist. The Wellcome Trust is one of the largest charitable organizations in the world, with an endowment of over £29 billion.\nThe Trust’s mission is to improve health by supporting scientists, researchers, and innovators in their work to understand, treat, and prevent disease. The Trust funds research in areas such as neuroscience, genetics, infectious diseases, and global health. It also provides support for public engagement with science, education and training for scientists, and the translation of research into practical applications that benefit patients and communities.\nThe Wellcome Trust is known for its long-term, strategic approach to funding research, and for its commitment to open science and data sharing. It also operates the Wellcome Collection, a public venue in London that hosts exhibitions and events related to health, medicine, and science.",
     "crumbs": [
-      "Sources",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Sources</span>"
+      "Appendix",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Pandemic PACT</span>"
     ]
   },
   {
-    "objectID": "sources.html#nih",
-    "href": "sources.html#nih",
-    "title": "8  Sources",
+    "objectID": "alternate-sources.html#nih",
+    "href": "alternate-sources.html#nih",
+    "title": "8  Pandemic PACT",
     "section": "8.3 National Institutes of Health",
     "text": "8.3 National Institutes of Health\nThe National Institutes of Health (NIH) is a biomedical research agency of the United States federal government. It is the largest biomedical research institution in the world, with its main campus located in Bethesda, Maryland. The NIH is composed of 27 separate institutes and centers, each with a specific research focus, and is responsible for conducting and funding research in a wide range of areas, including cancer, genetics, infectious diseases, and neuroscience.\nThe NIH was founded in 1887 as the Hygienic Laboratory and was later renamed the National Institutes of Health in 1930. Today, it is one of the world’s foremost centers for medical research, with a mission to seek fundamental knowledge about the nature and behavior of living systems and to apply that knowledge to enhance health, lengthen life, and reduce illness and disability. The NIH is funded by the U.S. government through the Department of Health and Human Services and operates under the direction of the Office of the Director.",
     "crumbs": [
-      "Sources",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Sources</span>"
+      "Appendix",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Pandemic PACT</span>"
     ]
   },
   {
-    "objectID": "sources.html#nsf",
-    "href": "sources.html#nsf",
-    "title": "8  Sources",
+    "objectID": "alternate-sources.html#nsf",
+    "href": "alternate-sources.html#nsf",
+    "title": "8  Pandemic PACT",
     "section": "8.4 National Science Foundation",
     "text": "8.4 National Science Foundation\nThe National Science Foundation (NSF) is an independent federal agency of the United States government that supports fundamental research and education across all fields of science and engineering. The NSF was established by the National Science Foundation Act of 1950 and has a budget of around $8 billion.\nThe NSF funds research and education in areas such as mathematics, computer science, physics, chemistry, biology, social sciences, and engineering. It supports individual researchers, small teams, and large interdisciplinary research collaborations through a competitive, merit-based process of proposal submission and review. The NSF also supports the development of science, technology, engineering, and mathematics (STEM) education at all levels, from K-12 through graduate education.\nThe NSF operates through several directorates and offices, each with a specific research focus or mission, such as the Directorate for Biological Sciences, the Directorate for Social, Behavioral and Economic Sciences, and the Office of Polar Programs. The NSF works to advance scientific discovery, promote science education and outreach, and promote innovation and economic growth through its investments in research and education.",
     "crumbs": [
-      "Sources",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Sources</span>"
+      "Appendix",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Pandemic PACT</span>"
     ]
   },
   {
-    "objectID": "sources.html#darpa",
-    "href": "sources.html#darpa",
-    "title": "8  Sources",
+    "objectID": "alternate-sources.html#darpa",
+    "href": "alternate-sources.html#darpa",
+    "title": "8  Pandemic PACT",
     "section": "8.5 Defense Advanced Research Projects Agency",
     "text": "8.5 Defense Advanced Research Projects Agency\nThe Defense Advanced Research Projects Agency is a research and development agency of the United States Department of Defense that is responsible for the development of emerging technologies for use by the military.\nDARPA was established in 1958 in response to the Soviet Union’s launch of Sputnik, the first artificial satellite, and has been involved in a number of high-profile technological innovations, including the development of the Internet, GPS, and stealth technology.\nDARPA’s mission is to maintain the technological superiority of the U.S. military by sponsoring and conducting research in a wide range of fields, including artificial intelligence, robotics, biotechnology, materials science, and aerospace technology. DARPA works with academic researchers, private companies, and other government agencies to develop and test new technologies, and it is known for its high-risk, high-reward approach to research and development.\nSome of DARPA’s current research initiatives include the development of hypersonic weapons, the creation of autonomous drone swarms, and the development of brain-machine interfaces for use in treating neurological disorders. DARPA’s work has had significant impacts on both military and civilian technology, and the agency is seen as a leader in cutting-edge research and development.",
     "crumbs": [
-      "Sources",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Sources</span>"
+      "Appendix",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Pandemic PACT</span>"
     ]
   },
   {
-    "objectID": "sources.html#clinicaltrials.gov",
-    "href": "sources.html#clinicaltrials.gov",
-    "title": "8  Sources",
+    "objectID": "alternate-sources.html#clinicaltrials.gov",
+    "href": "alternate-sources.html#clinicaltrials.gov",
+    "title": "8  Pandemic PACT",
     "section": "8.6 ClinicalTrials.gov",
     "text": "8.6 ClinicalTrials.gov\nClinicalTrials.gov is a publicly accessible database of clinical trials that are being conducted worldwide. It is maintained by the National Library of Medicine, a part of the National Institutes of Health (NIH) in the United States.\nThe database provides information on clinical trials for a wide range of diseases and conditions, including both interventional and observational studies. It includes information about the purpose of the trial, who may participate, where the trial is being conducted, and the status of the trial, such as whether it is recruiting participants or has been completed.\nClinicalTrials.gov was created in response to a 1997 law requiring the registration of clinical trials for certain serious or life-threatening diseases or conditions. Since then, the database has grown to include information on thousands of trials from around the world.\nClinicalTrials.gov is an important resource for researchers, healthcare professionals, and members of the public who are interested in clinical research. It can be used to identify ongoing or completed trials, learn about the purpose and design of a study, and find out how to participate in a trial. It also serves as a platform for researchers to share their results and comply with the requirements of various funding agencies and regulatory bodies.",
     "crumbs": [
-      "Sources",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Sources</span>"
+      "Appendix",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Pandemic PACT</span>"
     ]
   },
   {
-    "objectID": "sources.html#gepris",
-    "href": "sources.html#gepris",
-    "title": "8  Sources",
+    "objectID": "alternate-sources.html#gepris",
+    "href": "alternate-sources.html#gepris",
+    "title": "8  Pandemic PACT",
     "section": "8.7 GEPRIS",
     "text": "8.7 GEPRIS\nGeförderte Projekte in der Forschung und Entwicklung (Funded Projects in Research and Development) or GEPRIS is an online database of research projects funded by the German Research Foundation (DFG).\nThe DFG is the largest independent research funding organization in Germany and funds projects across all scientific disciplines, from the humanities and social sciences to the natural and life sciences. GEPRIS provides information about the projects that the DFG has funded, including their aims, methods, and outcomes, as well as the institutions and researchers involved.\nResearchers and members of the public can use GEPRIS to search for projects that have been funded by the DFG, and to access information about these projects. The database includes information about ongoing and completed projects, and users can search by various criteria, such as by researcher name, institution, scientific discipline, or project title.\nGEPRIS is a valuable tool for researchers to identify potential collaborators, explore research trends, and find information about the funding landscape in their field. It is also useful for members of the public who are interested in learning about the research being conducted in Germany and the impact of this research on society.",
     "crumbs": [
-      "Sources",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Sources</span>"
+      "Appendix",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Pandemic PACT</span>"
     ]
   },
   {
-    "objectID": "sources.html#edctp",
-    "href": "sources.html#edctp",
-    "title": "8  Sources",
+    "objectID": "alternate-sources.html#edctp",
+    "href": "alternate-sources.html#edctp",
+    "title": "8  Pandemic PACT",
     "section": "8.8 EDCTP",
     "text": "8.8 EDCTP\nEuropean and Developing Countries Clinical Trials Partnership or EDCTP is a public-public partnership between countries in Europe and sub-Saharan Africa, established in 2003, with the aim of accelerating the development of new clinical interventions to fight infectious diseases that disproportionately affect Africa.\nThe partnership’s mission is to improve the health of people in Africa by supporting the development of new medicines, vaccines, and other health interventions to prevent and treat diseases such as HIV/AIDS, tuberculosis, malaria, and neglected infectious diseases. EDCTP supports collaborative research projects that bring together scientists, institutions, and countries from both regions to conduct clinical trials and other research activities.\nEDCTP works with a range of partners, including national governments, research institutions, civil society organizations, and the private sector, to support research that is relevant and responsive to the needs of African communities. It also provides training and capacity-building opportunities to support the development of sustainable health research infrastructure and expertise in Africa.\nThe partnership is funded by the European Union, its member states, and other donors. Since its inception, EDCTP has supported over 100 collaborative research projects and played a key role in advancing the development of new interventions for infectious diseases that affect the people of Africa.",
     "crumbs": [
-      "Sources",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Sources</span>"
+      "Appendix",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Pandemic PACT</span>"
     ]
   },
   {
-    "objectID": "sources.html#glopidr",
-    "href": "sources.html#glopidr",
-    "title": "8  Sources",
+    "objectID": "alternate-sources.html#glopidr",
+    "href": "alternate-sources.html#glopidr",
+    "title": "8  Pandemic PACT",
     "section": "8.9 GLOPID-R",
     "text": "8.9 GLOPID-R\nGlobal Research Collaboration for Infectious Disease Preparedness or GLOPID-R is an international partnership that aims to strengthen global research efforts in the field of infectious disease preparedness. The partnership was established in response to the 2014 Ebola outbreak in West Africa, which highlighted the need for improved global coordination and collaboration in research and development for emerging and re-emerging infectious diseases.\nGLOPID-R brings together stakeholders from the global health community, including research funders, policy-makers, researchers, and public health organizations. The partnership aims to promote international cooperation and coordination in research to accelerate the development of new tools and approaches to prevent, detect, and respond to infectious disease outbreaks.\nGLOPID-R’s main objectives include identifying research priorities for infectious disease preparedness, coordinating research efforts across different regions and countries, and promoting capacity building and knowledge exchange to strengthen global health research infrastructure.\nThe partnership focuses on a range of infectious diseases, including those caused by emerging and re-emerging pathogens, neglected tropical diseases, and antimicrobial resistance. It works to support research efforts across the entire spectrum of infectious disease preparedness, from basic research to clinical trials and implementation research.\nGLOPID-R is supported by a range of funding agencies and partners from around the world and is seen as an important platform for promoting global cooperation and collaboration in infectious disease research and preparedness.",
     "crumbs": [
-      "Sources",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Sources</span>"
+      "Appendix",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Pandemic PACT</span>"
     ]
   },
   {
-    "objectID": "sources.html#nrfza",
-    "href": "sources.html#nrfza",
-    "title": "8  Sources",
+    "objectID": "alternate-sources.html#nrfza",
+    "href": "alternate-sources.html#nrfza",
+    "title": "8  Pandemic PACT",
     "section": "8.10 NRF South Africa",
     "text": "8.10 NRF South Africa\nThe National Research Foundation of South Africa (NRF) is an independent organization that promotes and supports research and innovation in all fields of science, engineering, technology, and social sciences in South Africa. The NRF was established in 1999 through the National Research Foundation Act and operates under the jurisdiction of the Department of Science and Innovation.\nThe NRF provides funding, develops policies, and manages research infrastructure to support South African researchers and institutions. It also fosters international collaboration in research, and supports the training and development of the next generation of researchers through various funding and fellowship schemes.\nThe NRF provides funding through a number of programs, including competitive grants, fellowships, and research chairs. It also supports the development of research infrastructure and the establishment of research centers of excellence.\nIn addition to providing funding and support for research, the NRF plays a key role in developing research policies and strategies at the national level. It advises the South African government on research priorities and is involved in various initiatives aimed at promoting science, technology, and innovation in the country.\nThe NRF is an important organization for the South African research community and has been instrumental in advancing the country’s research and innovation capabilities. Its funding and support have contributed to numerous scientific discoveries and innovations in a wide range of fields, including health, energy, and the environment.",
     "crumbs": [
-      "Sources",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Sources</span>"
+      "Appendix",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Pandemic PACT</span>"
     ]
   },
   {
-    "objectID": "updates.html",
-    "href": "updates.html",
+    "objectID": "update-alternate-sources.html",
+    "href": "update-alternate-sources.html",
     "title": "9  Updates",
     "section": "",
     "text": "9.1 Wellcome Trust Grant Funding Data\nThe current update process of the RIG database is summarised in this workflow:\nFollowing are the source-specific process of updating or retrieving information for the RIG database.",
     "crumbs": [
-      "Maintenance",
+      "Appendix",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Updates</span>"
     ]
   },
   {
-    "objectID": "updates.html#update-wellcome",
-    "href": "updates.html#update-wellcome",
+    "objectID": "update-alternate-sources.html#update-wellcome",
+    "href": "update-alternate-sources.html#update-wellcome",
     "title": "9  Updates",
     "section": "",
     "text": "9.1.1 General Information\nUsing the downloadable spreadsheet of funds awarded between 01st of October 2005 and 4th of May 2022 found at https://cms.wellcome.org/sites/default/files/2022-05/Wellcome-grants-awarded-1-October-2005-to-04-05-2022.xlsx, the following steps were taken to retrieve relevant information for the database:\n\n\n9.1.2 How to update\nPlease note that the steps below were done using the current available spreadsheet from the Wellcome Trust website and added the relevant projects to the RIG database. These steps can therefore be used as a guide for how to update the database with new information in the future to when the Wellcome Trust publishes its most up-to-date spreadsheet.\n\nGo to column J – Recipient Org:Country -&gt; deselect all and then select all the African countries in the list\nGo to column N – Planned end date -&gt; select all the years in the future\nThese two steps reduced the list from 19,833 projects to 111 projects\nRead the project title and decide if the project is relevant for our database or not\nIf unsure, read the abstract – that also helps to identify the keywords to tag the project within our database\nIf the project is relevant transfer all the information into our database\n\nNote: This method is only able to detect projects/activities where an African organisation itself holds the grant. It does not detect projects where African researchers are involved as collaborators. The spreadsheet does not list collaborators on projects, so it’s yet to be determined how we will identify projects on which African research institutes collaborate with international organisations being awarded the grant.",
     "crumbs": [
-      "Maintenance",
+      "Appendix",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Updates</span>"
     ]
   },
   {
-    "objectID": "updates.html#update-clinicaltrials",
-    "href": "updates.html#update-clinicaltrials",
+    "objectID": "update-alternate-sources.html#update-clinicaltrials",
+    "href": "update-alternate-sources.html#update-clinicaltrials",
     "title": "9  Updates",
     "section": "9.2 ClinicalTrials.gov",
     "text": "9.2 ClinicalTrials.gov\n\n9.2.1 How to update\nFollowing are steps taken to extract data from ClinicalTrials.gov.\n\nStart with searching a disease/topic of interest\n\n\n\nOn the results page apply the following filters to look for active studies\n\n\n\nClick on ‘Apply’ and then look manually through the column ‘Locations’ of the list of the results to find studies that take place in African countries\n\n\n\nClick on the first study to start working your way through the information available\nThe first information provided is the sponsor -&gt; this information should be added to the Funder – column in the Activities table\nInformation about collaborators can be added to Collaborators column\n\n\n\nStaying in the ‘Study Details’-tab, scroll down to ‘Study Design’\nThis section contains the official title, which should be used as the name for the Activity\nAdditionally it contains information about the start and end date, which should be copied into the respective fields in the Activities table\n\n\n\nScroll further down to ‘Contact and Locations’\nThe information given under contacts should be added to the Researcher column in Airtable\nSwitching into the Researcher-table within in Airtable the given contact details should be added to the newly created entries for the involved researchers\nAlso the affiliation to a certain institute can be added based on these information as well as the researcher’s location -&gt; is it possible to link the Location with the Affiliation so that the location is automatically added based on the information about the institution the researcher is affiliated with?\nSwitch back into the Activities table and add information about the Locations to the Activity Location and the Institutions columns\n\n\n\nScroll up again to the selection of tabs\nClick on the Results tab -&gt; it’s worth checking this tab even when it’s called No Results Posted as it might still contain links to publications that are affiliated with the study\nThese links can be copied into the Published Work column in the Activities table\n\n\n\nI also copied the link of the study page on clinicaltrials.gov into the Activity Website column\n\n\n\nto determine the Research Field, I had to use my own understanding of the study so I am not sure if this can be automated or rather needs to be done by a database librarian",
     "crumbs": [
-      "Maintenance",
+      "Appendix",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Updates</span>"
     ]
   },
   {
-    "objectID": "updates.html#update-public-research",
-    "href": "updates.html#update-public-research",
+    "objectID": "update-alternate-sources.html#update-public-research",
+    "href": "update-alternate-sources.html#update-public-research",
     "title": "9  Updates",
     "section": "9.3 Public journal/research databases",
     "text": "9.3 Public journal/research databases\nIn order to aid in automation, maintain a list relevant search terms for each topic of interest (stored in the “Topics” table in Airtable). Even if the terms are not used for the purposes of developing a search strategy, they can be used by those who are not subject matter experts when collection information on a specific topic\n\n9.3.1 Example of a successful search:\n(zoonoses OR zoonotic disease OR zoonotic illness) and (africa*) and (surveillance OR tracking OR sampling)\nThe majority of results from this search, when conducted in PubMed, appeared relevant to the database (based on title/abstract scanning)\n\n\n9.3.2 Example of PubMed search for surveillance activities for Brucellosis:\n(\"surveillance\"[Title/Abstract] OR \"prevalence\"[Title/Abstract] OR \"monitoring\"[Title/Abstract] OR \"seropositive\"[Title/Abstract] OR \"seroprevalence\"[Title/Abstract] OR \"seroevidence\"[Title/Abstract] OR \"screened\"[Title/Abstract] OR \"biosurveillance\"[Title/Abstract] OR \"sampl*\"[Title/Abstract]) AND (brucellosis[Title/Abstract] OR \"Brucella melitensis\"[Title/Abstract] OR \"B. melitensis\"[Title/Abstract] OR \"Brucella abortus\"[Title/Abstract] OR \"B. abortus\"[Title/Abstract])  \nThis search yielded a large quantity of results, not all of which were relevant. Manual processes are required to validate results.\nIncluding terms to filter the results based on location were helpful, but still included results not located on the African continent. Search term to filter for African countries:\n(Djibouti[Title/Abstract] OR Seychelles[Title/Abstract] OR DR Congo[Title/Abstract] OR Comoros[Title/Abstract] OR Togo[Title/Abstract] OR Sierra Leone[Title/Abstract] OR Libya[Title/Abstract] OR Tanzania[Title/Abstract] OR South Africa[Title/Abstract] OR Cabo Verde[Title/Abstract] OR Congo[Title/Abstract] OR Kenya[Title/Abstract] OR Liberia[Title/Abstract] OR Central African Republic[Title/Abstract] OR Mauritania[Title/Abstract] OR Uganda[Title/Abstract] OR Algeria[Title/Abstract] OR Sudan[Title/Abstract] OR Morocco[Title/Abstract] OR Eritrea[Title/Abstract] OR Angola[Title/Abstract] OR Mozambique[Title/Abstract] OR Ghana[Title/Abstract] OR Madagascar[Title/Abstract] OR Cameroon[Title/Abstract] OR Côte d'Ivoire[Title/Abstract] OR Namibia[Title/Abstract] OR Niger[Title/Abstract] OR Gambia[Title/Abstract] OR Botswana[Title/Abstract] OR Gabon[Title/Abstract] OR Sao Tome & Principe[Title/Abstract] OR Lesotho[Title/Abstract] OR Burkina Faso[Title/Abstract] OR Nigeria[Title/Abstract] OR Mali[Title/Abstract] OR Guinea-Bissau[Title/Abstract] OR Malawi[Title/Abstract] OR Zambia[Title/Abstract] OR Senegal[Title/Abstract] OR Chad[Title/Abstract] OR Somalia[Title/Abstract] OR Zimbabwe[Title/Abstract] OR Equatorial Guinea[Title/Abstract] OR Guinea[Title/Abstract] OR Rwanda[Title/Abstract] OR Mauritius[Title/Abstract] OR Benin[Title/Abstract] OR Burundi[Title/Abstract] OR Tunisia[Title/Abstract] OR Eswatini[Title/Abstract] OR Ethiopia[Title/Abstract] OR South Sudan[Title/Abstract] OR Egypt[Title/Abstract]) \nFrom publications, can extract researchers, institutions, funders, activities. Ideally, researchers, institutions, and funders can be extracted automatically as opposed to manually, but scripts would need to be customized for each journal.\n\n\n9.3.3 Validation of results\nValidation of results can be useful to better understand the overlap between publications and activities and determine the priority of searching through publications vs. navigating to institution sites directly (or other strategies).\nAfter finding a relevant publication, look at the publication’s authors and their respective institutions\nNavigate to institutions’ sites to search for publications or results from research\nAre their activities listed on the site? Are those activities explicitly mentioned in the publications? Etc.\n\n\n9.3.4 Some relevant journals/databases:\n\nZoonoses & Public Health from Wiley Online Library : https://onlinelibrary.wiley.com/action/doSearch?SeriesKey=18632378&sortBy=Earliest\nJournal of Public Health in Africa: https://www.publichealthinafrica.org/jphia/issue/view/30\nPLoS Journal of Neglected Tropical Diseases: https://journals.plos.org/plosntds/search?filterJournals=PLoSNTD",
     "crumbs": [
-      "Maintenance",
+      "Appendix",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Updates</span>"
     ]
   },
   {
-    "objectID": "updates.html#update-gepris",
-    "href": "updates.html#update-gepris",
+    "objectID": "update-alternate-sources.html#update-gepris",
+    "href": "update-alternate-sources.html#update-gepris",
     "title": "9  Updates",
     "section": "9.4 GEPRIS",
     "text": "9.4 GEPRIS\n\n9.4.1 General Information:\nGEPRIS is a database listing all projects funded by the German Research Foundation (German: Deutsche Forschungsgemeinschaft; abbr. DFG) The DFG is a research funding organisation, which functions as a self-governing institution for the promotion of science and research in the Federal Republic Germany. In 2019, the DFG had a funding budget of €3.3 billion.\n\n\n9.4.2 How to Use:\nThe database can be accessed here: https://gepris.dfg.de/gepris/OCTOPUS?language=en&task=showSearchSimple\nThis link should directly lead to the English version of the website, otherwise the language can be changed by clicking on English in the top right corner.\n\nIn the database one can search for Projects, People, or Institutions – for our purpose the project option is the most relevant\nOne can either search for keywords or filter for different criteria – for a systematic approach I found using the filtering options easier than going through all our\n\n\nOn the search start site stay in the Projects tab.\nClick on Show extended search.\nUnder Subject Area select one of the following:\n\nAgriculture, Forestry and Veterinary Medicine\nBasic Research in Biology and Medicine\nMedicine\nMicrobiology, Virology, and Immunology\nSocial Sciences\nWater Research\nZoology\n\n\nNote: After working through all these subject areas, any relevant project in the field of One Health should be picked up by the searches\n\nLeave everything under DFG Programme as it is\nMove on to Funding and change Status to Current\nMove on to International and change Continent to Africa\nClick on Find\nRead through the project titles on the results page to identify relevant projects\nImport all the relevant project information (as highlighted on the screenshots) into the Africa CDC database\n\n \n\nTo identify the research institutes that are involved in the project one has to click on the researchers names and extract that information from their profile (their affiliation with a research institute is listed there)\n\n\n\n9.4.3 Positive aspects of this source:\nThe filtering options allow to filter for several criteria which are crucial for the relevance of a project to our database. That removes a lot of irrelevant projects from the results pages. The project pages list almost all the information we are interested in.\n\n\n9.4.4 Downsides of this source:\nThe project page doesn’t list the anticipated end date of a project.\nOne has to click on the link to the researcher’s profile to identify the participating organisations.\nEven using all the different filtering options not all resulting hits are relevant for our database, so I don’t think the process can be fully automated or at least requires a subsequent manual validation or clean up step to remove irrelevant projects.",
     "crumbs": [
-      "Maintenance",
+      "Appendix",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Updates</span>"
     ]
   },
   {
-    "objectID": "updates.html#update-edctp",
-    "href": "updates.html#update-edctp",
+    "objectID": "update-alternate-sources.html#update-edctp",
+    "href": "update-alternate-sources.html#update-edctp",
     "title": "9  Updates",
     "section": "9.5 EDCTP",
     "text": "9.5 EDCTP\n\n9.5.1 General Information\nThe European & Developing Countries Clinical Trials Partnership (EDCTP) is a non-profit organisation with a European office in The Hague, The Netherlands and an African office in Cape Town, South Africa. EDCTP is a partnership between European Union (EU), Norway, Switzerland, and African countries to accelerate the development of new clinical interventions such as drugs, vaccines, microbicides, and diagnostics against poverty-related diseases in Africa. The organisation supports clinical trials, capacity strengthening and networking in Africa and Europe. Funding comes from the EU, member states, pharmaceutical industry and private organisations and charities like The Wellcome Trust and The Bill & Melinda Gates foundation.\nNote: Since funding comes from several sources that we also list as sources for populating the database such as the European Union (European Commission), The Wellcome Trust and The Bill & Melinda Gates Foundation, there is the possibility that downloading project information from all these sources into our database could lead to duplicate entries. I created a column in the Actvities table for the Project ID, as this might be helpful to identify duplicates and remove them automatically.\n\n\n9.5.2 How to use:\nThe database of funded project can be accessed here: https://www.edctp.org/edctp2-project-portal/\nThere is the option to download the list of projects as a PDF, CSV or XLXS file. Personally, I did not find that helpful for manually adding projects to the database, but it might be useful for an automated process.\n\nGo to Status of Project and select the filter Active\nGo to Classification and select one of the following filters:\n\nCo-Infections\nCOVID-19\nCysticercosis/Taeniasis\n\nDiagnostics\nDiarrhoeal Diseases\nDrugs\nEmerging Infections, incl. Ebola, Lassa\nEpidemiology\nHIV\nHuman African trypanosomiasis (sleeping sickness)\n\nImplementation Research\n\nLeishmaniases\nLeprosy (Hansen disease)\nLower respiratory infections\n\nLymphatic filariasis\nMalaria\nMicrobicides\nOnchocerciasis (river blindness)\nRabies\nSchistosomiasis\nSoil-transmitted helminthiasis\n\nSocial Science\nTuberculosis\nVaccines\nYaws\nYellow Fever\n\n\nNote: Only one Classification at a time can be selected\n\nOnce one Classification was selected click on search\nChange from Show Map to Show List -&gt; this makes it easier to systematically look through the projects\nOn the results list you can see the location of the coordinating organisation, but even if it is not in an African country, it is worth checking the project details for the Participating Organisations. So read the project title and decide whether this could be a relevant project, if so, click on View details\n\n\n\nCheck the Participating Organisations first to decide whether the project is relevant to our database:\n\n\n\nIf the project is relevant use the Project Name + Acronym for the Activity Column\nTransfer all the relevant information to our database, including Project ID, Start and End date, Participating Organisations and corresponding locations, Project Website, Coordinating Organisation and Coordinating Researcher\nTag the project with the correct keywords in the Activity Type, Activity Outputs, Target Species, Topic, and Research Field columns based on your understanding of the project abstract\n\n\n\n9.5.3 Benefits of this Source:\nThe projects can be easily filtered for currently active projects.\nThe EDCTP is specifically focused on projects in Africa or Europe with African collaborators so most projects fulfil at least one of our selection criteria\nA lot of the projects (not all) are also topic-wise relevant for our database\nThe database lists most of the information that we are interested in for our database\n\n\n9.5.4 Shortcomings of this source:\nOnly one disease/topic can be selected at a time so sequential searches are necessary\nProject details only list the Coordinating researcher but no other lead researchers at the participating organisations",
     "crumbs": [
-      "Maintenance",
+      "Appendix",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Updates</span>"
     ]
   }
