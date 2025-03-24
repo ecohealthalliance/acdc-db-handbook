@@ -2,7 +2,7 @@
 output-file: alternate-sources.html
 ---
 
-# Pandemic PACT {#pact}
+# Alternate Sources {#alt-sources}
 
 Following is an initial list of sources of information used for the RIG database. 
 

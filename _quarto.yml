@@ -41,6 +41,7 @@ book:
       chapters:
         - 06-database-dolthub.qmd
     - part: Exporting the Database
+      chapters:
         - 07-data-export.qmd
     - part: Appendix
       chapters:

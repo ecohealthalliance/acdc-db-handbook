@@ -2,7 +2,7 @@
 output-file: update-alternate-sources.html
 ---
 
-# Updates {#sec-updates}
+# Update Alternate Sources {#update-alt-sources}
 
 The current update process of the RIG database is summarised in this workflow:
 
