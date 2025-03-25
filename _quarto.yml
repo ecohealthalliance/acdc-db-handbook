@@ -24,6 +24,18 @@ book:
       affiliation:
         - name: EcoHealth Alliance
           city: New York
+    - name: Ernest Guevarra
+      orcid: 0000-0002-4887-4415
+      email: guevarra@ecohealthalliance.org
+      affiliation: 
+        - name: EcoHealth Alliance
+          city: New York
+    - name: Nathan C. Layman
+      orcid: 0000-0003-2238-6584
+      email: n8.layman@gmail.com
+      affiliation: 
+        - name: EcoHealth Alliance
+          city: New York
   date: last-modified
   date-format: "DD MMMM YYYY"
   chapters:
@@ -43,13 +55,13 @@ book:
         - 07-pact-fetch.qmd
         - 08-acdc-db-search.qmd
         - 09-pact-update.qmd
-    - part: Appendix
-      chapters:
-        - 10-alternate-sources.qmd
-        - 11-update-alternate-sources.qmd
     - part: Exporting the Database
       chapters:
-        - 12-data-export.qmd
+        - 10-data-export.qmd
+    - part: Appendix
+      chapters:
+        - 11-alternate-sources.qmd
+        - 12-update-alternate-sources.qmd
   cover-image: images/acdc_eha.png
   search: true
   repo-url: https://github.com/ecohealthalliance/acdc-db-handbook/

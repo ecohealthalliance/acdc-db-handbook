@@ -6,7 +6,7 @@ output-file: pact-update.html
 
 ## Data Processing
 
-1. Download PandemicPACT CSV files to the `data` folder
+1. Download Pandemic PACT CSV files to the `data` folder
 2. Run [process_pandemic_pact_data.R](https://github.com/ecohealthalliance/acdc-db-search/blob/main/scripts/process_pandemic_pact_data.R) script
 
 ## Database Import

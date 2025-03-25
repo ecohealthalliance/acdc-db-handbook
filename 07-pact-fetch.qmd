@@ -8,7 +8,7 @@ The primary data source for future updates to the Africa CDC Research Informatio
 
 ## Downloading the Latest Data
 
-PandemicPACT data can be downloaded from figshare. The data is updated monthly and contains comprehensive pandemic-related surveillance information.
+Pandemic PACT data can be downloaded from figshare. The data is updated monthly and contains comprehensive pandemic-related surveillance information.
 
 1. Navigate to the figshare link
 2. Click the 'Switch View' button in the lower left of the figshare window to change to 'File View'
