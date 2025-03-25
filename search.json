@@ -207,6 +207,39 @@
     ]
   },
   {
+    "objectID": "data-export.html",
+    "href": "data-export.html",
+    "title": "8  Exporting Data from Dolt to a MySQL Database",
+    "section": "",
+    "text": "8.1 Exporting Data from Dolt",
+    "crumbs": [
+      "Exporting the Database",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Exporting Data from Dolt to a MySQL Database</span>"
+    ]
+  },
+  {
+    "objectID": "data-export.html#exporting-data-from-dolt",
+    "href": "data-export.html#exporting-data-from-dolt",
+    "title": "8  Exporting Data from Dolt to a MySQL Database",
+    "section": "",
+    "text": "Open the terminal or command prompt.\nNavigate to the Dolt database directory.\nRun the following command to create a SQL dump file:\ndolt dump -f\nThis will create a file called doltdump.sql that contains all the SQL statements needed to recreate the database structure and data.\n\n\n8.1.1 Notes\nThe doltdump.sql is currently ~ 235Mb in size.",
+    "crumbs": [
+      "Exporting the Database",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Exporting Data from Dolt to a MySQL Database</span>"
+    ]
+  },
+  {
+    "objectID": "data-export.html#importing-data-into-mysql",
+    "href": "data-export.html#importing-data-into-mysql",
+    "title": "8  Exporting Data from Dolt to a MySQL Database",
+    "section": "8.2 Importing Data into MySQL",
+    "text": "8.2 Importing Data into MySQL\n\nMake sure MySQL is installed and running.\nImport the dump file into the MySQL database:\nmysql -u username -p database_name &lt; doltdump.sql\nReplace username with the appropriate MySQL username and database_name with the name of the target MySQL database.\nWhen prompted, enter the MySQL password.\nWait for the import process to complete.\n\n\n8.2.1 Notes\n\nThe generated SQL dump contains standard SQL that’s compatible with MySQL.\nThis approach migrates both the schema (tables, views, etc.) and data in one operation.\nYou may need to create the target MySQL database first if it doesn’t already exist.",
+    "crumbs": [
+      "Exporting the Database",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Exporting Data from Dolt to a MySQL Database</span>"
+    ]
+  },
+  {
     "objectID": "alternate-sources.html",
     "href": "alternate-sources.html",
     "title": "9  Alternate Sources",
