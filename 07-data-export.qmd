@@ -2,6 +2,36 @@
 output-file: data-export.html
 ---
 
-# Data Export {#data-export}
+# Exporting Data from Dolt to a MySQL Database {#data-export}
 
 
+## Exporting Data from Dolt
+
+1. Open the terminal or command prompt.
+2. Navigate to the Dolt database directory.
+3. Run the following command to create a SQL dump file:
+   ```bash
+   dolt dump -f
+   ```
+4. This will create a file called `doltdump.sql` that contains all the SQL statements needed to recreate the database structure and data.
+
+### Notes
+
+The doltdump.sql is currently ~ 235Mb in size.
+
+## Importing Data into MySQL
+
+1. Make sure MySQL is installed and running.
+2. Import the dump file into the MySQL database:
+   ```bash
+   mysql -u username -p database_name < doltdump.sql
+   ```
+   Replace `username` with the appropriate MySQL username and `database_name` with the name of the target MySQL database.
+3. When prompted, enter the MySQL password.
+4. Wait for the import process to complete.
+
+### Notes
+
+- The generated SQL dump contains standard SQL that's compatible with MySQL.
+- This approach migrates both the schema (tables, views, etc.) and data in one operation.
+- You may need to create the target MySQL database first if it doesn't already exist.
