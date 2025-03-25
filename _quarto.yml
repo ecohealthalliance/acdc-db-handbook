@@ -28,25 +28,28 @@ book:
   date-format: "DD MMMM YYYY"
   chapters:
     - index.qmd
-    - part: Tools
-      chapters:
-        - 01-dolt.qmd
-        - 02-dolthub.qmd
-        - 03-rstats.qmd
-    - part: Data Sources
-      chapters:
-        - 04-pact.qmd
-        - 05-update-pact.qmd
     - part: Database
       chapters:
-        - 06-database-dolthub.qmd
-    - part: Exporting the Database
+        - 01-database.qmd
+        - 02-database-schema.qmd
+    - part: Tools
       chapters:
-        - 07-data-export.qmd
+        - 03-dolt-install.qmd
+        - 04-dolthub.qmd
+        - 05-rstats.qmd
+    - part: Data Sources
+      chapters:
+        - 06-pact.qmd
+        - 07-pact-fetch.qmd
+        - 08-acdc-db-search.qmd
+        - 09-pact-update.qmd
     - part: Appendix
       chapters:
-        - 08-alternate-sources.qmd
-        - 09-update-alternate-sources.qmd
+        - 10-alternate-sources.qmd
+        - 11-update-alternate-sources.qmd
+    - part: Exporting the Database
+      chapters:
+        - 12-data-export.qmd
   cover-image: images/acdc_eha.png
   search: true
   repo-url: https://github.com/ecohealthalliance/acdc-db-handbook/

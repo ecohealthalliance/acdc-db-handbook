@@ -1,0 +1,33 @@
+# Schema
+
+<details>
+<summary>The final unified table, <code>africa_unified</code>, integrates data from various sources with the following structure: (click to expand)</summary>
+
+| Field | Description |
+|-------|-------------|
+| **activity_id** | Unique identifier for each activity or record |
+| **Title** | Name of the publication or activity |
+| **Publication Link** | URL to access the publication |
+| **Description** | Detailed explanation of the content |
+| **Cover Image** | Link to associated image |
+| **Data Category** | Primary classification of the data |
+| **Data sub-Category** | Secondary classification for more granular organization |
+| **Publication Category** | Type of publication (e.g., journal article, report) |
+| **Geographical Coverage** | Areas covered by the data |
+| **Geographical Coverage Country ISO** | Standard country codes for geographic areas |
+| **Citation Link** | Reference information for academic citation |
+| **Associated Authors** | Names of contributors |
+| **Activity Type** | Classification of action or research type |
+| **activity_start_date** | When the activity began |
+| **activity_end_date** | When the activity concluded |
+| **funder_name** | Organization(s) providing financial support |
+| **topic_name** | Subject matter classification |
+| **diseases** | Health conditions addressed |
+| **disease_types** | Categories of diseases covered |
+| **au_region_name** | African Union regional classification |
+| **data_source** | Origin of the data |
+</details>
+
+## Note
+
+The database contains identifying information about researchers and is currently private. Contact [Andrew Agaba](mailto:agabaandre@gmail.com) for more information and access to the database.

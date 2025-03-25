@@ -1,0 +1,22 @@
+---
+output-file: pact-fetch.html
+---
+
+# Fetch Data {#sec-pandemic-pact}
+
+The primary data source for future updates to the Africa CDC Research Information Gateway is [Pandemic PACT](https://www.pandemicpact.org/), a repository of global funding sources and research projects on diseases with pandemic potential.
+
+## Downloading the Latest Data
+
+PandemicPACT data can be downloaded from figshare. The data is updated monthly and contains comprehensive pandemic-related surveillance information.
+
+1. Navigate to the figshare link
+2. Click the 'Switch View' button in the lower left of the figshare window to change to 'File View'
+3. Download both the most recent data file (typically named "PACT_Data_YYYY_MM.csv") and the most recent data dictionary (typically named "PACT_Dictionary_YYYY_MM.pdf")
+4. The most recent data present in this database was updated on 02/2025 [data](https://figshare.com/ndownloader/files/52661729?private_link=58527668245cb63f14f5), [data dictionary](https://figshare.com/ndownloader/files/52661744?private_link=58527668245cb63f14f5)
+
+### Notes
+
+- Date fields are formatted as YYYY-MM-DD
+- Missing values are represented as "NA" or as ""
+- Regional codes follow the standard PACT format (refer to the data dictionary)

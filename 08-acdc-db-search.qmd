@@ -1,0 +1,26 @@
+---
+output-file: acdc-db-search.html
+---
+
+# Process Data {#sec-github-clone}
+
+Scripts to process new PandemicPACT data and update the Research Information Gateway database are available at the [`acdc-db-search`](https://github.com/ecohealthalliance/acdc-db-search) GitHub repository
+
+## Clone the Repository
+
+1. Open your terminal or command line interface
+2. Clone the `acdc-db-search` GitHub repository using one of these methods:
+   - Using GitHub CLI:
+     ```bash
+     gh repo clone ecohealthalliance/acdc-db-search
+     ```
+   - Using HTTPS:
+     ```bash
+     git clone https://github.com/ecohealthalliance/acdc-db-search.git
+     ```
+3. Navigate to the cloned repository:
+   ```bash
+   cd acdc-db-search
+   ```
+
+This repository contains all the necessary scripts for data processing and database updates. See the repository 

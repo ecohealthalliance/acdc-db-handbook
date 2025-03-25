@@ -1,0 +1,18 @@
+---
+output-file: database.html
+---
+
+# Dolt
+
+The Research Information Gateway (RIG) is structured as a relational database. Relational databases like MySQL provide structured data storage with powerful querying capabilities, allowing complex relationships between different types of data to be efficiently modeled and accessed. The RIG uses Dolt as its database solution, which combines Git-style version control with MySQL database functionality, offering the benefits of both technologies in one integrated system.
+
+## Benefits of DOLT
+
+1. Complete data history tracking and rollback capabilities
+2. Git-like operations (fork, clone, branch, merge, push, pull)
+3. Conflict-free collaborative data editing
+4. Flexible import and export of data through CLI, an R package ([`doltr`](https://github.com/ecohealthalliance/doltr)) and the DoltHub API
+5. MySQL compatibility for seamless integration with existing systems such as Africa CDC's [Knowledge Hub](https://khub.africacdc.org/)
+
+This approach brings software development best practices to data management while maintaining a familiar SQL interface.
+

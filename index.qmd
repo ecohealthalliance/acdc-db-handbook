@@ -16,7 +16,7 @@ airtable_metadata <- airtable(
 
 # Introduction {#sec-introduction}
 
-This site serves as a handbook created as a how-to manual for the development and maintenance of a comprehensive database of African infectious disease research activity to support continental public health initiatives focused on zoonotic pathogens.
+This handbook provides instructions for developing and maintaining the Research Information Gateway (RIG) - a resource that catalogs African infectious disease research to support continental public health initiatives on zoonotic pathogens.
 
 ## About the database {#sec-about-database}
 

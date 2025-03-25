@@ -2,7 +2,7 @@
 output-file: pact.html
 ---
 
-# Pandemic PACT {#pact}
+# PandemicPACT Overview {#pact}
 
 This is a description of the RIG database's primary data source, Pandemic PACT. We originally used a variety of data sources (summarized under Appendix, Alternate Sources), but replaced them with Pandemic PACT, which is a more comprehensive data source. Should Pandemic PACT become unavailable in the future, the Alternate Sources can be used instead.
 

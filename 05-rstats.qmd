@@ -1,0 +1,38 @@
+# R {#sec-rstats}
+
+[R](https://cran.r-project.org) is a free and open-source programming language and software environment for statistical computing and graphics. Installation instructions are available on the [R Project website](https://cran.r-project.org/doc/manuals/r-release/R-admin.html). Developed in the early 1990s at the University of Auckland, R is widely used by statisticians, data analysts, and researchers across various fields.
+
+R provides a comprehensive range of statistical and graphical techniques including linear and nonlinear modeling, statistical tests, time-series analysis, classification, and clustering. Its active community continuously develops new packages and extensions, making it powerful for data science applications. For the Research Information Gateway, R's ability to integrate with tools like Airtable through community-developed packages makes it particularly well-suited.
+
+## R Data Processing Workflow
+
+### Overview
+The Research Information Gateway uses R to process dataset files before importing them into Dolt. This workflow handles data cleaning, transformation, and standardization.
+
+### Key Processing Steps
+
+1. **Setup & Data Loading**
+   - Installs required packages using pacman
+   - Loads custom functions from the R folder
+   - Reads source CSV files and reference data
+
+2. **Data Transformation**
+   - Converts dummy variables back to categorical data
+   - Combines related fields (such as name components)
+   - Converts separate year and month values into proper date formats
+
+3. **Data Enrichment**
+   - Maps entity names to standardized codes
+   - Identifies regional classifications
+   - Applies consistent mapping across related fields
+
+4. **Data Cleanup**
+   - Removes duplicates and empty columns
+   - Standardizes NULL/NA/empty values
+   - Validates field lengths
+
+5. **Export & Database Import**
+   - Exports processed data to CSV
+   - Uses Dolt commands to import with appropriate primary keys
+
+This workflow ensures data is properly structured, standardized, and ready for use in the Research Information Gateway's Dolt database.

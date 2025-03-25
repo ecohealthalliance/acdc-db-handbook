@@ -2,10 +2,15 @@
 output-file: data-export.html
 ---
 
-# Exporting Data from Dolt to a MySQL Database {#data-export}
+# Exporting Data {#data-export}
 
+The Research Information Gateway offers two primary methods to export data from Dolt:
 
-## Exporting Data from Dolt
+1. **SQL Dump**: Generate a complete database dump in SQL format for importing into other database systems like MySQL. This approach exports the entire database with schema and data.
+
+2. **CSV Export via DoltHub API**: Extract specific tables or query results as CSV files through the DoltHub API. This method is useful for targeted exports or when you need data in a format compatible with spreadsheet applications.
+
+## Exporting Data to a MySQL Database
 
 1. Open the terminal or command prompt.
 2. Navigate to the Dolt database directory.

@@ -1,0 +1,21 @@
+# DoltHub {#sec-dolthub}
+
+[DoltHub](https://www.dolthub.com) is GitHub for Dolt databases - a platform to share, collaborate on, and manage Dolt databases. DoltHub hosts public data for free and provides a modern, secure web GUI for database management.
+
+As a [Dolt remote](https://docs.dolthub.com/concepts/dolt/git/remotes), you can [clone](https://docs.dolthub.com/cli-reference/cli#dolt-clone), [push](https://docs.dolthub.com/cli-reference/cli#dolt-push), [pull](https://docs.dolthub.com/cli-reference/cli#dolt-pull) and [fetch](https://docs.dolthub.com/cli-reference/cli#dolt-fetch) from DoltHub. It adds collaborative features including:
+
+- [Permissions](https://docs.dolthub.com/concepts/dolthub/permissions)
+- [Pull requests](https://docs.dolthub.com/concepts/dolthub/prs)
+- [Issues](https://docs.dolthub.com/concepts/dolthub/issues)
+- [Forks](https://docs.dolthub.com/concepts/dolthub/forks)
+- A built-in SQL workbench for exploring and modifying databases through the web
+
+## DoltHub API {#sec-dolthub-api}
+
+DoltHub offers an [API](https://docs.dolthub.com/products/dolthub/api) with the following capabilities:
+
+1. [Authentication](https://docs.dolthub.com/products/dolthub/api/authentication)
+2. [SQL API](https://docs.dolthub.com/products/dolthub/api/sql) - For read/write SQL queries to DoltHub databases
+3. [CSV API](https://docs.dolthub.com/products/dolthub/api/csv) - For downloading CSV versions of DoltHub tables
+4. [Database API](https://docs.dolthub.com/products/dolthub/api/database) - For interacting with databases and pull requests
+5. [Hooks](https://docs.dolthub.com/products/dolthub/api/hooks) - For receiving notifications about database changes

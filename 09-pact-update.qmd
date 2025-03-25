@@ -1,0 +1,157 @@
+---
+output-file: pact-update.html
+---
+
+# Update Database
+
+## Data Processing
+
+1. Download PandemicPACT CSV files to the `data` folder
+2. Run [process_pandemic_pact_data.R](https://github.com/ecohealthalliance/acdc-db-search/blob/main/scripts/process_pandemic_pact_data.R) script
+
+## Database Import
+
+### For Dolt
+```bash
+dolt table import -c -f --all-text --pk pactid pact_data_processed ../data/pact_data_processed.csv --continue
+```
+
+### For DOLT or MySQL
+<details>
+<summary>MySQL Import Command: (click to expand) </summary>
+
+```SQL
+LOAD DATA INFILE '../data/pact_data_processed.csv'
+INTO TABLE pact_data_processed
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+```
+</details>
+
+## Update Unified Table
+
+<details>
+<summary>SQL for Updating africa_unified Table: (click to expand)</summary>
+
+```SQL
+-- Step 1: Drop the existing tables if they exist
+DROP TABLE IF EXISTS africa_unified;
+DROP TABLE IF EXISTS africa_unified_temp;
+
+-- Step 2: Create the temp table with data from both sources
+CREATE TABLE africa_unified_temp (
+ activity_id TEXT,
+ Title TEXT,
+ `Publication Link` TEXT,
+ Description TEXT,
+ `Cover Image` TEXT,
+ `Data Category` TEXT,
+ `Data sub-Category` TEXT,
+ `Publication Category` TEXT,
+ `Geographical Coverage` TEXT,
+ `Geographical Coverage Country ISO` TEXT,
+ `Citation Link` TEXT,
+ `Associated Authors` TEXT,
+ `Activity Type` TEXT,
+ activity_start_date TEXT,
+ activity_end_date TEXT,
+ funder_name TEXT,
+ topic_name TEXT,
+ diseases TEXT,
+ disease_types TEXT,
+ au_region_name TEXT,
+ data_source TEXT
+);
+
+-- Step 3: Insert the RIG data
+INSERT INTO africa_unified_temp
+SELECT
+ activity_id,
+ activity AS Title,
+ activity_website AS `Publication Link`,
+ abstract AS Description,
+ NULL AS `Cover Image`,
+ 'Research and Development' AS `Data Category`,
+ NULL AS `Data sub-Category`,
+ NULL AS `Publication Category`,
+ country AS `Geographical Coverage`,
+ country_code as `Geographical Coverage Country ISO`,
+ NULL AS `Citation Link`,
+ researcher_name AS `Associated Authors`,
+ activity_type AS `Activity Type`,
+ activity_start_date,
+ activity_end_date,
+ funder_name,
+ topic_name,
+ diseases,
+ disease_types,
+ au_region AS au_region_name,
+ source_name AS data_source
+FROM
+ rig_unified;
+
+-- Step 4: Insert the PACT data with "Pandemic PACT" as Associated Authors
+INSERT INTO africa_unified_temp
+SELECT
+ pactid as activity_id,
+ grant_title_eng AS Title,
+ NULL AS `Publication Link`,
+ abstract AS Description,
+ NULL AS `Cover Image`,
+ 'Research and Development' AS `Data Category`,
+ NULL AS `Data sub-Category`,
+ NULL AS `Publication Category`,
+ research_location_country AS `Geographical Coverage`,
+ research_location_country_iso AS `Geographical Coverage Country ISO`,
+ NULL AS `Citation Link`,
+ investigator_name AS `Associated Authors`,
+ study_type_main AS `Activity Type`,
+ grant_start_date AS activity_start_date,
+ grant_end_date AS activity_end_date,
+ funder_name,
+ study_subject AS topic_name,
+ disease AS diseases,
+ families AS disease_types,
+ research_location_au_region AS au_region_name,
+ 'Pandemic PACT' AS data_source
+FROM
+ pact_data_processed
+WHERE
+ research_location_au_region LIKE '%Africa%';
+
+-- Step 5: Create final table with updated AU regions for blank values
+CREATE TABLE africa_unified AS
+SELECT
+ t.activity_id,
+ t.Title,
+ t.`Publication Link`,
+ t.Description,
+ t.`Cover Image`,
+ t.`Data Category`,
+ t.`Data sub-Category`,
+ t.`Publication Category`,
+ t.`Geographical Coverage`,
+ t.`Geographical Coverage Country ISO`,
+ t.`Citation Link`,
+ t.`Associated Authors`,
+ t.`Activity Type`,
+ t.activity_start_date,
+ t.activity_end_date,
+ t.funder_name,
+ t.topic_name,
+ t.diseases,
+ t.disease_types,
+ t.au_region_name,
+ t.data_source
+FROM
+ africa_unified_temp t;
+
+-- Clean up the temporary table
+DROP TABLE africa_unified_temp;
+
+DELETE FROM africa_unified
+WHERE Title IS NULL;
+```
+</details>
